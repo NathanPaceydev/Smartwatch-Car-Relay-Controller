@@ -568,7 +568,7 @@ public class DeviceListActivity extends Activity{
 		if (storedDevices.equals("n/a"))
 		{
 			System.out.println("New Start Up Flag");
-			deviceListAdapter.add("\nGetting Started \n");
+			deviceListAdapter.add("Getting Started");
 			//startedTextView.setText("Welcome to the relay Controller");
 
 
@@ -581,13 +581,11 @@ public class DeviceListActivity extends Activity{
 			for(int i = 0; i < storedDevicesArray.length; i++)
 			{
 				String deviceString = cPanel.getStoredString(storedDevicesArray[i]);
-				System.out.println(deviceString);
 				String[] deviceStringArray = deviceString.split(";");
 				
 				if(deviceStringArray.length>1){
 					//deviceListAdapter.add(deviceStringArray[4]+";\n");
-					deviceListAdapter.add(deviceStringArray[4] + "\n" + deviceStringArray[0]);
-					//deviceListAdapter.add(deviceStringArray[4]+"\n"+deviceStringArray[0]);
+					deviceListAdapter.add(deviceStringArray[4]+"\n"+deviceStringArray[0]);
 				}
 				
 				else
@@ -818,7 +816,7 @@ public class DeviceListActivity extends Activity{
 
 			//String targetName = ((TextView) arg1).getText().toString();
 			//String info;
-			//String storedDevices = cPanel.getStoredString("savedDevices");
+			String storedDevices = cPanel.getStoredString("savedDevices");
 
 
 			/*if (storedDevices.equals("n/a"))
@@ -857,10 +855,10 @@ public class DeviceListActivity extends Activity{
 			}
 			String[] infoSplit = info.split("\n");
 
-			//for(String i : infoSplit)
-			//{
-			//	System.out.print((i));
-			//}
+			for(String i : infoSplit)
+			{
+				System.out.print((i));
+			}
 
 			System.out.println(infoSplit[1] + " selected from list");
 			
