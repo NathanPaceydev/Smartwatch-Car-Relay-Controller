@@ -25,7 +25,7 @@
     <application
         android:name="com.controlanything.NCDTCPRelay.ControlPanel"
         android:debuggable="true"
-        android:icon="@drawable/tcpicon"
+        android:icon="@mipmap/launch_icon"
         android:label="@string/app_name"
         android:testOnly="true" >
         <activity

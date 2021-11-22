@@ -54,12 +54,13 @@ public final class R {
     public static final int device_setup=0x7f040012;
     public static final int ic_action_name=0x7f040013;
     public static final int icon=0x7f040014;
-    public static final int offbtn=0x7f040015;
-    public static final int onbtn=0x7f040016;
-    public static final int spinner_box=0x7f040017;
-    public static final int tcpicon=0x7f040018;
-    public static final int textbox=0x7f040019;
-    public static final int top_bar=0x7f04001a;
+    public static final int magna_logo=0x7f040015;
+    public static final int offbtn=0x7f040016;
+    public static final int onbtn=0x7f040017;
+    public static final int spinner_box=0x7f040018;
+    public static final int tcpicon=0x7f040019;
+    public static final int textbox=0x7f04001a;
+    public static final int top_bar=0x7f04001b;
   }
   public static final class id {
     public static final int Submit_button=0x7f050000;
@@ -130,16 +131,20 @@ public final class R {
   public static final class menu {
     public static final int hands=0x7f070000;
   }
+  public static final class mipmap {
+    public static final int ic_launcher=0x7f080000;
+    public static final int launch_icon=0x7f080001;
+  }
   public static final class string {
-    public static final int NumberofRelays=0x7f080000;
-    public static final int action_settings=0x7f080001;
-    public static final int ad_inputs=0x7f080002;
-    public static final int app_name=0x7f080003;
-    public static final int find_device=0x7f080004;
-    public static final int hello=0x7f080005;
-    public static final int hello_world=0x7f080006;
-    public static final int service_name=0x7f080007;
-    public static final int title_activity_hands=0x7f080008;
-    public static final int title_activity_macro_setup=0x7f080009;
+    public static final int NumberofRelays=0x7f090000;
+    public static final int action_settings=0x7f090001;
+    public static final int ad_inputs=0x7f090002;
+    public static final int app_name=0x7f090003;
+    public static final int find_device=0x7f090004;
+    public static final int hello=0x7f090005;
+    public static final int hello_world=0x7f090006;
+    public static final int service_name=0x7f090007;
+    public static final int title_activity_hands=0x7f090008;
+    public static final int title_activity_macro_setup=0x7f090009;
   }
 }

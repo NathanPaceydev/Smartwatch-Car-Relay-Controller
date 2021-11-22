@@ -68,7 +68,7 @@ ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:22:5-133:19
 	android:label
 		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:25:9-41
 	android:icon
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:24:9-41
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:24:9-43
 	android:name
 		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:23:9-68
 activity#com.controlanything.NCDTCPRelay.DeviceListActivity

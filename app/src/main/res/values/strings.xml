@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, NCDTCPRelayActivity!</string>
-    <string name="app_name">IORelay</string>
+    <string name="app_name">Magna</string>
     <string name="NumberofRelays">Selection</string>
     <string name="service_name">DiscoveryUtility</string>
     <string name="find_device">FindDevice</string>
