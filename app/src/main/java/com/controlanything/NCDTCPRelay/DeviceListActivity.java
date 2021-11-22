@@ -467,7 +467,7 @@ public class DeviceListActivity extends Activity{
 		//deviceListView.setLayoutParams(new LayoutParams(45, 45));
 
 		//use the device_name XML file as list layout
-    	ArrayAdapter<String> deviceListAdapter =  new ArrayAdapter<String>(this, R.layout.device_name);
+    	final ArrayAdapter<String> deviceListAdapter =  new ArrayAdapter<String>(this, R.layout.device_name);
     	deviceListView.setAdapter(deviceListAdapter);
     	deviceListView.setOnItemClickListener(deviceSelected);
     	deviceListView.isLongClickable();
@@ -483,7 +483,21 @@ public class DeviceListActivity extends Activity{
 
     	    	String info = ((TextView) arg1).getText().toString();
     	    	String[] infoSplit = info.split("\n");
-    	    	
+
+				if (info.contains("Getting Started ")){
+					// ** on mobile the app should link to the info URL **
+					//Uri uriUrl = Uri.parse("http://www.controlanything.com/Relay/Device/IORelay_TCP-DOC");
+					//Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+					//startActivity(launchBrowser);
+					//finish();
+
+					// make sure the getting started text is not mutable
+					Intent deviceList = new Intent(getApplicationContext(), DeviceListActivity.class);
+					startActivity(deviceList);
+					finish();
+					//return; // commented out due to return type
+				}
+
     	    	currentlyEditingDevice = infoSplit[1];
     			
     			String deviceSettings = cPanel.getStoredString(currentlyEditingDevice);
@@ -713,20 +727,30 @@ public class DeviceListActivity extends Activity{
 			public void onClick(DialogInterface dialog, int which) 
 			{
 
-
 				removeDeviceAlert.setTitle("Are you sure?");
 				removeDeviceAlert.setMessage("Remove: " + deviceName);
 				removeDeviceAlert.setCancelable(true);
+
+				// ** remove device Yes Click **
 				removeDeviceAlert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
 					public void onClick(DialogInterface dialog, int which) {
 						String[] storedDevices = cPanel.getStoredString("savedDevices").split(";");
 						String devicesToSave = null;
+
 						for(int i = 0; i <storedDevices.length; i++){
 							if(mac.equals(storedDevices[i])){
+
+								cPanel.deleteString(mac);
+
+								/* // stupid code from NCD
 								cPanel.saveString(mac+"Names", "n/a");
 								cPanel.saveString(mac+"Momentary", "n/a");
 								cPanel.saveString(mac, "n/a");
+								//devicesToSave = "Test";
+								 */
+
+
 
 							}else{
 								if (devicesToSave == null){
@@ -741,30 +765,52 @@ public class DeviceListActivity extends Activity{
 						}else{
 							cPanel.saveString("savedDevices", "n/a");
 						}
-						cPanel.saveString(mac, "n/a");
-						setContentView( mainTable());
+
+/*
 						if(currentapiVersion>=11){
-				    		saveButtonAnimation.start();
-				    	}
+							saveButtonAnimation.start();
+						}
+
+ */
+
+						//cPanel.saveString(mac, "n/a");
+						//setContentView( mainTable());
+
+
+						Intent deviceList = new Intent(getApplicationContext(), DeviceListActivity.class);
+						startActivity(deviceList);
+						finish();
 
 
 					}
 				});
+
+
+				// ** remove device No click **
 				removeDeviceAlert.setNegativeButton("No", new DialogInterface.OnClickListener() {
 
 					public void onClick(DialogInterface dialog, int which) {
 						dialog.cancel();
+						Intent deviceList = new Intent(getApplicationContext(), DeviceListActivity.class);
+						startActivity(deviceList);
+						finish();
+
+						/*
 						if(currentapiVersion>=11){
 				    		saveButtonAnimation.start();
 				    	}
 
+						 */
+
 					}
 				});
+
 				AlertDialog areYouSureDialog = removeDeviceAlert.create();
 				areYouSureDialog.show();
 			}
 				
 		});
+
     	removeDeviceAlert.setNegativeButton("Edit", new DialogInterface.OnClickListener() {
 			
 			public void onClick(DialogInterface dialog, int which) {
@@ -848,11 +894,16 @@ public class DeviceListActivity extends Activity{
 
 			String info = ((TextView) arg1).getText().toString();
 
-			if (info.contains("Getting Started")){
+			if (info.contains("Getting Started ")){
 				//Uri uriUrl = Uri.parse("http://www.controlanything.com/Relay/Device/IORelay_TCP-DOC");
 				//Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
 				//startActivity(launchBrowser);
 				//finish();
+
+				// make sure the getting started text is not mutable
+				Intent deviceList = new Intent(getApplicationContext(), DeviceListActivity.class);
+				startActivity(deviceList);
+				finish();
 				return;
 			}
 			String[] infoSplit = info.split("\n");
