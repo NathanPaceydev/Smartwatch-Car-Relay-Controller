@@ -41,6 +41,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
+// Network Discovery activity
 public class DiscoveryActivity extends Activity{
 	
 	ControlPanel cPanel;
@@ -76,6 +77,8 @@ public class DiscoveryActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		cPanel = ((ControlPanel)getApplicationContext());
+
+		System.out.println("Network Discovery Activity");
 		
 		//Get display size minus top bar
 		Display display = getWindowManager().getDefaultDisplay(); 
@@ -83,28 +86,29 @@ public class DiscoveryActivity extends Activity{
 		displayHeight = display.getHeight();
 		displayHeight = displayHeight - getStatusBarHeight();
 		
-		font = Typeface.createFromAsset(getAssets(), "fonts/neuropolxfree.ttf");
+		font = Typeface.createFromAsset(getAssets(), "fonts/neuropolxfree.ttf"); //set font
 		
 		//Get connected Network Name:
-		WifiManager wifiManager = (WifiManager) getSystemService(WIFI_SERVICE);
+		WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
 		WifiInfo wifiInfo = wifiManager.getConnectionInfo();
 		ssid = wifiInfo.getSSID();
 		
-		setContentView(mainTable());
+		setContentView(mainTable()); // call the main table layout
 		if(currentapiVersion>=11){
 			saveButtonAnimation.start();
 		}
 		
 		
-		
 		deviceDiscoveryIntent = new Intent(this, DiscoveryUtility.class);
 		deviceDiscoveryIntent.setAction("Start");
+
 		deviceDiscoveryMessenger = new Messenger(discoveryHandler());
     	deviceDiscoveryIntent.putExtra("BOOLEAN", continueScanningUDP);
     	deviceDiscoveryIntent.putExtra("MESSENGER", deviceDiscoveryMessenger);
     	
     	webIDiscoveryIntent = new Intent(this, WebiDiscoveryService.class);
     	webIDiscoveryIntent.setAction("Start");
+
     	webIdiscoveryMessenger = new Messenger(discoveryHandler());
     	webIDiscoveryIntent.putExtra("BOOLEAN", continueScanningUDP);
     	webIDiscoveryIntent.putExtra("MESSENGER", webIdiscoveryMessenger);
@@ -112,16 +116,19 @@ public class DiscoveryActivity extends Activity{
     	startService(deviceDiscoveryIntent);
     	startService(webIDiscoveryIntent);
 	}
+
 	
 	public RelativeLayout mainTable(){
+
 		RelativeLayout mTable = new RelativeLayout(this);
 		mTable.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 		mTable.setBackgroundResource(R.drawable.background);
+		mTable.setGravity(RelativeLayout.CENTER_HORIZONTAL);
 		
 		mTable.addView(titleTable());
 		
 		//Set layout rules for bottom button
-		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 100);
 		bottomButtonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 		//Add button to master view
 		mTable.addView(exitButton(), bottomButtonParams);
@@ -138,7 +145,7 @@ public class DiscoveryActivity extends Activity{
 	
 	public RelativeLayout titleTable(){
 		rLayout = new RelativeLayout(this);
-		rLayout.setBackgroundResource(R.drawable.top_bar);
+		//rLayout.setBackgroundResource(R.drawable.top_bar); // got rid of title background
         int id = rLayout.generateViewId();
 		rLayout.setId(id);
 		
@@ -189,11 +196,10 @@ public class DiscoveryActivity extends Activity{
 		rLayout.addView(tTable, titleLayoutParams);
 		
 		return rLayout;
-		
-		
-		
-		
+
 	}
+
+
 	
 	public RelativeLayout title(){
 		RelativeLayout rLayout = new RelativeLayout(this);

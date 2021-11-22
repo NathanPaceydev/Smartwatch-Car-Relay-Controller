@@ -818,6 +818,7 @@ public class SettingsPageActivity extends Activity{
 		
 		return tRow;
 	}
+
 	
 	private TableRow lockAccessPinEditRow(){
 		lockAccessPinRow = new TableRow(this);
@@ -850,6 +851,7 @@ public class SettingsPageActivity extends Activity{
 		
 		return lockAccessPinRow;
 	}
+
 	
 	private TableRow displayInputsCheck(){
 		TableRow tRow = new TableRow(this);
@@ -1053,20 +1055,24 @@ public class SettingsPageActivity extends Activity{
 		
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
 				this, R.array.numOfRelays, R.layout.spinner_item);
+
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		
 		numberOfRelaysSpinner.setAdapter(adapter);
+
+		//numberOfRelaysSpinner.setLayoutParams(new LayoutParams(80,30));
+
 		numberOfRelaysSpinner.setOnItemSelectedListener(new SpinnerListener());
 		numberOfRelaysSpinner.setBackgroundResource(R.drawable.spinner_box);
 		numberOfRelaysSpinner.getBackground().setAlpha(180);
 
-		//numberOfRelaysSpinner.setLayoutParams(new LayoutParams(300,100));
 
 
 
 		int tempInt = adapter.getPosition(String.valueOf(numberOfRelays));
 		numberOfRelaysSpinner.setSelection(tempInt);
-		
+
+
 		numRelaysRow.addView(tView);
 		numRelaysRow.addView(numberOfRelaysSpinner);
 		
@@ -1078,6 +1084,7 @@ public class SettingsPageActivity extends Activity{
 		
 		return numRelaysRow;
 	}
+
 	
 	private TableRow numberOfPWMChannelsRow(){
 		numPWMChannelsRow = new TableRow(this);
