@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.controlanything.NCDTCPRelay"
+    android:versionCode="14"
+    android:versionName="8.5.1" >
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.controlanything.NCDTCPRelay.ControlPanel"
+        android:icon="@drawable/tcpicon"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.DeviceListActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".CommandReceiver" >
+            <intent-filter>
+                <action android:name="com.controlanything.NCDTCPRelay.CommandReceiver" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.SettingsPageActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.DiscoveryActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.BluetoothDiscovery"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.RelayControlActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.ADInputActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.PWMControlActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.LinearActuatorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.ADSetupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.WiNetDeviceList"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.Hands"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name="com.controlanything.NCDTCPRelay.DeviceComService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="com.controlanything.NCDTCPRelay.DiscoveryUtility"
+            android:enabled="true"
+            android:label="@string/service_name" >
+        </service>
+        <service
+            android:name="com.controlanything.NCDTCPRelay.WebiDiscoveryService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="com.controlanything.NCDTCPRelay.FindDevice"
+            android:enabled="true"
+            android:label="@string/find_device" >
+        </service>
+        <service
+            android:name="com.controlanything.NCDTCPRelay.DeviceComService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="com.controlanything.NCDTCPRelay.ADInputs"
+            android:enabled="true"
+            android:label="@string/ad_inputs" >
+        </service>
+
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.MacroSetupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.MacroConfigurationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.MacroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+    </application>
+
+</manifest>

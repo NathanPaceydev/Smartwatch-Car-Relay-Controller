@@ -1,0 +1,84 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/home/nti/IORelay_TCP/app/src/main/res/values/dimens.xml",
+                    "from": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "92,151",
+                        "endColumns": "57,55",
+                        "endOffsets": "145,202"
+                    },
+                    "to": {
+                        "startLines": "76,77",
+                        "startColumns": "4,4",
+                        "startOffsets": "2369,2427",
+                        "endColumns": "57,55",
+                        "endOffsets": "2422,2478"
+                    }
+                },
+                {
+                    "source": "/home/nti/IORelay_TCP/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "72,64,43,68,37,28,19,10,5,78,8,4,7,3,79,6,77,80",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2233,1980,1204,2101,1051,826,604,379,169,2413,331,124,280,56,2466,222,2358,2519",
+                        "endLines": "75,67,63,71,42,36,27,18,5,78,8,4,7,3,79,6,77,80",
+                        "endColumns": "19,19,19,19,19,19,19,19,52,52,46,44,50,67,52,57,54,73",
+                        "endOffsets": "2352,2096,1975,2228,1199,1046,821,599,217,2461,373,164,326,119,2514,275,2408,2588"
+                    },
+                    "to": {
+                        "startLines": "2,6,10,31,35,41,50,59,78,79,80,81,82,83,84,85,86,87",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,179,300,1076,1208,1361,1586,1808,2483,2536,2589,2636,2681,2732,2800,2853,2911,2966",
+                        "endLines": "5,9,30,34,40,49,58,67,78,79,80,81,82,83,84,85,86,87",
+                        "endColumns": "19,19,19,19,19,19,19,19,52,52,46,44,50,67,52,57,54,73",
+                        "endOffsets": "174,295,1071,1203,1356,1581,1803,2028,2531,2584,2631,2676,2727,2795,2848,2906,2961,3035"
+                    }
+                },
+                {
+                    "source": "/home/nti/IORelay_TCP/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "6,5,7,2,8,3,4,9",
+                        "startColumns": "2,2,2,2,2,2,2,2",
+                        "startOffsets": "222,181,260,53,298,93,143,334",
+                        "endColumns": "37,40,37,39,35,49,37,38",
+                        "endOffsets": "257,219,295,90,331,140,178,370"
+                    },
+                    "to": {
+                        "startLines": "68,69,70,71,72,73,74,75",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "2033,2073,2116,2156,2198,2236,2288,2328",
+                        "endColumns": "39,42,39,41,37,51,39,40",
+                        "endOffsets": "2068,2111,2151,2193,2231,2283,2323,2364"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/values-sw720dp-land-v13_values-sw720dp-land-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "/home/nti/IORelay_TCP/app/src/main/res/values-sw720dp-land/dimens.xml",
+                    "from": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "205",
+                        "endColumns": "58",
+                        "endOffsets": "259"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "58",
+                        "endOffsets": "109"
+                    }
+                }
+            ]
+        }
+    ]
+}

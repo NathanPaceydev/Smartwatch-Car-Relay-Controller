@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, NCDTCPRelayActivity!</string>
+    <string name="app_name">IORelay</string>
+    <string name="NumberofRelays">Selection</string>
+    <string name="service_name">DiscoveryUtility</string>
+    <string name="find_device">FindDevice</string>
+    <string name="ad_inputs">ADInputs</string>
+
+    <string-array name="numberOfRelays">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>24</item>
+        <item>32</item>
+    </string-array>
+    <string-array name="numOfRelays">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>24</item>
+        <item>32</item>
+    </string-array>
+    <string-array name="numOfPWMChannels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="numOfActuators">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="inputType">
+        <item>Dont Show Input</item>
+        <item>Raw 10 bit</item>
+        <item>Voltage</item>
+        <item>Resistance</item>
+        <item>Closure</item>
+        <item>Temperature(495-2171)F</item>
+        <item>Temperature (495-2171)C</item>
+        <item>Temperature(317-1406)F</item>
+        <item>Temperature (317-1406)C</item>
+        <item>Temperature(495-2172)F</item>
+        <item>Temperature (495-2172)C</item>
+        <item>Light Level (PDV-8001)Lux</item>
+        <item>Current (H722)Amps</item>
+        <item>Current (H822)Amps</item>
+        <item>Solar Battary</item>
+        <item>0-100 PSI Sensor</item>
+        <item>0-300 PSI Sensor</item>
+        <item>PX3224</item>
+        <item>PA6229</item>
+    </string-array>
+    <string-array name="connectionType">
+        <item>Network</item>
+        <item>Bluetooth</item>
+    </string-array>
+    <string-array name="menuOptions">
+        <item>Export Settings</item>
+        <item>Import Settings</item>
+    </string-array>
+    <string-array name="MacroAlertDialogOptions">
+        <item>Edit</item>
+        <item>Remove</item>
+    </string-array>
+
+    <string name="title_activity_hands">Hands</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_macro_setup">MacroSetupActivity</string>
+
+</resources>

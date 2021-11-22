@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/admin_button"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/admin_background"
+        android:text="Admin Setup"
+        android:fontFamily="helvetica"
+        android:textColor="@color/white"
+        android:textSize="9dp" />
+
+
+
+
+</FrameLayout>
