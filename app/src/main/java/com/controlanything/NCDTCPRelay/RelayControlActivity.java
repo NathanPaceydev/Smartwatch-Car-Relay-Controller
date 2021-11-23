@@ -29,6 +29,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -62,6 +63,7 @@ public class RelayControlActivity extends Activity{
 	TextView[] relayLabels;
 	RelativeLayout titleTable;
 	ImageView bottomButton;
+	ImageView speechButton;
 	public int[] relayStatusArray;
 	public TextView tvSocketConnection;
 	TextView bText;
@@ -94,7 +96,7 @@ public class RelayControlActivity extends Activity{
 	boolean winet;
 	boolean switchToADActivity = false;
 	boolean switchToMacrosActivity = false;
-	
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -178,10 +180,17 @@ public class RelayControlActivity extends Activity{
 		mTable.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 
 		mTable.addView(title());
+
 				
 		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 100);
 		bottomButtonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-		mTable.addView(deviceListButton(), bottomButtonParams);	
+
+		ImageView listButton = deviceListButton();
+		mTable.addView(listButton, bottomButtonParams);
+
+
+
+
 		
 		if(displayInputs || displayMacros){
 			RelativeLayout.LayoutParams bottomTextParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
@@ -194,17 +203,22 @@ public class RelayControlActivity extends Activity{
 		}
 	
 		RelativeLayout.LayoutParams scrollViewParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
-		scrollViewParams.addRule(RelativeLayout.BELOW, titleTable.getId());
+		scrollViewParams.addRule(RelativeLayout.ABOVE, titleTable.getId());
 		if(displayInputs || displayMacros){
 			scrollViewParams.addRule(RelativeLayout.ABOVE, bText.getId());
+
 		}else{
 			scrollViewParams.addRule(RelativeLayout.ABOVE, bottomButton.getId());
 		}
-		
 		mTable.addView(scrollView(), scrollViewParams);
-		
 
-		
+		//		** new speech button layout **
+		RelativeLayout.LayoutParams speechButtonParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 70);
+		speechButtonParams.addRule(RelativeLayout.ABOVE, scrollView().getId());
+		//speechButtonParams.addRule(RelativeLayout.ABOVE,listButton.getId() );
+		mTable.addView(speechControlButton(), speechButtonParams);
+
+
 		return mTable;
 	}
 
@@ -213,21 +227,14 @@ public class RelayControlActivity extends Activity{
 		titleTable = new RelativeLayout(this);
 		//titleTable.setBackgroundResource(R.drawable.top_bar);
 		titleTable.setId(1);
-		
+
 //		table.setLayoutParams(new LayoutParams(displayWidth,(int) convertPixelsToDp(248, this)));
-		
-		//final TextView tView = new TextView(this);
-//		tView.setPadding(15, 70, 0, 0);
-		//tView.setText(deviceName);
-		//tView.setTypeface(font);
-		//tView.setTextSize(30);
-		//tView.setTextColor(Color.BLACK);
 
 		RelativeLayout.LayoutParams titleLayoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
 		
 		titleLayoutParams.addRule(RelativeLayout.CENTER_VERTICAL);
-		
-		//titleTable.addView(tView,titleLayoutParams);
+
+		//titleTable.addView(speechButton,titleLayoutParams);
 		
 		return titleTable;
 	}
@@ -244,7 +251,7 @@ public class RelayControlActivity extends Activity{
 	public ScrollView scrollView(){
 		sView = new ScrollView(this);
 		//Allows for height of bottom button
-		sView.setPadding(16, 16, 16, 16);
+		sView.setPadding(32, 70, 16, 0);
 
 		sView.addView(controlsTable());
 		
@@ -289,11 +296,10 @@ public class RelayControlActivity extends Activity{
 				}
 			});
 		}
-		
-		
-		
+
 		return sView;
 	}
+
 	
 	public ImageView deviceListButton(){
 		DisplayMetrics metrics = new DisplayMetrics();
@@ -359,6 +365,41 @@ public class RelayControlActivity extends Activity{
 	}
 
 
+	// ** new speech control Method **
+	public ImageView speechControlButton(){
+		speechButton = new ImageView(this);
+
+		speechButton.setId(4);
+		//speechButton.setLayoutParams(new LayoutParams(60, 60));
+
+		speechButton.setClickable(true);
+		speechButton.setPadding(0,8,0,8);
+
+
+		if(currentapiVersion >=11) {
+			speechButton.setImageResource(R.drawable.google_mic);
+
+			speechButton.setOnClickListener(new OnClickListener(){
+				public void onClick(View v) {
+					// set the class / activity to be called
+					Intent listView = new Intent(getApplicationContext(), DeviceListActivity.class);
+					startActivity(listView);
+
+					if(cPanel.connected == true){
+						cPanel.disconnect();
+					}
+					finish();
+				}
+
+			});
+
+
+		}
+
+		return speechButton;
+	}
+
+
 	
 	public TableLayout controlsTable(){
 		TableLayout cTable = new TableLayout(this);
@@ -395,13 +436,13 @@ public class RelayControlActivity extends Activity{
 			relayLabels[i].setTextSize(16);
 			relayLabels[i].setTextColor(Color.WHITE);
 			relayLabels[i].setGravity(Gravity.CENTER);
-			// set the padding for watchface
 
-			relayLabels[i].setPadding(0, 0, 0, 0);
+			// set the padding for watchface
+			relayLabels[i].setPadding(0, -100, 0, -100);
 
 			relayLabels[i].setTypeface(font);
-			relayLabels[i].setMaxLines(2);
-			relayLabels[i].setLineSpacing(50, 1);
+			relayLabels[i].setMaxLines(1);
+			relayLabels[i].setLineSpacing(-1000, -100); // reduce the line spacing
 			relayLabels[i].setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.MATCH_PARENT));
 			
 			
@@ -430,8 +471,9 @@ public class RelayControlActivity extends Activity{
     		}
 			relayButtons[i].setId(i);
 
-    		// scale the relay buttons
-    		relayButtons[i].setLayoutParams(new LayoutParams(120,120));
+    		// ** scale the relay buttons **
+    		relayButtons[i].setLayoutParams(new LayoutParams(120,80));
+    		relayButtons[i].setPadding(0,0,0,0);
 
 			relayControlRow.addView(relayButtons[i]);
 			relayControlRow.addView(relayLabels[i]);

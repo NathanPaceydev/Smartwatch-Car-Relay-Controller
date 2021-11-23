@@ -24,8 +24,20 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="/tmp/ic_android_black_24dp.xml" />
-                                                <entry key="opacityPercent" value="60" />
+                                                <entry key="imagePath" value="/tmp/baseline_mic_none_24.xml" />
+                                                <entry key="opacityPercent" value="80" />
+                                                <entry key="trimmed" value="true" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="clipartAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="url" value="file:$PROJECT_DIR$/../Android/Sdk/icons/material/materialicons/mic_none/baseline_mic_none_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -72,11 +84,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="assetType" value="IMAGE" />
                                       <entry key="imageAsset" value="$PROJECT_DIR$/../Downloads/black.jpg" />
-                                      <entry key="outputName" value="background" />
+                                      <entry key="outputName" value="speech_button" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="000000" />
+                                      <entry key="themeColor" value="da291c" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -199,7 +210,6 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="assetType" value="IMAGE" />
                                       <entry key="backgroundColor" value="3ac1c6" />
                                       <entry key="iconShape" value="CIRCLE" />
                                       <entry key="imageAsset" value="$PROJECT_DIR$/../Downloads/Magna_Logo (2).png" />
@@ -332,7 +342,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
+                            <entry key="outputIconType" value="ACTIONBAR" />
                           </map>
                         </option>
                       </PersistentState>

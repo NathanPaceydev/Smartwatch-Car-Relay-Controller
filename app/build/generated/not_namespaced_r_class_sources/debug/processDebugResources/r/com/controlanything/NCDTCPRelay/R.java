@@ -52,15 +52,17 @@ public final class R {
     public static final int bottom_bar_list_dark=0x7f040010;
     public static final int button_dead=0x7f040011;
     public static final int device_setup=0x7f040012;
-    public static final int ic_action_name=0x7f040013;
-    public static final int icon=0x7f040014;
-    public static final int magna_logo=0x7f040015;
-    public static final int offbtn=0x7f040016;
-    public static final int onbtn=0x7f040017;
-    public static final int spinner_box=0x7f040018;
-    public static final int tcpicon=0x7f040019;
-    public static final int textbox=0x7f04001a;
-    public static final int top_bar=0x7f04001b;
+    public static final int google_mic=0x7f040013;
+    public static final int ic_action_name=0x7f040014;
+    public static final int icon=0x7f040015;
+    public static final int magna_logo=0x7f040016;
+    public static final int offbtn=0x7f040017;
+    public static final int onbtn=0x7f040018;
+    public static final int spinner_box=0x7f040019;
+    public static final int tcpicon=0x7f04001a;
+    public static final int text_to_speech=0x7f04001b;
+    public static final int textbox=0x7f04001c;
+    public static final int top_bar=0x7f04001d;
   }
   public static final class id {
     public static final int Submit_button=0x7f050000;
