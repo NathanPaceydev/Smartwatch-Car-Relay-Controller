@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/name_edit.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/name_edit.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/spinner_item.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/spinner_item.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/titlebar.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/titlebar.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/action_item.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/action_item.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/network.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/network.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/add_button.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/add_button.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/device_name.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/device_name.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/admin_password.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/admin_password.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_hands.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/activity_hands.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/relay_button.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/relay_button.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/edit_command_alert_dialog.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/edit_command_alert_dialog.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/main.xml",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/main.xml"
+    }
+]

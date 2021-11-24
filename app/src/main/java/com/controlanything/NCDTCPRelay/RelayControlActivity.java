@@ -1,6 +1,8 @@
 package com.controlanything.NCDTCPRelay;
 
+import java.text.NumberFormat;
 import java.util.Arrays;
+import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -20,6 +22,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.Vibrator;
+import android.speech.RecognizerIntent;
 import android.util.DisplayMetrics;
 import android.view.GestureDetector;
 import android.view.Gravity;
@@ -98,6 +101,47 @@ public class RelayControlActivity extends Activity{
 	boolean switchToMacrosActivity = false;
 
 
+
+
+	//private ActivityMainBinding binding;
+
+	private static final int SPEECH_RECOGNIZER_REQUEST_CODE = 0;
+	private float tipPercent = .15f;
+
+
+
+
+	private void startSpeech() {
+		Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+		startActivityForResult(intent, SPEECH_RECOGNIZER_REQUEST_CODE);
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode,resultCode, data);
+
+
+		if (requestCode == SPEECH_RECOGNIZER_REQUEST_CODE){
+			if(resultCode == RESULT_OK){
+				List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+				String recognizeTxt = results.get(0);
+
+				try{
+
+					String text = recognizeTxt.toString();
+					System.out.println("You Said: "+text);
+
+				}
+				catch(NumberFormatException ex){
+
+				}
+			}
+		}
+	}
+
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -113,6 +157,12 @@ public class RelayControlActivity extends Activity{
 		callingClass = i.getClass();
 		System.out.println("Calling Class = "+callingClass.toString());
 		deviceMacAddress = i.getStringExtra("MAC");
+
+		/*
+		binding = ActivityMainBinding.inflate(getLayoutInflater());
+		setContentView(binding.getRoot());
+		System.out.println(binding.text);
+		 */
 	}
 	
 	public void getDeviceInfo(){
@@ -382,13 +432,7 @@ public class RelayControlActivity extends Activity{
 			speechButton.setOnClickListener(new OnClickListener(){
 				public void onClick(View v) {
 					// set the class / activity to be called
-					Intent listView = new Intent(getApplicationContext(), DeviceListActivity.class);
-					startActivity(listView);
-
-					if(cPanel.connected == true){
-						cPanel.disconnect();
-					}
-					finish();
+					startSpeech();
 				}
 
 			});
