@@ -120,8 +120,8 @@ public class RelayControlActivity extends Activity{
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode,resultCode, data);
-
-
+		System.out.println("Here");
+		/*
 		if (requestCode == SPEECH_RECOGNIZER_REQUEST_CODE){
 			if(resultCode == RESULT_OK){
 				List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
@@ -137,7 +137,7 @@ public class RelayControlActivity extends Activity{
 
 				}
 			}
-		}
+		}*/
 	}
 
 
@@ -145,7 +145,9 @@ public class RelayControlActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+		// might not work LOL
+		setContentView(R.layout.relay_control);
+
 		cPanel = ((ControlPanel)getApplicationContext());
 		gDetector = new GestureDetector(getApplicationContext(), new MyGestureDetector());
 		myVib = (Vibrator) this.getSystemService(VIBRATOR_SERVICE);
@@ -225,8 +227,11 @@ public class RelayControlActivity extends Activity{
 	}
 	
 	public RelativeLayout mainViewTable(){
-		RelativeLayout mTable = new RelativeLayout(this);
-		mTable.setBackgroundResource(R.drawable.background);
+
+		// call the empty relative layout
+		setContentView(R.layout.relay_control);
+		RelativeLayout mTable = (RelativeLayout) findViewById(R.id.control_layout); // assign to mTable
+//		mTable.setBackgroundResource(R.drawable.background);
 		mTable.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 
 		mTable.addView(title());
@@ -237,8 +242,6 @@ public class RelayControlActivity extends Activity{
 
 		ImageView listButton = deviceListButton();
 		mTable.addView(listButton, bottomButtonParams);
-
-
 
 
 		

@@ -8,6 +8,10 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/icon.png"
     },
     {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/layout_relay_control.xml.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/relay_control.xml"
+    },
+    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-hdpi_bottom_bar.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-hdpi/bottom_bar.png"
     },
