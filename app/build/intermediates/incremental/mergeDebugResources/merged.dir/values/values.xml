@@ -84,7 +84,6 @@
     <string name="hello">Hello World, NCDTCPRelayActivity!</string>
     <string name="hello_world">Hello world!</string>
     <string name="service_name">DiscoveryUtility</string>
-    <string name="speech_to_text">speech to text</string>
     <string name="title_activity_hands">Hands</string>
     <string name="title_activity_macro_setup">MacroSetupActivity</string>
 </resources>

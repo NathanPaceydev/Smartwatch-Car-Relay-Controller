@@ -120,25 +120,94 @@ public class RelayControlActivity extends Activity{
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode,resultCode, data);
-		System.out.println("Here");
 
 		if (requestCode == SPEECH_RECOGNIZER_REQUEST_CODE){
 			if(resultCode == RESULT_OK){
 				List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 				String recognizeTxt = results.get(0);
 
-				try{
+				String text = recognizeTxt.toString();
+				System.out.println("You Said: "+text);
+				relaySpeechControl(text);
 
-					String text = recognizeTxt.toString();
-					System.out.println("You Said: "+text);
 
-				}
-				catch(NumberFormatException ex){
-
-				}
 			}
 		}
 	}
+
+	// method to activate the relay from the speech text
+	public void relaySpeechControl(String speechText){
+		System.out.println(speechText); // test print
+		speechText = speechText.toLowerCase();
+		//System.out.println(relayNames[0].toString());
+		int relayNumberActivated = -1;
+
+		// loop through the relay names and se if the speech text contains the element
+		for(int i =0; i<relayNames.length; i++){
+			System.out.println(relayNames[i]);
+
+			if(speechText.contains(relayNames[i].toString().toLowerCase())){
+				System.out.println("Speech Matches: "+relayNames[i]);
+
+				String relayActivated = relayNames[i]; // activated features
+				relayNumberActivated = i;
+
+				// ** TODO make this work
+				Toast toast = Toast.makeText(this, "Matches a Relay", Toast.LENGTH_LONG);
+				toast.show();
+			}
+		}
+
+		// call the relay action if the number is updated
+		if(relayNumberActivated>-1) {
+			clickRelay(relayNumberActivated, 1);
+		}
+
+	}
+
+
+	// method called for speech recogintion -> assumes click relay
+	public boolean clickRelay(final int relayNumber, final int bankNumber)
+	{
+		if (momentaryIntArray[relayNumber] == 0) {
+			if (relayStatusArray[relayNumber] == 0) {
+				int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber - ((bankNumber-1)*8)), bankNumber));
+				if(returnedStatus[0] != 260){
+					myVib.vibrate(50);
+
+					updateButtonTextFusion(bankNumber, returnedStatus);
+				}else{
+					changeTitleToRed();
+				}
+			}
+			else {
+				int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber - ((bankNumber-1)*8)), bankNumber));
+
+				if(returnedStatus[0] != 260){
+					myVib.vibrate(50);
+					updateButtonTextFusion(bankNumber, returnedStatus);
+				}
+				else{
+					changeTitleToRed();
+				}
+			}
+
+		}
+		else{
+				int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber - ((bankNumber-1)*8)), bankNumber));
+				if(returnedStatus[0] != 260){
+					myVib.vibrate(50);
+					updateButtonTextFusion(bankNumber, returnedStatus);
+				}
+				else{
+					changeTitleToRed();
+				}
+
+		}
+				return false;
+
+	}
+
 
 
 
@@ -712,8 +781,7 @@ public class RelayControlActivity extends Activity{
 	  			});
 			}
   		}
-  		
-  		
+
   		
   		return relayButton;
 	}

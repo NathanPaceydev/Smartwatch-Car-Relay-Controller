@@ -1,237 +1,247 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-135:12
-INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-135:12
-INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-135:12
-INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-135:12
-INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-135:12
-INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-135:12
-INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-135:12
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:1-139:12
 	package
 		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml
 		INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:5:5-32
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:6:5-32
 		INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml
 		INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:4:5-51
 	xmlns:android
 		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:4:5-29
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:5:5-29
 		INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml
 		INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml
 uses-sdk
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:6:5-43
-INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:6:5-43
-INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:6:5-43
-INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:6:5-43
-INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:6:5-43
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:7:5-43
 	android:targetSdkVersion
 		INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:6:5-43
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:7:5-43
 		INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:6:15-40
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:7:15-40
 		INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml
 		INJECTED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:8:5-9:23
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:9:5-10:23
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:8:22-64
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:9:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:10:5-11:23
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:11:5-12:23
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:10:22-76
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:11:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:12:5-13:23
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:13:5-14:23
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:12:22-73
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:13:22-73
 uses-permission#android.permission.VIBRATE
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:14:5-15:23
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:15:5-16:23
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:14:22-63
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:15:22-63
 uses-permission#android.permission.BLUETOOTH
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:16:5-17:23
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:17:5-18:23
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:16:22-65
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:17:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:18:5-19:23
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:19:5-20:23
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:18:22-71
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:19:22-71
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:20:5-81
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:21:5-81
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:20:22-78
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:21:22-78
+uses-permission#android:keepScreenOn=true
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:22:5-65
+	android:name
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:22:22-62
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:23:5-68
+	android:name
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:23:22-65
 application
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:22:5-133:19
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:26:5-137:19
 	android:label
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:25:9-41
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:29:9-41
 	android:icon
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:24:9-43
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:28:9-43
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:23:9-68
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:27:9-68
 activity#com.controlanything.NCDTCPRelay.DeviceListActivity
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:26:9-34:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:30:9-38:20
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:28:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:32:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:27:13-78
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:31:13-78
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:29:13-33:29
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:33:13-37:29
 action#android.intent.action.MAIN
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:30:17-69
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:34:17-69
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:30:25-66
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:34:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:32:17-77
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:36:17-77
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:32:27-74
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:36:27-74
 receiver#com.controlanything.NCDTCPRelay.CommandReceiver
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:35:9-39:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:39:9-43:20
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:35:19-50
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:39:19-50
 intent-filter#action:name:com.controlanything.NCDTCPRelay.CommandReceiver
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:36:13-38:29
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:40:13-42:29
 action#com.controlanything.NCDTCPRelay.CommandReceiver
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:37:17-90
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:41:17-90
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:37:25-87
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:41:25-87
 activity#com.controlanything.NCDTCPRelay.SettingsPageActivity
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:40:9-43:20
-	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:42:13-60
-	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:41:13-80
-activity#com.controlanything.NCDTCPRelay.DiscoveryActivity
 ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:44:9-47:20
 	android:theme
 		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:46:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:45:13-77
-activity#com.controlanything.NCDTCPRelay.BluetoothDiscovery
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:45:13-80
+activity#com.controlanything.NCDTCPRelay.DiscoveryActivity
 ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:48:9-51:20
 	android:theme
 		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:50:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:49:13-78
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:49:13-77
+activity#com.controlanything.NCDTCPRelay.BluetoothDiscovery
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:52:9-55:20
+	android:theme
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:54:13-60
+	android:name
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:53:13-78
 activity#com.controlanything.NCDTCPRelay.RelayControlActivity
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:52:9-56:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:56:9-60:20
 	android:screenOrientation
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:54:13-49
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:58:13-49
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:55:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:59:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:53:13-80
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:57:13-80
 activity#com.controlanything.NCDTCPRelay.ADInputActivity
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:57:9-61:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:61:9-65:20
 	android:screenOrientation
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:59:13-49
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:63:13-49
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:60:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:64:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:58:13-75
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:62:13-75
 activity#com.controlanything.NCDTCPRelay.PWMControlActivity
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:62:9-66:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:66:9-70:20
 	android:screenOrientation
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:64:13-49
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:68:13-49
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:65:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:69:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:63:13-78
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:67:13-78
 activity#com.controlanything.NCDTCPRelay.LinearActuatorActivity
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:67:9-71:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:71:9-75:20
 	android:screenOrientation
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:69:13-49
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:73:13-49
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:70:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:74:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:68:13-82
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:72:13-82
 activity#com.controlanything.NCDTCPRelay.ADSetupActivity
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:72:9-77:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:76:9-81:20
 	android:screenOrientation
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:74:13-49
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:78:13-49
 	android:windowSoftInputMode
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:76:13-55
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:80:13-55
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:75:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:79:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:73:13-75
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:77:13-75
 activity#com.controlanything.NCDTCPRelay.WiNetDeviceList
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:78:9-83:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:82:9-87:20
 	android:screenOrientation
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:80:13-49
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:84:13-49
 	android:windowSoftInputMode
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:82:13-55
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:86:13-55
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:81:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:85:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:79:13-75
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:83:13-75
 activity#com.controlanything.NCDTCPRelay.Hands
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:84:9-88:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:88:9-92:20
 	android:screenOrientation
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:86:13-49
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:90:13-49
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:87:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:91:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:85:13-65
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:89:13-65
 service#com.controlanything.NCDTCPRelay.DeviceComService
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:90:9-93:19
-	android:enabled
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:92:13-35
-	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:91:13-76
-service#com.controlanything.NCDTCPRelay.DiscoveryUtility
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:94:9-98:19
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:94:9-97:19
 	android:enabled
 		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:96:13-35
-	android:label
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:97:13-49
 	android:name
 		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:95:13-76
-service#com.controlanything.NCDTCPRelay.WebiDiscoveryService
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:99:9-102:19
+service#com.controlanything.NCDTCPRelay.DiscoveryUtility
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:98:9-102:19
 	android:enabled
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:101:13-35
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:100:13-35
+	android:label
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:101:13-49
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:100:13-80
-service#com.controlanything.NCDTCPRelay.FindDevice
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:103:9-107:19
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:99:13-76
+service#com.controlanything.NCDTCPRelay.WebiDiscoveryService
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:103:9-106:19
 	android:enabled
 		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:105:13-35
-	android:label
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:106:13-48
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:104:13-70
-service#com.controlanything.NCDTCPRelay.ADInputs
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:112:9-116:19
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:104:13-80
+service#com.controlanything.NCDTCPRelay.FindDevice
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:107:9-111:19
 	android:enabled
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:114:13-35
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:109:13-35
 	android:label
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:115:13-46
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:110:13-48
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:113:13-68
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:108:13-70
+service#com.controlanything.NCDTCPRelay.ADInputs
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:116:9-120:19
+	android:enabled
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:118:13-35
+	android:label
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:119:13-46
+	android:name
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:117:13-68
 activity#com.controlanything.NCDTCPRelay.MacroSetupActivity
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:118:9-122:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:122:9-126:20
 	android:screenOrientation
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:120:13-49
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:124:13-49
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:121:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:125:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:119:13-78
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:123:13-78
 activity#com.controlanything.NCDTCPRelay.MacroConfigurationActivity
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:123:9-127:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:127:9-131:20
 	android:screenOrientation
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:125:13-49
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:129:13-49
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:126:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:130:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:124:13-86
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:128:13-86
 activity#com.controlanything.NCDTCPRelay.MacroActivity
-ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:128:9-132:20
+ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:132:9-136:20
 	android:screenOrientation
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:130:13-49
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:134:13-49
 	android:theme
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:131:13-60
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:135:13-60
 	android:name
-		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:129:13-73
+		ADDED from /home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:133:13-73

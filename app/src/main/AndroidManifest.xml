@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.controlanything.NCDTCPRelay"
+    xmlns:tools="http://schemas.android.com/tools"
     android:versionCode="14"
     android:versionName="8.5.1" >
     <uses-sdk android:minSdkVersion="8" />
@@ -18,6 +19,10 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" >
     </uses-permission>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android:keepScreenOn=true" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
 
     <application
         android:name="com.controlanything.NCDTCPRelay.ControlPanel"
