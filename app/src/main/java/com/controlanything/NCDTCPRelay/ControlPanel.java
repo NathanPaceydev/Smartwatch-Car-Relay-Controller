@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketException;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.http.HttpResponse;
@@ -32,6 +34,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -39,10 +42,12 @@ import android.content.SharedPreferences.Editor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 
 
 public class ControlPanel extends Application {
@@ -481,13 +486,16 @@ public class ControlPanel extends Application {
 	//Calls Async Task to disconnect the socket, then prints line.
 	public void disconnect(){
 
+
 		if(bluetooth){
 			if(btSocket != null){
 				try {
 					btSocket.close();
 					btSocket = null;
 					connected = false;
-					System.out.println("Bluetooth Socket Closed");
+					System.out.println("disconnect Bluetooth Socket Closed");
+					//btSocket.connect();
+
 				} catch (IOException e) {
 					System.out.println("Exception closing Bluetooth Socket");
 					e.printStackTrace();
@@ -1199,6 +1207,7 @@ public class ControlPanel extends Application {
 					try {
 						if(btSocket != null){
 							btSocket.close();
+							System.out.println("Turn on Bluetooth Socket Closed");
 						}
 
 					} catch (IOException e) {
@@ -1485,6 +1494,7 @@ public class ControlPanel extends Application {
 					try {
 						if(btSocket != null){
 							btSocket.close();
+							System.out.println("Turn off Bluetooth Socket Closed");
 						}
 
 					} catch (IOException e) {
@@ -1776,6 +1786,8 @@ public class ControlPanel extends Application {
 				}else{
 					try {
 						btSocket.close();
+						System.out.println("Status BT close");
+
 					} catch (IOException e) {
 						e.printStackTrace();
 					}

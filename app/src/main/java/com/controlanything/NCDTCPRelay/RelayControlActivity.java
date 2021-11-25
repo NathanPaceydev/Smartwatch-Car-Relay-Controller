@@ -121,7 +121,7 @@ public class RelayControlActivity extends Activity{
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode,resultCode, data);
 		System.out.println("Here");
-		/*
+
 		if (requestCode == SPEECH_RECOGNIZER_REQUEST_CODE){
 			if(resultCode == RESULT_OK){
 				List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
@@ -137,7 +137,7 @@ public class RelayControlActivity extends Activity{
 
 				}
 			}
-		}*/
+		}
 	}
 
 
@@ -730,7 +730,7 @@ public class RelayControlActivity extends Activity{
 			System.out.println("cPanel.connected == false");
 		}
 		cPanel.connected = false;
-		finish();
+		//finish();
 	}
 
 	@Override
