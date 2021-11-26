@@ -105,6 +105,7 @@ public class RelayControlActivity extends Activity{
 	private static final int SPEECH_RECOGNIZER_REQUEST_CODE = 0;
 	private float tipPercent = .15f;
 
+
 	// method to show Toast messages on the main UI thread instead of locally
 	public void showToast(final String message) {
 		final Handler mHandler = new Handler(); // set Handler
@@ -121,7 +122,7 @@ public class RelayControlActivity extends Activity{
 					@Override
 					public void run () {
 						// make the Toast
-						Toast newToast =Toast.makeText(RelayControlActivity.this, message.toString(),Toast.LENGTH_LONG);
+						Toast newToast = Toast.makeText(RelayControlActivity.this, message.toString(),Toast.LENGTH_LONG);
 						newToast.show();
 					}
 				});
@@ -161,6 +162,7 @@ public class RelayControlActivity extends Activity{
 		speechText = speechText.toLowerCase();
 		//System.out.println(relayNames[0].toString());
 		int relayNumberActivated = -1;
+		String message= "Relays";
 
 		// loop through the relay names and se if the speech text contains the element
 		for(int i =0; i<relayNames.length; i++){
@@ -169,19 +171,19 @@ public class RelayControlActivity extends Activity{
 			// convert to lowercase for compare
 			if(speechText.contains(relayNames[i].toString().toLowerCase())){
 				System.out.println("Speech Matches: "+relayNames[i]);
-				String relayActivated = relayNames[i]; // activated features
+
 				relayNumberActivated = i;
-
-				// print the activated relay
-				showToast(relayActivated+" Activated");
+				message +=", "+ relayNames[i];
 				clickRelay(relayNumberActivated, 1);
-
-				//return; // break the loop
 
 			}
 		}
+
 		if (relayNumberActivated == -1) {
 			showToast("Relays Not Activated\nUse Relay Names to Activate");
+		}else{
+			// print the activated relay
+			showToast(message+" Activated");
 		}
 
 	}
