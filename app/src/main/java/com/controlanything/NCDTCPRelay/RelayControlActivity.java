@@ -19,6 +19,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.Vibrator;
@@ -100,15 +101,33 @@ public class RelayControlActivity extends Activity{
 	boolean switchToADActivity = false;
 	boolean switchToMacrosActivity = false;
 
-
-
-
 	//private ActivityMainBinding binding;
-
 	private static final int SPEECH_RECOGNIZER_REQUEST_CODE = 0;
 	private float tipPercent = .15f;
 
+	// method to show Toast messages on the main UI thread instead of locally
+	public void showToast(final String message) {
+		final Handler mHandler = new Handler(); // set Handler
 
+		new Thread(new Runnable() { // add new thread
+			@Override
+			public void run () {
+				// Perform long-running task here
+				// (like audio buffering).
+				// You may want to update a progress
+				// bar every second, so use a handler:
+
+				mHandler.post(new Runnable() {
+					@Override
+					public void run () {
+						// make the Toast
+						Toast newToast =Toast.makeText(RelayControlActivity.this, message.toString(),Toast.LENGTH_LONG);
+						newToast.show();
+					}
+				});
+			}
+		}).start();
+	}
 
 
 	private void startSpeech() {
@@ -121,14 +140,14 @@ public class RelayControlActivity extends Activity{
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode,resultCode, data);
 
+
 		if (requestCode == SPEECH_RECOGNIZER_REQUEST_CODE){
 			if(resultCode == RESULT_OK){
 				List<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 				String recognizeTxt = results.get(0);
 
-				String text = recognizeTxt.toString();
-				System.out.println("You Said: "+text);
-				relaySpeechControl(text);
+				System.out.println("You Said: "+recognizeTxt);
+				relaySpeechControl(recognizeTxt);
 
 
 			}
@@ -138,40 +157,41 @@ public class RelayControlActivity extends Activity{
 	// method to activate the relay from the speech text
 	public void relaySpeechControl(String speechText){
 
-		System.out.println(speechText); // test print
+		//System.out.println(speechText); // test print
 		speechText = speechText.toLowerCase();
 		//System.out.println(relayNames[0].toString());
 		int relayNumberActivated = -1;
 
 		// loop through the relay names and se if the speech text contains the element
 		for(int i =0; i<relayNames.length; i++){
-			System.out.println(relayNames[i]);
+			//System.out.println(relayNames[i]);
 
+			// convert to lowercase for compare
 			if(speechText.contains(relayNames[i].toString().toLowerCase())){
 				System.out.println("Speech Matches: "+relayNames[i]);
-
 				String relayActivated = relayNames[i]; // activated features
 				relayNumberActivated = i;
 
-				// ** TODO make this work
-				Toast toast = Toast.makeText(this, "Matches a Relay", Toast.LENGTH_LONG);
-				toast.show();
+				// print the activated relay
+				showToast(relayActivated+" Activated");
+				clickRelay(relayNumberActivated, 1);
+
+				//return; // break the loop
+
 			}
 		}
-
-		// call the relay action if the number is updated
-		if(relayNumberActivated>-1) {
-			clickRelay(relayNumberActivated, 1);
+		if (relayNumberActivated == -1) {
+			showToast("Relays Not Activated\nUse Relay Names to Activate");
 		}
 
 	}
 
 
+
+
 	// method called for speech recogintion -> assumes click relay
 	public boolean clickRelay(final int relayNumber, final int bankNumber)
 	{
-		//TODO Make this work
-		Toast.makeText(getBaseContext(), relayNames[relayNumber]+ " activated", Toast.LENGTH_SHORT).show();
 
 		if (momentaryIntArray[relayNumber] == 0) {
 			if (relayStatusArray[relayNumber] == 0) {
