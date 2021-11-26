@@ -137,6 +137,7 @@ public class RelayControlActivity extends Activity{
 
 	// method to activate the relay from the speech text
 	public void relaySpeechControl(String speechText){
+
 		System.out.println(speechText); // test print
 		speechText = speechText.toLowerCase();
 		//System.out.println(relayNames[0].toString());
@@ -169,6 +170,9 @@ public class RelayControlActivity extends Activity{
 	// method called for speech recogintion -> assumes click relay
 	public boolean clickRelay(final int relayNumber, final int bankNumber)
 	{
+		//TODO Make this work
+		Toast.makeText(getBaseContext(), relayNames[relayNumber]+ " activated", Toast.LENGTH_SHORT).show();
+
 		if (momentaryIntArray[relayNumber] == 0) {
 			if (relayStatusArray[relayNumber] == 0) {
 				int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber - ((bankNumber-1)*8)), bankNumber));
