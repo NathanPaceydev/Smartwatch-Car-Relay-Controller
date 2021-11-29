@@ -36,12 +36,12 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/bottom_bar.png"
     },
     {
-        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable_icon.png.flat",
-        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/icon.png"
-    },
-    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-hdpi_bottom_bar_add.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-hdpi/bottom_bar_add.png"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable_icon.png.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/icon.png"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-ldpi_icon.png.flat",

@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -186,10 +187,10 @@ public class RelayControlActivity extends Activity{
 		}
 
 		if (relayNumberActivated == -1) {
-			showToast("Relays Not Activated\nUse Relay Names to Activate");
+			showToast(getString(R.string.relays_not_active));
 		}else{
-			// print the activated relay
-			showToast(message+" Activated");
+			// print the activated relay using the string resources
+			showToast(getString(R.string.relay_active, message));
 		}
 
 	}
@@ -349,11 +350,13 @@ public class RelayControlActivity extends Activity{
 		if(displayInputs || displayMacros){
 			RelativeLayout.LayoutParams bottomTextParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
 			bottomTextParams.addRule(RelativeLayout.ABOVE, bottomButton.getId());
+			/*
 			if(displayInputs){
-				mTable.addView(bottomText("Swipe left to display Inputs Page"), bottomTextParams);
+				//mTable.addView(bottomText("Swipe left to display Inputs Page"), bottomTextParams);
 			}else{
-				mTable.addView(bottomText("Swipe left to display Macros Page"), bottomTextParams);
+				//mTable.addView(bottomText("Swipe left to display Macros Page"), bottomTextParams);
 			}
+			 */
 		}
 	
 		RelativeLayout.LayoutParams scrollViewParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
@@ -392,15 +395,18 @@ public class RelayControlActivity extends Activity{
 		
 		return titleTable;
 	}
-		
+
+	/*
 	public TextView bottomText(String message){
 		bText = new TextView(this);
 		bText.setId(3);
-		bText.setText(message);
+		bText.setText(R.string.bottom_text_relays, message);
 		bText.setTextColor(textColor);
 		bText.setTextSize(this.subTextSize);
 		return bText;
 	}
+
+	 */
 	
 	public ScrollView scrollView(){
 		sView = new ScrollView(this);
@@ -965,14 +971,17 @@ public class RelayControlActivity extends Activity{
     
     public void changeTitleToGreen(){
     	tvSocketConnection.setBackgroundColor(Color.GREEN);
-    	tvSocketConnection.setText("NCD TCP Relay: Connected");
+		tvSocketConnection.setText(R.string.green_title);
     	
     }
     
-    public void changeTitleToYellow(){
+    @SuppressLint("SetTextI18n")
+	public void changeTitleToYellow(){
     	tvSocketConnection.setBackgroundColor(Color.YELLOW);
-    	tvSocketConnection.setText("NCD TCP Relay: Connecting....");
-    }
+    	//tvSocketConnection.setText("NCD TCP Relay: Connecting....");
+		tvSocketConnection.setText(R.string.yellow_title);
+
+	}
 	
 	public void showAlertDialog(String title){
 		System.out.println("showAlertDialog called");
@@ -990,7 +999,7 @@ public class RelayControlActivity extends Activity{
 					System.out.println("Passing "+btDeviceAddress+" as bt address");
 					if(cPanel.connect(btDeviceAddress)){
 						dismissProgressDialog();
-						Toast toast = Toast.makeText(getBaseContext(), "Connected", Toast.LENGTH_LONG);
+						Toast toast = Toast.makeText(getBaseContext(), R.string.connected, Toast.LENGTH_LONG);
 						toast.show();
 					}else{
 						dismissProgressDialog();
@@ -1037,7 +1046,7 @@ public class RelayControlActivity extends Activity{
 							dialog.dismiss();
 							sView.removeAllViews();
 							sView.addView(controlsTable());
-							Toast toast = Toast.makeText(getBaseContext(), "Connected", Toast.LENGTH_LONG);
+							Toast toast = Toast.makeText(getBaseContext(), R.string.connected, Toast.LENGTH_LONG);
 							toast.show();
 
 						}else{
@@ -1089,7 +1098,7 @@ public class RelayControlActivity extends Activity{
 							dialog.dismiss();
 							sView.removeAllViews();
 							sView.addView(controlsTable());
-							Toast toast = Toast.makeText(getBaseContext(), "Connected", Toast.LENGTH_LONG);
+							Toast toast = Toast.makeText(getBaseContext(), R.string.connected, Toast.LENGTH_LONG);
 							toast.show();
 						}else{
 							startFindDeviceService(deviceMacAddress, "local");
@@ -1140,7 +1149,7 @@ public class RelayControlActivity extends Activity{
 							dialog.dismiss();
 							sView.removeAllViews();
 							sView.addView(controlsTable());
-							Toast toast = Toast.makeText(getBaseContext(), "Connected", Toast.LENGTH_LONG);
+							Toast toast = Toast.makeText(getBaseContext(), R.string.connected, Toast.LENGTH_LONG);
 							toast.show();
 						}else{
 							startFindDeviceService(deviceMacAddress, "local");
@@ -1192,7 +1201,7 @@ public class RelayControlActivity extends Activity{
 							dialog.dismiss();
 							sView.removeAllViews();
 							sView.addView(controlsTable());
-							Toast toast = Toast.makeText(getBaseContext(), "Connected", Toast.LENGTH_LONG);
+							Toast toast = Toast.makeText(getBaseContext(), R.string.connected, Toast.LENGTH_LONG);
 							toast.show();
 						}else{
 							startFindDeviceService(deviceMacAddress, "local");
@@ -1261,7 +1270,7 @@ public class RelayControlActivity extends Activity{
 				
 				String recievedIP = message.obj.toString();
 				System.out.println("Got this IP back");
-				Toast toast = Toast.makeText(getBaseContext(), "Got This IP back: "+recievedIP, Toast.LENGTH_LONG);
+				Toast toast = Toast.makeText(getBaseContext(), getString(R.string.got_this_IP,recievedIP), Toast.LENGTH_LONG);
 				toast.show();
 				if(cPanel.connect(recievedIP, port)){
 					lostConnectionDialog.dismiss();
@@ -1271,11 +1280,11 @@ public class RelayControlActivity extends Activity{
 				}else{
 					System.out.println("Could not Connect to "+recievedIP);
 					dismissProgressDialog();
-					Toast toast1 = Toast.makeText(getBaseContext(), "Could not find device", Toast.LENGTH_LONG);
+					Toast toast1 = Toast.makeText(getBaseContext(), getString(R.string.could_not_find_device), Toast.LENGTH_LONG);
 					toast1.show();
 					
 					lostConnectionDialog.dismiss();
-					showAlertDialog("Could Not Connect");
+					showAlertDialog(getString(R.string.could_not_connect));
 					
 				}
 			}

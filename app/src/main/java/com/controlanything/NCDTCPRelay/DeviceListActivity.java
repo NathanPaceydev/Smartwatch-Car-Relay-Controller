@@ -240,7 +240,7 @@ public class DeviceListActivity extends Activity{
 		bottomTextView = new TextView(this);
 		int id = bottomTextView.generateViewId();
         bottomTextView.setId(id);
-		bottomTextView.setText("Click and hold device to Edit/Remove");
+		bottomTextView.setText(getString(R.string.click_and_hold));
 		bottomTextView.setTextSize(10);
 		bottomTextView.setGravity(Gravity.CENTER_HORIZONTAL);
 		bottomTextView.setTextColor(Color.WHITE);
@@ -269,7 +269,7 @@ public class DeviceListActivity extends Activity{
 		int id = startedTextView.generateViewId();
 		startedTextView.setId(id);
 		startedTextView.setPadding(24,64, 24,16);
-		startedTextView.setText("Welcome to the relay Controller");
+		startedTextView.setText(R.string.home_welcome_message);
 		startedTextView.setTextSize(16);
 		startedTextView.setGravity(Gravity.CENTER_HORIZONTAL);
 		startedTextView.setTextColor(Color.WHITE);
@@ -484,7 +484,7 @@ public class DeviceListActivity extends Activity{
     	    	String info = ((TextView) arg1).getText().toString();
     	    	String[] infoSplit = info.split("\n");
 
-				if (info.contains("Getting Started ")){
+				if (info.contains(getString(R.string.getting_started))){
 					// ** on mobile the app should link to the info URL **
 					//Uri uriUrl = Uri.parse("http://www.controlanything.com/Relay/Device/IORelay_TCP-DOC");
 					//Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
@@ -582,7 +582,9 @@ public class DeviceListActivity extends Activity{
 		if (storedDevices.equals("n/a"))
 		{
 			System.out.println("New Start Up Flag");
-			deviceListAdapter.add("\nGetting Started \n");
+			deviceListAdapter.add("\n"+getString(R.string.getting_started)+"\n");
+
+			//deviceListAdapter.add("\nGetting Started \n");
 			//startedTextView.setText("Welcome to the relay Controller");
 
 
@@ -667,7 +669,7 @@ public class DeviceListActivity extends Activity{
 		}
 		});
 
-		alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+		alert.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
 		  public void onClick(DialogInterface dialog, int whichButton) {
 		    // Canceled.
 		  }
@@ -719,20 +721,22 @@ public class DeviceListActivity extends Activity{
     	String[] deviceSettingsSplit = deviceSettings.split(";");
     	final String deviceName = deviceSettingsSplit[4];
     	final AlertDialog.Builder removeDeviceAlert = new AlertDialog.Builder(this);
-    	removeDeviceAlert.setTitle("Edit/Remove");
-    	removeDeviceAlert.setMessage("Edit or Remove: " + deviceName);
+    	removeDeviceAlert.setTitle(getString(R.string.edit_or_remove));
+    	//removeDeviceAlert.setMessage("Edit or Remove: " + deviceName);
+		removeDeviceAlert.setMessage(getString(R.string.edit_or_remove_device,deviceName));
+
     	removeDeviceAlert.setCancelable(true);
-    	removeDeviceAlert.setPositiveButton("Remove", new DialogInterface.OnClickListener() {
+    	removeDeviceAlert.setPositiveButton(getString(R.string.remove), new DialogInterface.OnClickListener() {
 			
 			public void onClick(DialogInterface dialog, int which) 
 			{
 
-				removeDeviceAlert.setTitle("Are you sure?");
-				removeDeviceAlert.setMessage("Remove: " + deviceName);
+				removeDeviceAlert.setTitle(getString(R.string.are_you_sure));
+				removeDeviceAlert.setMessage(getString(R.string.remove_device,deviceName));
 				removeDeviceAlert.setCancelable(true);
 
 				// ** remove device Yes Click **
-				removeDeviceAlert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+				removeDeviceAlert.setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
 
 					public void onClick(DialogInterface dialog, int which) {
 						String[] storedDevices = cPanel.getStoredString("savedDevices").split(";");
@@ -787,7 +791,7 @@ public class DeviceListActivity extends Activity{
 
 
 				// ** remove device No click **
-				removeDeviceAlert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+				removeDeviceAlert.setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
 
 					public void onClick(DialogInterface dialog, int which) {
 						dialog.cancel();
@@ -811,7 +815,7 @@ public class DeviceListActivity extends Activity{
 				
 		});
 
-    	removeDeviceAlert.setNegativeButton("Edit", new DialogInterface.OnClickListener() {
+    	removeDeviceAlert.setNegativeButton(getString(R.string.edit), new DialogInterface.OnClickListener() {
 			
 			public void onClick(DialogInterface dialog, int which) {
 				System.out.println("Button Clicked here");
@@ -851,7 +855,9 @@ public class DeviceListActivity extends Activity{
 		});
     	AlertDialog removeDeviceDialog = removeDeviceAlert.create();
     	removeDeviceDialog.show();
-    }
+    }// end remove device Alert:
+
+
 	/*
 	* listview object with the string contianing the words "Getting Started" will open a website on phone ?
 	*
@@ -894,7 +900,8 @@ public class DeviceListActivity extends Activity{
 
 			String info = ((TextView) arg1).getText().toString();
 
-			if (info.contains("Getting Started ")){
+			// TODO make this a string resource
+			if (info.contains(getString(R.string.getting_started))){
 				//Uri uriUrl = Uri.parse("http://www.controlanything.com/Relay/Device/IORelay_TCP-DOC");
 				//Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
 				//startActivity(launchBrowser);
@@ -1017,7 +1024,7 @@ public class DeviceListActivity extends Activity{
 		
 		if(cManager.getActiveNetworkInfo() == null || cManager.getActiveNetworkInfo().isConnected() == false){
 			dismissProgressDialog();
-			Toast toast = Toast.makeText(getBaseContext(), "No Network Connection", Toast.LENGTH_LONG);
+			Toast toast = Toast.makeText(getBaseContext(), getString(R.string.no_network_connection), Toast.LENGTH_LONG);
 			toast.show();
 			return;
 		}
@@ -1060,7 +1067,7 @@ public class DeviceListActivity extends Activity{
 				
 			}
 			else{
-				makeToast("Could Not Connect", Toast.LENGTH_LONG);
+				makeToast(getString(R.string.could_not_connect), Toast.LENGTH_LONG);
 				return;
 			}
 		}
@@ -1158,14 +1165,15 @@ public class DeviceListActivity extends Activity{
         		//connect then display relays page
         		if(cPanel.connect(address)){
         			Intent relayControlIntent = new Intent(getApplicationContext(), RelayControlActivity.class);
-        			relayControlIntent.setAction("Start");
+        			relayControlIntent.setAction(getString(R.string.start));
         			relayControlIntent.putExtra("MAC", address);
         			startActivity(relayControlIntent);
         			finish();
         			return;
         		}else{
         			cPanel.btSocket = null;
-        			Toast toast = Toast.makeText(getBaseContext(), "Could Not Connect\nEnsure Bluetooth Device is in range(300 ft).", Toast.LENGTH_LONG);
+        			// device out of range message
+        			Toast toast = Toast.makeText(getBaseContext(), getString(R.string.device_out_of_range_message), Toast.LENGTH_LONG);
         			toast.show();
         			return;
         		}
@@ -1174,14 +1182,14 @@ public class DeviceListActivity extends Activity{
         	if(displayInputs){
         		if(cPanel.connect(address)){
         			Intent adInputsActivity = new Intent(getApplicationContext(), ADInputActivity.class);
-	        		adInputsActivity.setAction("Start");
+	        		adInputsActivity.setAction(getString(R.string.start));
 	        		adInputsActivity.putExtra("BLUETOOTHADDRESS", address);
 	        		startActivity(adInputsActivity);
 	        		finish();
 	        		return;
         		}else{
         			cPanel.btSocket = null;
-        			Toast toast = Toast.makeText(getBaseContext(), "Could Not Connect\nEnsure Bluetooth Device is in range(300 ft).", Toast.LENGTH_LONG);
+        			Toast toast = Toast.makeText(getBaseContext(), getString(R.string.device_out_of_range_message), Toast.LENGTH_LONG);
         			toast.show();
         			return;
         		}
@@ -1190,14 +1198,14 @@ public class DeviceListActivity extends Activity{
         	if(displayMacros){
         		if(cPanel.connect(address)){
         			Intent macrosActivityIntent = new Intent(getApplicationContext(), MacroActivity.class);
-        			macrosActivityIntent.setAction("Start");
+        			macrosActivityIntent.setAction(getString(R.string.start));
         			macrosActivityIntent.putExtra("MAC", address);
 	        		startActivity(macrosActivityIntent);
 	        		finish();
 	        		return;
         		}else{
         			cPanel.btSocket = null;
-        			Toast toast = Toast.makeText(getBaseContext(), "Could Not Connect\nEnsure Bluetooth Device is in range(300 ft).", Toast.LENGTH_LONG);
+        			Toast toast = Toast.makeText(getBaseContext(), getString(R.string.device_out_of_range_message), Toast.LENGTH_LONG);
         			toast.show();
         			return;
         		}
@@ -1211,7 +1219,7 @@ public class DeviceListActivity extends Activity{
     				return;
         		}else{
         			cPanel.btSocket = null;
-        			Toast toast = Toast.makeText(getBaseContext(), "Could Not Connect\nEnsure Bluetooth Device is in range(300 ft).", Toast.LENGTH_LONG);
+        			Toast toast = Toast.makeText(getBaseContext(), getString(R.string.device_out_of_range_message), Toast.LENGTH_LONG);
         			toast.show();
         		}
         	}
@@ -1224,7 +1232,7 @@ public class DeviceListActivity extends Activity{
     				return;
         		}else{
         			cPanel.btSocket = null;
-        			Toast toast = Toast.makeText(getBaseContext(), "Could Not Connect\nEnsure Bluetooth Device is in range(300 ft).", Toast.LENGTH_LONG);
+        			Toast toast = Toast.makeText(getBaseContext(), getString(R.string.device_out_of_range_message), Toast.LENGTH_LONG);
         			toast.show();
         		}
         	}
@@ -1233,7 +1241,7 @@ public class DeviceListActivity extends Activity{
 	
 	public void switchToRelayActivity(String mac){
 		Intent relayControlIntent = new Intent(getApplicationContext(), RelayControlActivity.class);
-		relayControlIntent.setAction("Start");
+		relayControlIntent.setAction(getString(R.string.start));
 		relayControlIntent.putExtra("MAC", mac);
 		startActivity(relayControlIntent);
 		finish();
@@ -1241,7 +1249,7 @@ public class DeviceListActivity extends Activity{
 	
 	public void switchToInputActivity(String ipAddress, int portNumber){
 		Intent adInputsActivity = new Intent(getApplicationContext(), ADInputActivity.class);
-		adInputsActivity.setAction("Start");
+		adInputsActivity.setAction(getString(R.string.start));
 		adInputsActivity.putExtra("MAC", currentlyEditingDevice);
 		adInputsActivity.putExtra("IP", ipAddress);
 		adInputsActivity.putExtra("PORT", portNumber);
@@ -1251,7 +1259,7 @@ public class DeviceListActivity extends Activity{
 	
 	public void switchToMacrosActivity(String mac){
 		Intent macroActivityIntent = new Intent(getApplicationContext(), MacroActivity.class);
-		macroActivityIntent.setAction("Start");
+		macroActivityIntent.setAction(getString(R.string.start));
 		macroActivityIntent.putExtra("MAC", mac);
 		startActivity(macroActivityIntent);
 		finish();
@@ -1293,7 +1301,7 @@ public class DeviceListActivity extends Activity{
 					{
 						showProgressDialog("Connecting to SignalSwitch");
 						//Find Device Through SignalSwitch
-						findDeviceIntent.setAction("Start");
+						findDeviceIntent.setAction(getString(R.string.start));
 						findDeviceIntent.putExtra("LOCATION", "remote");
 						findDeviceIntent.putExtra("MAC", currentlyEditingDevice);
 						findDeviceIntent.putExtra("MESSENGER", findDeviceMessenger);
@@ -1305,7 +1313,8 @@ public class DeviceListActivity extends Activity{
 					{
 						System.out.println("no device on signalswitch");
 						dismissProgressDialog();
-						Toast toast = Toast.makeText(getBaseContext(), "Device Not Available Local or Remote", Toast.LENGTH_LONG);
+						// device not available print
+						Toast toast = Toast.makeText(getBaseContext(), getString(R.string.device_not_available_message), Toast.LENGTH_LONG);
 						toast.show();
 						return;
 					}
@@ -1366,13 +1375,13 @@ public class DeviceListActivity extends Activity{
 							return;
 						}
 						
-						Toast toast = Toast.makeText(getBaseContext(), "No Activity Enabled \n must select relays, inputs, or macros", Toast.LENGTH_LONG);
+						Toast toast = Toast.makeText(getBaseContext(), getString(R.string.no_activity_message), Toast.LENGTH_LONG);
 						toast.show();
 						
 
 					}else{
 						dismissProgressDialog();
-						Toast toast = Toast.makeText(getBaseContext(), "Could not Connect", Toast.LENGTH_LONG);
+						Toast toast = Toast.makeText(getBaseContext(), getString(R.string.could_not_connect), Toast.LENGTH_LONG);
 						toast.show();
 					}
 				}
@@ -1381,7 +1390,7 @@ public class DeviceListActivity extends Activity{
 		
 		findDeviceIntent = new Intent(this, FindDevice.class);
 		findDeviceMessenger = new Messenger(findDeviceHandler);
-		findDeviceIntent.setAction("Start");
+		findDeviceIntent.setAction(getString(R.string.start));
 		findDeviceIntent.putExtra("LOCATION", location);
 		findDeviceIntent.putExtra("MAC", mac);
 		findDeviceIntent.putExtra("MESSENGER", findDeviceMessenger);
