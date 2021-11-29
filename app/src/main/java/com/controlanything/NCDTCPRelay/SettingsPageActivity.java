@@ -584,7 +584,7 @@ public class SettingsPageActivity extends Activity{
 		
 		TextView tView = new TextView(this);
 		
-		tView.setText("Device Name");
+		tView.setText(R.string.device_name);
 		tView.setTextSize(subTextSize);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
@@ -609,7 +609,7 @@ public class SettingsPageActivity extends Activity{
 		}
 		
 		if(deviceName == "n/a"){
-			nameEditText.setText("Enter Name");
+			nameEditText.setText(R.string.enter_name);
 		}else{
 			nameEditText.setText(deviceName);
 		}
@@ -626,7 +626,7 @@ public class SettingsPageActivity extends Activity{
 		TableRow tableRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Default IP Address");
+		tView.setText(R.string.default_IP_address);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -658,7 +658,7 @@ public class SettingsPageActivity extends Activity{
 		TableRow tableRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Port Number");
+		tView.setText(R.string.port_number);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -691,7 +691,7 @@ public class SettingsPageActivity extends Activity{
 		TableRow tableRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Network Name");
+		tView.setText(R.string.network_name);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -709,7 +709,7 @@ public class SettingsPageActivity extends Activity{
 		ssidEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
 		
 		if(ssid == "n/a" | ssid ==" "){
-			ssidEditText.setText("Enter Network");
+			ssidEditText.setText(R.string.enter_network);
 		}else{
 			ssidEditText.setText(ssid);
 		}
@@ -723,7 +723,7 @@ public class SettingsPageActivity extends Activity{
 		TableRow tRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Lock Configuration");
+		tView.setText(R.string.lock_config);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -756,7 +756,7 @@ public class SettingsPageActivity extends Activity{
 	private TableRow lockConfigPinEditRow(){
 		lockConfigPinRow = new TableRow(this);
 		TextView tView = new TextView(this);
-		tView.setText("Lock Config Pin");
+		tView.setText(R.string.lock_config_pin);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -789,7 +789,7 @@ public class SettingsPageActivity extends Activity{
 		TableRow tRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Lock Access");
+		tView.setText(R.string.lock_access);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -823,7 +823,7 @@ public class SettingsPageActivity extends Activity{
 	private TableRow lockAccessPinEditRow(){
 		lockAccessPinRow = new TableRow(this);
 		TextView tView = new TextView(this);
-		tView.setText("Lock Access Pin");
+		tView.setText(R.string.Lock_Access_Pin);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -857,7 +857,7 @@ public class SettingsPageActivity extends Activity{
 		TableRow tRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Display Inputs");
+		tView.setText(R.string.display_inputs);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);

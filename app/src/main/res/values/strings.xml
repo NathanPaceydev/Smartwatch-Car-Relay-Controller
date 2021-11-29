@@ -121,6 +121,33 @@
     <string name="click_and_hold">Click and hold device to Edit/Remove</string>
 
     <string name="home_welcome_message">Welcome to the relay Controller</string>
+    <string name="retry_connection">Retry Connection</string>
+    <string name="retry">Retry</string>
+    <string name="connecting">Connecting</string>
+    <string name="exit">Exit</string>
+    <string name="connection_lost">Connection Lost</string>
+    <string name="retry_wifi_not_available">Retry Connection \nWiFi Not Available</string>
+    <string name="local">Local</string>
+    <string name="searching_lan_for_device">Searching Lan for device</string>
+    <string name="remote">Remote</string>
+    <string name="get_connection_signal_switch">Getting Connection through Signal Switch</string>
+    <string name="could_not_connect_local">Could Not Connect Local</string>
+    <string name="could_not_connect_remote">Could Not Connect Remote</string>
+    <string name="device_not_found">device not found local</string>
+    <string name="device_not_available">device not available</string>
+
+    <!-- Device Settings Page strings-->
+    <string name="device_name">Device Name</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="default_IP_address">Default IP Address</string>
+    <string name="port_number">Port Number</string>
+    <string name="network_name">Network Name</string>
+    <string name="enter_network">Enter Network</string>
+    <string name="lock_config">Lock Configuration</string>
+    <string name="lock_config_pin">Lock Config Pin</string>
+    <string name="lock_access">Lock Access</string>
+    <string name="Lock_Access_Pin">Lock Access Pin</string>
+    <string name="display_inputs">Display Inputs</string>
 
 
 </resources>

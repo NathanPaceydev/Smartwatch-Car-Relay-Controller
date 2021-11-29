@@ -443,7 +443,7 @@ public class RelayControlActivity extends Activity{
 							System.out.println("Switching to Macros Activity");
 
 							Intent macroActivityIntent = new Intent(getApplicationContext(), MacroActivity.class);
-							macroActivityIntent.setAction("Start");
+							macroActivityIntent.setAction(getString(R.string.start));
 							macroActivityIntent.putExtra("MAC", deviceMacAddress);
 							showProgressDialog("Loading");
 							startActivity(macroActivityIntent);
@@ -990,12 +990,12 @@ public class RelayControlActivity extends Activity{
 		if(bluetooth){
 			
 			removeDeviceAlert.setTitle(title);
-	    	removeDeviceAlert.setMessage("Retry Connection");
+	    	removeDeviceAlert.setMessage(R.string.retry_connection);
 	    	removeDeviceAlert.setCancelable(false);
-	    	removeDeviceAlert.setPositiveButton("Retry", new DialogInterface.OnClickListener() {
+	    	removeDeviceAlert.setPositiveButton(R.string.retry, new DialogInterface.OnClickListener() {
 
 				public void onClick(DialogInterface dialog, int which) {
-					showProgressDialog("Connecting");
+					showProgressDialog(getString(R.string.connecting));
 					System.out.println("Passing "+btDeviceAddress+" as bt address");
 					if(cPanel.connect(btDeviceAddress)){
 						dismissProgressDialog();
@@ -1003,13 +1003,13 @@ public class RelayControlActivity extends Activity{
 						toast.show();
 					}else{
 						dismissProgressDialog();
-						showAlertDialog("Could Not Connect");
+						showAlertDialog(getString(R.string.could_not_connect));
 					}
 					
 				}
 	    		
 	    	});
-	    	removeDeviceAlert.setNeutralButton("Exit", new DialogInterface.OnClickListener() {
+	    	removeDeviceAlert.setNeutralButton(R.string.exit, new DialogInterface.OnClickListener() {
 				
 				public void onClick(DialogInterface dialog, int which) {
 					if(cPanel.connected){
@@ -1024,20 +1024,20 @@ public class RelayControlActivity extends Activity{
 			
 		}else{
 
-			if(title.equals("Connection Lost")){
+			if(title.equals(getString(R.string.connection_lost))){
 				if(isWiFiConnected(getBaseContext()) == true){
-					removeDeviceAlert.setMessage("Retry Connection");
+					removeDeviceAlert.setMessage(getString(R.string.retry_connection));
 				}else{
-					removeDeviceAlert.setMessage("Retry Connection \nWiFi Not Available");
+					removeDeviceAlert.setMessage(getString(R.string.retry_wifi_not_available));
 				}
 
 
 				removeDeviceAlert.setTitle(title);
-				//	    	removeDeviceAlert.setMessage("Retry Connection");
+				//	    	removeDeviceAlert.setMessage(R.string.retry_connection);
 				removeDeviceAlert.setCancelable(false);
-				removeDeviceAlert.setPositiveButton("Local", new DialogInterface.OnClickListener() {
+				removeDeviceAlert.setPositiveButton(R.string.local, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which){
-						showProgressDialog("Searching Lan for device");
+						showProgressDialog(getString(R.string.searching_lan_for_device));
 						cPanel.disconnect();
 
 						if(cPanel.connect(defaultIP, port)==true){
@@ -1054,10 +1054,10 @@ public class RelayControlActivity extends Activity{
 						}
 					}
 				});
-				removeDeviceAlert.setNeutralButton("Remote", new DialogInterface.OnClickListener(){
+				removeDeviceAlert.setNeutralButton(R.string.remote, new DialogInterface.OnClickListener(){
 
 					public void onClick(DialogInterface dialog, int which) {
-						showProgressDialog("Getting Connection through Signal Switch");
+						showProgressDialog(getString(R.string.get_connection_signal_switch));
 						cPanel.disconnect();
 
 						String wiNetMac = cPanel.getStoredString(deviceMacAddress+"-"+"wiNet-wiNetMac");
@@ -1071,7 +1071,7 @@ public class RelayControlActivity extends Activity{
 					}
 
 				});
-				removeDeviceAlert.setNegativeButton("Exit", new DialogInterface.OnClickListener(){
+				removeDeviceAlert.setNegativeButton(R.string.exit, new DialogInterface.OnClickListener(){
 
 					public void onClick(DialogInterface dialog, int which) {
 						Intent deviceListActivity = new Intent(getApplicationContext(), DeviceListActivity.class);
@@ -1081,15 +1081,15 @@ public class RelayControlActivity extends Activity{
 
 				});
 			}
-			if(title.equals("Could Not Connect Local")){
+			if(title.equals(getString(R.string.could_not_connect_local))){
 				removeDeviceAlert.setTitle(title);
 				if(isWiFiConnected(getBaseContext()) == true){
-					removeDeviceAlert.setMessage("Retry Connection");
+					removeDeviceAlert.setMessage(R.string.retry_connection);
 				}else{
-					removeDeviceAlert.setMessage("Retry Connection \nWiFi Not Available");
+					removeDeviceAlert.setMessage(R.string.retry_wifi_not_available);
 				}
 				removeDeviceAlert.setCancelable(false);
-				removeDeviceAlert.setPositiveButton("Local", new DialogInterface.OnClickListener() {
+				removeDeviceAlert.setPositiveButton(R.string.local, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which){
 						cPanel.disconnect();
 
@@ -1105,10 +1105,10 @@ public class RelayControlActivity extends Activity{
 						}
 					}
 				});
-				removeDeviceAlert.setNeutralButton("Remote", new DialogInterface.OnClickListener(){
+				removeDeviceAlert.setNeutralButton(R.string.remote, new DialogInterface.OnClickListener(){
 
 					public void onClick(DialogInterface dialog, int which) {
-						showProgressDialog("Getting Connection through Signal Switch");
+						showProgressDialog(getString(R.string.get_connection_signal_switch));
 						cPanel.disconnect();
 
 						String wiNetMac = cPanel.getStoredString(deviceMacAddress+"-"+"wiNet-wiNetMac");
@@ -1122,7 +1122,7 @@ public class RelayControlActivity extends Activity{
 					}
 
 				});
-				removeDeviceAlert.setNegativeButton("Exit", new DialogInterface.OnClickListener(){
+				removeDeviceAlert.setNegativeButton(R.string.exit, new DialogInterface.OnClickListener(){
 
 					public void onClick(DialogInterface dialog, int which) {
 						Intent deviceListActivity = new Intent(getApplicationContext(), DeviceListActivity.class);
@@ -1132,15 +1132,15 @@ public class RelayControlActivity extends Activity{
 
 				});
 			}
-			if(title.equals("Could Not Connect")){
+			if(title.equals(R.string.could_not_connect)){
 				removeDeviceAlert.setTitle(title);
 				if(isWiFiConnected(getBaseContext()) == true){
-					removeDeviceAlert.setMessage("Retry Connection");
+					removeDeviceAlert.setMessage(R.string.retry_connection);
 				}else{
-					removeDeviceAlert.setMessage("Retry Connection \nWiFi Not Available");
+					removeDeviceAlert.setMessage(R.string.retry_wifi_not_available);
 				}
 				removeDeviceAlert.setCancelable(false);
-				removeDeviceAlert.setPositiveButton("Local", new DialogInterface.OnClickListener() {
+				removeDeviceAlert.setPositiveButton(R.string.local, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which){
 						cPanel.disconnect();
 
@@ -1156,10 +1156,10 @@ public class RelayControlActivity extends Activity{
 						}
 					}
 				});
-				removeDeviceAlert.setNeutralButton("Remote", new DialogInterface.OnClickListener(){
+				removeDeviceAlert.setNeutralButton(R.string.remote, new DialogInterface.OnClickListener(){
 
 					public void onClick(DialogInterface dialog, int which) {
-						showProgressDialog("Getting Connection through Signal Switch");
+						showProgressDialog(getString(R.string.get_connection_signal_switch));
 						cPanel.disconnect();
 
 						String wiNetMac = cPanel.getStoredString(deviceMacAddress+"-"+"wiNet-wiNetMac");
@@ -1173,7 +1173,7 @@ public class RelayControlActivity extends Activity{
 					}
 
 				});
-				removeDeviceAlert.setNegativeButton("Exit", new DialogInterface.OnClickListener(){
+				removeDeviceAlert.setNegativeButton(R.string.exit, new DialogInterface.OnClickListener(){
 
 					public void onClick(DialogInterface dialog, int which) {
 						Intent deviceListActivity = new Intent(getApplicationContext(), DeviceListActivity.class);
@@ -1184,15 +1184,15 @@ public class RelayControlActivity extends Activity{
 				});
 
 			}
-			if(title.equals("Could Not Connect Remote")){
+			if(title.equals(getString(R.string.could_not_connect_remote))){
 				removeDeviceAlert.setTitle(title);
 				if(isWiFiConnected(getBaseContext()) == true){
-					removeDeviceAlert.setMessage("Retry Connection");
+					removeDeviceAlert.setMessage(R.string.retry_connection);
 				}else{
-					removeDeviceAlert.setMessage("Retry Connection \nWiFi Not Available");
+					removeDeviceAlert.setMessage(R.string.retry_wifi_not_available);
 				}
 				removeDeviceAlert.setCancelable(false);
-				removeDeviceAlert.setPositiveButton("Local", new DialogInterface.OnClickListener() {
+				removeDeviceAlert.setPositiveButton(R.string.local, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which){
 						cPanel.disconnect();
 
@@ -1208,10 +1208,10 @@ public class RelayControlActivity extends Activity{
 						}
 					}
 				});
-				removeDeviceAlert.setNeutralButton("Remote", new DialogInterface.OnClickListener(){
+				removeDeviceAlert.setNeutralButton(R.string.remote, new DialogInterface.OnClickListener(){
 
 					public void onClick(DialogInterface dialog, int which) {
-						showProgressDialog("Getting Connection through Signal Switch");
+						showProgressDialog(getString(R.string.get_connection_signal_switch));
 						cPanel.disconnect();
 
 						String wiNetMac = cPanel.getStoredString(deviceMacAddress+"-"+"wiNet-wiNetMac");
@@ -1225,7 +1225,7 @@ public class RelayControlActivity extends Activity{
 					}
 
 				});
-				removeDeviceAlert.setNegativeButton("Exit", new DialogInterface.OnClickListener(){
+				removeDeviceAlert.setNegativeButton(R.string.exit, new DialogInterface.OnClickListener(){
 
 					public void onClick(DialogInterface dialog, int which) {
 						Intent deviceListActivity = new Intent(getApplicationContext(), DeviceListActivity.class);
@@ -1244,7 +1244,7 @@ public class RelayControlActivity extends Activity{
 	public void startFindDeviceService(String deviceMac, String location ){
 		findDeviceIntent = new Intent(getApplicationContext(), FindDevice.class);
 		findDeviceMessenger = new Messenger(findDeviceHandler());
-		findDeviceIntent.setAction("Start");
+		findDeviceIntent.setAction(getString(R.string.start));
 		findDeviceIntent.putExtra("LOCATION", location);
 		findDeviceIntent.putExtra("MAC", deviceMac);
 		findDeviceIntent.putExtra("MESSENGER", findDeviceMessenger);
@@ -1257,14 +1257,14 @@ public class RelayControlActivity extends Activity{
 				dismissProgressDialog();
 				System.out.println(message.obj.toString());
 				System.out.println("RelayControlActivity finddevice handler called");
-				if (message.obj.toString() == "device not found local")
+				if (message.obj.toString() == getString(R.string.device_not_found))
 				{
-					showAlertDialog("Could Not Connect Local");
+					showAlertDialog(getString(R.string.could_not_connect_local));
 					return;
 				}
 				
-				if(message.obj.toString() == "device not available"){
-					showAlertDialog("Could Not Connect Remote");
+				if(message.obj.toString() == getString(R.string.device_not_available)){
+					showAlertDialog(getString(R.string.could_not_connect_remote));
 					return;
 				}
 				
