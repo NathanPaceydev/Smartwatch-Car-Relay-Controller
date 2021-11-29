@@ -3,6 +3,7 @@ package com.controlanything.NCDTCPRelay;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -134,6 +135,11 @@ public class RelayControlActivity extends Activity{
 	private void startSpeech() {
 		Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
 		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+		//intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "de_DE");
+		// ** set the voice control to the default Language **
+		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+		System.out.println("Default Language: "+Locale.getDefault().toString()); //print the language
+
 		startActivityForResult(intent, SPEECH_RECOGNIZER_REQUEST_CODE);
 	}
 
@@ -565,7 +571,8 @@ public class RelayControlActivity extends Activity{
 		for(int i = 0; i<numberOfRelays; i++){
 			LinearLayout relayControlRow = new LinearLayout(this);
 			relayControlRow.setOrientation(LinearLayout.HORIZONTAL);
-			
+			relayControlRow.setGravity(LinearLayout.TEXT_ALIGNMENT_VIEW_END);
+
 			relayButtons[i] = new ImageButton(this);
 
 			relayLabels[i] = new TextView(this);
@@ -575,16 +582,16 @@ public class RelayControlActivity extends Activity{
 			// setting the relay labels
 			relayLabels[i].setText(relayNames[i]);
 			// setting the text size
-			relayLabels[i].setTextSize(16);
+			relayLabels[i].setTextSize(15);
 			relayLabels[i].setTextColor(Color.WHITE);
 			relayLabels[i].setGravity(Gravity.CENTER);
 
 			// set the padding for watchface
-			relayLabels[i].setPadding(0, -100, 0, -100);
+			relayLabels[i].setPadding(0, 0, 0, 0);
 
 			relayLabels[i].setTypeface(font);
 			relayLabels[i].setMaxLines(1);
-			relayLabels[i].setLineSpacing(-1000, -100); // reduce the line spacing
+			relayLabels[i].setLineSpacing(100, 100); // reduce the line spacing
 			relayLabels[i].setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.MATCH_PARENT));
 			
 			
@@ -614,7 +621,7 @@ public class RelayControlActivity extends Activity{
 			relayButtons[i].setId(i);
 
     		// ** scale the relay buttons **
-    		relayButtons[i].setLayoutParams(new LayoutParams(120,80));
+    		relayButtons[i].setLayoutParams(new LayoutParams(100,80));
     		relayButtons[i].setPadding(0,0,0,0);
 
 			relayControlRow.addView(relayButtons[i]);
