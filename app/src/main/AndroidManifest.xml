@@ -28,7 +28,9 @@
     <application
         android:name="com.controlanything.NCDTCPRelay.ControlPanel"
         android:icon="@mipmap/launch_icon"
-        android:label="@string/app_name" >
+        android:supportsRtl="true"
+        android:label="@string/app_name"
+       >
         <activity
             android:name="com.controlanything.NCDTCPRelay.DeviceListActivity"
             android:theme="@android:style/Theme.NoTitleBar" >

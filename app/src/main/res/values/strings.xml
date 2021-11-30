@@ -5,7 +5,7 @@
     <string name="app_name">Magna</string>
     <string name="NumberofRelays">Selection</string>
     <string name="service_name">DiscoveryUtility</string>
-    <string name="find_device">FindDevice</string>
+    <string name="find_device">Find Device</string>
     <string name="ad_inputs">ADInputs</string>
 
     <!-- Added Strings Relay control -->
@@ -116,7 +116,7 @@
     <string name="no_network_connection">No Network Connection</string>
     <string name="start">Start</string>
     <string name="device_out_of_range_message">Could Not Connect\nEnsure Bluetooth Device is in range(300 ft).</string>
-    <string name="device_not_available_message">"Device Not Available Local or Remote"</string>
+    <string name="device_not_available_message">Device Not Available Local or Remote</string>
     <string name="no_activity_message">No Activity Enabled \n must select relays, inputs, or macros</string>
     <string name="click_and_hold">Click and hold device to Edit/Remove</string>
 
@@ -154,8 +154,8 @@
     <string name="display_macros">Display Macros</string>
     <string name="macro_setup">Macro Setup</string>
     <string name="number_of_relays">Number of Relays</string>
-    <string name="number_of_channels">\"Number of Channels \"</string>
-    <string name="number_of_actuators">\"Number of Actuators \"</string>
+    <string name="number_of_channels">\Number of Channels \</string>
+    <string name="number_of_actuators">\Number of Actuators \</string>
     <string name="button_is_momentary">Button is\n Momentary?</string>
     <string name="device_setup">Device Setup</string>
     <string name="device_list">Device List</string>
