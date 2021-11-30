@@ -96,6 +96,7 @@
     <string name="could_not_connect_remote">Could Not Connect Remote</string>
     <string name="could_not_find_device">Could not find device</string>
     <string name="default_IP_address">Default IP Address</string>
+    <string name="device_list">Device List</string>
     <string name="device_name">Device Name</string>
     <string name="device_not_available">device not available</string>
     <string name="device_not_available_message">"Device Not Available Local or Remote"</string>

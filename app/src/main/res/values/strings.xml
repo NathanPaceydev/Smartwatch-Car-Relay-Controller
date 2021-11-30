@@ -158,6 +158,7 @@
     <string name="number_of_actuators">\"Number of Actuators \"</string>
     <string name="button_is_momentary">Button is\n Momentary?</string>
     <string name="device_setup">Device Setup</string>
+    <string name="device_list">Device List</string>
 
     <!-- Device Setup String-->
 

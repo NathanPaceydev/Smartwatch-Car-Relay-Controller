@@ -259,6 +259,7 @@ public class DeviceListActivity extends Activity{
 
 		return findDeviceTableView;
 	}
+
 	
 	public TextView bottomText(){
 		bottomTextView = new TextView(this);

@@ -1,6 +1,5 @@
 package com.controlanything.NCDTCPRelay;
 
-import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -21,7 +20,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.Vibrator;
@@ -31,17 +29,16 @@ import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
-import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -68,7 +65,8 @@ public class RelayControlActivity extends Activity{
 	ImageButton[] relayButtons;
 	TextView[] relayLabels;
 	RelativeLayout titleTable;
-	ImageView bottomButton;
+	//ImageView bottomButton;
+	TableRow deviceListButtonTableView;
 	ImageView speechButton;
 	public int[] relayStatusArray;
 	public TextView tvSocketConnection;
@@ -339,17 +337,16 @@ public class RelayControlActivity extends Activity{
 		mTable.addView(title());
 
 				
-		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 100);
+		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, 70);
 		bottomButtonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-
-		ImageView listButton = deviceListButton();
+		TableRow listButton = deviceListButton();
 		mTable.addView(listButton, bottomButtonParams);
 
 
 		
 		if(displayInputs || displayMacros){
 			RelativeLayout.LayoutParams bottomTextParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-			bottomTextParams.addRule(RelativeLayout.ABOVE, bottomButton.getId());
+			bottomTextParams.addRule(RelativeLayout.ABOVE, deviceListButtonTableView.getId());
 			/*
 			if(displayInputs){
 				//mTable.addView(bottomText("Swipe left to display Inputs Page"), bottomTextParams);
@@ -365,7 +362,7 @@ public class RelayControlActivity extends Activity{
 			scrollViewParams.addRule(RelativeLayout.ABOVE, bText.getId());
 
 		}else{
-			scrollViewParams.addRule(RelativeLayout.ABOVE, bottomButton.getId());
+			scrollViewParams.addRule(RelativeLayout.ABOVE, deviceListButtonTableView.getId());
 		}
 		mTable.addView(scrollView(), scrollViewParams);
 
@@ -460,30 +457,50 @@ public class RelayControlActivity extends Activity{
 		return sView;
 	}
 
-	
-	public ImageView deviceListButton(){
+	//TODO
+	public TableRow deviceListButton(){
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
-		bottomButton = new ImageView(this);
-		bottomButton.setId(2);
+		// create a table view to layer the button
+		deviceListButtonTableView = new TableRow(this);
+		int id = View.generateViewId();
+		deviceListButtonTableView.setId(id);
+		deviceListButtonTableView.setBackgroundResource(R.drawable.animationxmldevicelist);
+
+
+		TextView bottomButtonText = new TextView(this);
+		//bottomButtonText.setLayoutParams(new LayoutParams(100,20));
+		bottomButtonText.setText(R.string.device_list);
+		bottomButtonText.setTextColor(Color.WHITE);
+		bottomButtonText.setTextSize(16);
+		bottomButtonText.setGravity(Gravity.CENTER);
+		bottomButtonText.setPadding(0,10,0,0);
+
+
+		//bottomButton = new ImageView(this);
+		//bottomButton.setId(2);
+
 		int buttonWidth = (int) (metrics.widthPixels)/4;
 		int buttonHeight = (int) (metrics.widthPixels)/8;
-		
+
+		deviceListButtonTableView.setLayoutParams(new LayoutParams(buttonWidth,buttonHeight));
+
+
 		if(currentapiVersion>=11){
-			bottomButton.setImageResource(R.drawable.animationxmldevicelist);
 			//bottomButton.setBackgroundResource(0);
 //			bottomButton.setMinimumHeight(120);
-			bottomButton.setLayoutParams(new LayoutParams(buttonWidth, buttonHeight));
+
 			//bottomButton.setBackgroundResource(R.drawable.bottom_bar);
 
-            saveButtonAnimation = (AnimationDrawable)bottomButton.getDrawable();
+            saveButtonAnimation = (AnimationDrawable)deviceListButtonTableView.getBackground();
             saveButtonAnimation.setEnterFadeDuration(1000);
             saveButtonAnimation.setExitFadeDuration(1000);
-			
-			bottomButton.setOnClickListener(new OnClickListener(){
+
+			deviceListButtonTableView.setOnClickListener(new OnClickListener(){
 
 				public void onClick(View v) {
+					System.out.println("Test click print");
 					Intent listView = new Intent(getApplicationContext(), DeviceListActivity.class);
 					startActivity(listView);
 					if(cPanel.connected == true){
@@ -496,15 +513,17 @@ public class RelayControlActivity extends Activity{
 			});
 			
 		}else{
-			bottomButton.setImageResource(R.drawable.bottom_bar_list);
+			deviceListButtonTableView.setBackgroundResource(R.drawable.bottom_bar_list);
 			//bottomButton.setBackgroundResource(0);
 //			bottomButton.setMinimumHeight(120);
-			bottomButton.setLayoutParams(new LayoutParams(buttonHeight, buttonHeight));
+			deviceListButtonTableView.setLayoutParams(new LayoutParams(buttonHeight, buttonHeight));
 			//bottomButton.setBackgroundResource(R.drawable.bottom_bar);
-			
-			bottomButton.setOnClickListener(new OnClickListener(){
+
+			deviceListButtonTableView.setOnClickListener(new OnClickListener(){
 
 				public void onClick(View v) {
+					System.out.println("Test click print2");
+
 					Intent listView = new Intent(getApplicationContext(), DeviceListActivity.class);
 					startActivity(listView);
 					if(cPanel.connected == true){
@@ -518,10 +537,13 @@ public class RelayControlActivity extends Activity{
 				
 			});
 		}
+
+		deviceListButtonTableView.addView(bottomButtonText);
+		deviceListButtonTableView.setPadding(0,0,0,10);
+
+
 		
-		
-		
-		return bottomButton;
+		return deviceListButtonTableView;
 	}
 
 
@@ -847,7 +869,7 @@ public class RelayControlActivity extends Activity{
 		tvSocketConnection = new TextView(this);
 		getDeviceInfo();
 		setContentView(mainViewTable());
-		System.out.println("Bottom Button Height"+bottomButton.getHeight());
+		System.out.println("Bottom Button Height"+deviceListButtonTableView.getHeight());
 		
 		if(currentapiVersion>=11){
 			saveButtonAnimation.start();
@@ -875,7 +897,7 @@ public class RelayControlActivity extends Activity{
 		}else{
 //			fusion = cPanel.checkFusion();
 		}
-		System.out.println("Bottom Button Height"+bottomButton.getHeight());
+		System.out.println("Bottom Button Height"+deviceListButtonTableView.getHeight());
 	}
 	
 	private void updateButtonText(int bankNumber) {
