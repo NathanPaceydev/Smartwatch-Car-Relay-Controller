@@ -4,12 +4,12 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/offbtn.png"
     },
     {
-        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/layout_relay_control.xml.flat",
-        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/relay_control.xml"
-    },
-    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-mdpi_icon.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/icon.png"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/layout_relay_control.xml.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/relay_control.xml"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-hdpi_bottom_bar.png.flat",
@@ -36,12 +36,12 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/bottom_bar.png"
     },
     {
-        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-hdpi_bottom_bar_add.png.flat",
-        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-hdpi/bottom_bar_add.png"
-    },
-    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable_icon.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/icon.png"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-hdpi_bottom_bar_add.png.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-hdpi/bottom_bar_add.png"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-ldpi_icon.png.flat",
@@ -60,12 +60,12 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/bottom_bar_button.png"
     },
     {
-        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-mdpi_blue_button_no_glow.png.flat",
-        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/blue_button_no_glow.png"
-    },
-    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-ldpi_animationxmlexit.xml.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-ldpi/animationxmlexit.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-mdpi_blue_button_no_glow.png.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/blue_button_no_glow.png"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-ldpi_bottom_bar_exit_dark.png.flat",
@@ -140,12 +140,12 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/mipmap-mdpi/launch_icon.png"
     },
     {
-        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/layout_admin_password.xml.flat",
-        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/admin_password.xml"
-    },
-    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-mdpi_bottom_bar_add.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/bottom_bar_add.png"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/layout_admin_password.xml.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/admin_password.xml"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-mdpi_magna_logo.png.flat",
@@ -192,16 +192,16 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-hdpi/ic_action_name.png"
     },
     {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-ldpi_bottom_bar_button.png.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-ldpi/bottom_bar_button.png"
+    },
+    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-mdpi_onbtn.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/onbtn.png"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-xhdpi_top_bar.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-xhdpi/top_bar.png"
-    },
-    {
-        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-ldpi_bottom_bar_button.png.flat",
-        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-ldpi/bottom_bar_button.png"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable_admin_background.png.flat",
@@ -332,20 +332,20 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-hdpi/background.png"
     },
     {
-        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-hdpi_spinner_box.png.flat",
-        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-hdpi/spinner_box.png"
-    },
-    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-mdpi_bottom_bar_add_dark.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/bottom_bar_add_dark.png"
     },
     {
-        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_name.png.flat",
-        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-xxhdpi/ic_action_name.png"
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-hdpi_spinner_box.png.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-hdpi/spinner_box.png"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-ldpi_bottom_bar_add_dark.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-ldpi/bottom_bar_add_dark.png"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_name.png.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-xxhdpi/ic_action_name.png"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-hdpi_bottom_bar_button_dark.png.flat",
@@ -376,12 +376,12 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/bottom_bar_list.png"
     },
     {
-        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-mdpi_animationxmlexit.xml.flat",
-        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/animationxmlexit.xml"
-    },
-    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-hdpi_bottom_bar_button.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-hdpi/bottom_bar_button.png"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable-mdpi_animationxmlexit.xml.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/animationxmlexit.xml"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/layout_titlebar.xml.flat",
@@ -504,12 +504,12 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-hdpi/animationxmlexit.xml"
     },
     {
-        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable_offbtn.png.flat",
-        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/offbtn.png"
-    },
-    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable_animationxmldevicelist.xml.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/animationxmldevicelist.xml"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/drawable_offbtn.png.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/offbtn.png"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/res/merged/debug/layout_network.xml.flat",

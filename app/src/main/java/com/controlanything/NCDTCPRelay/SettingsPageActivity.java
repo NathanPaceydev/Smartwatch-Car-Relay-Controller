@@ -892,7 +892,7 @@ public class SettingsPageActivity extends Activity{
 		inputSetupRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("A/D Setup");
+		tView.setText(R.string.a_or_d_setup);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -901,7 +901,7 @@ public class SettingsPageActivity extends Activity{
 		inputsSetupButton = new Button(this);
 		inputsSetupButton.setBackgroundResource(R.drawable.textbox);
 		inputsSetupButton.setTextColor(textColor);
-		inputsSetupButton.setText("Setup");
+		inputsSetupButton.setText(R.string.setup);
 		inputsSetupButton.setTextSize(subTextSize);
 		inputsSetupButton.setWidth(100);
 		inputsSetupButton.setOnClickListener(new OnClickListener(){
@@ -930,7 +930,7 @@ public class SettingsPageActivity extends Activity{
 		TableRow tRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Display Relays");
+		tView.setText(R.string.display_relays);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -972,7 +972,7 @@ public class SettingsPageActivity extends Activity{
 		TableRow tRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Display Macros");
+		tView.setText(R.string.display_macros);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -1007,7 +1007,7 @@ public class SettingsPageActivity extends Activity{
 		macroSetupRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Macro Setup");
+		tView.setText(R.string.macro_setup);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -1016,7 +1016,7 @@ public class SettingsPageActivity extends Activity{
 		macroSetupButton = new Button(this);
 		macroSetupButton.setBackgroundResource(R.drawable.textbox);
 		macroSetupButton.setTextColor(textColor);
-		macroSetupButton.setText("Setup");
+		macroSetupButton.setText(R.string.setup);
 		macroSetupButton.setTextSize(subTextSize);
 		macroSetupButton.setWidth(buttonWidth);
 		macroSetupButton.setOnClickListener(new OnClickListener(){
@@ -1045,7 +1045,7 @@ public class SettingsPageActivity extends Activity{
 //		numRelaysRow.setMinimumHeight(80);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Number of Relays");
+		tView.setText(R.string.number_of_relays);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -1090,7 +1090,7 @@ public class SettingsPageActivity extends Activity{
 		numPWMChannelsRow = new TableRow(this);
 		
 		TextView tView = new TextView(this);
-		tView.setText("Number of Channels ");
+		tView.setText(R.string.number_of_channels);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -1117,7 +1117,7 @@ public class SettingsPageActivity extends Activity{
 	private TableRow numberOfActuatorsRow(){
 		numActuatorsRow = new TableRow(this);
 		TextView tView = new TextView(this);
-		tView.setText("Number of Actuators ");
+		tView.setText(R.string.number_of_actuators);
 		tView.setTextColor(textColor);
 		tView.setTextSize(subTextSize);
 		tView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -1351,7 +1351,7 @@ public class SettingsPageActivity extends Activity{
 				relayNamesEditTextArray[i].setText(channelType+(i+1));
 			}
 			TextView tView1 = new TextView(this);
-			tView1.setText("Button is\n Momentary?");
+			tView1.setText(R.string.button_is_momentary);
 			tView1.setTextColor(Color.GREEN);
 			tView1.setTextSize(subTextSize);
 			tView1.setGravity(Gravity.RIGHT);

@@ -148,6 +148,18 @@
     <string name="lock_access">Lock Access</string>
     <string name="Lock_Access_Pin">Lock Access Pin</string>
     <string name="display_inputs">Display Inputs</string>
+    <string name="a_or_d_setup">A/D Setup</string>
+    <string name="setup">Setup</string>
+    <string name="display_relays">Display Relays</string>
+    <string name="display_macros">Display Macros</string>
+    <string name="macro_setup">Macro Setup</string>
+    <string name="number_of_relays">Number of Relays</string>
+    <string name="number_of_channels">\"Number of Channels \"</string>
+    <string name="number_of_actuators">\"Number of Actuators \"</string>
+    <string name="button_is_momentary">Button is\n Momentary?</string>
+
+    <!-- Device Setup String-->
+
 
 
 </resources>

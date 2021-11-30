@@ -1,6 +1,5 @@
 package com.controlanything.NCDTCPRelay;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -13,7 +12,6 @@ import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -36,6 +34,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -59,6 +58,7 @@ public class DeviceListActivity extends Activity{
 	//global views
 	//RelativeLayout titleTable;
 	ImageView bottomButton;
+	TableRow findDeviceTableView;
 	TextView startedTextView;
 	TextView bottomTextView;
 	ProgressDialog progressDialog;
@@ -110,12 +110,12 @@ public class DeviceListActivity extends Activity{
 		//mTable.setPadding(6);
 		//mTable.addView(title());
 		
-		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, 100);
+		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, 100);
 		bottomButtonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 		mTable.addView(findDevicesButton(), bottomButtonParams);
 		
 		RelativeLayout.LayoutParams bottomTextParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-		bottomTextParams.addRule(RelativeLayout.ABOVE, bottomButton.getId());
+		bottomTextParams.addRule(RelativeLayout.ABOVE, findDeviceTableView.getId());
 		mTable.addView(bottomText(), bottomTextParams);
 		
 		RelativeLayout.LayoutParams listViewParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.MATCH_PARENT);
@@ -177,17 +177,23 @@ public class DeviceListActivity extends Activity{
 	}*/
 
 // add device button
-	public ImageView findDevicesButton(){
+	public TableRow findDevicesButton(){
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
-		//setContentView(R.layout.add_button);
 
-		bottomButton = new ImageView(this);
-		int id = bottomButton.generateViewId();
-        bottomButton.setId(id);
+		// create a table view to layer the button
+		findDeviceTableView = new TableRow(this);
+		int id = View.generateViewId();
+		findDeviceTableView.setId(id);
+
+		//bottomButton = new ImageView(this);
+		//int id = bottomButton.generateViewId();
+        //bottomButton.setId(id);
 
         int buttonWidth = (int) (metrics.widthPixels)/4;
         int buttonHeight = (int) (metrics.widthPixels)/8;
+
+        findDeviceTableView.setLayoutParams(new LayoutParams(buttonWidth,buttonHeight));
 
 
         /*
@@ -216,24 +222,41 @@ public class DeviceListActivity extends Activity{
 		}else{
 
          */
-			bottomButton.setImageResource(R.drawable.device_setup);
-			bottomButton.setLayoutParams(new LayoutParams(buttonWidth,buttonHeight));
-			//bottomButton.set
-			//bottomButton.setBackgroundResource(R.drawable.bottom_bar);
+		TextView bottomButtonText = new TextView(this);
+		//bottomButtonText.setLayoutParams(new LayoutParams(100,20));
+		bottomButtonText.setText("Device Setup");
+		bottomButtonText.setTextColor(Color.WHITE);
+		bottomButtonText.setTextSize(16);
+		bottomButtonText.setGravity(Gravity.CENTER);
+		bottomButtonText.setPadding(0,10,0,0);
 
-			bottomButton.setOnClickListener(new OnClickListener(){
 
-				public void onClick(View v) {
-					adminAlertBuilder();
+		/*
+		bottomButtonText.setPadding(24,0,24,0);
+		bottomButton.setImageResource(R.drawable.admin_background);
+		bottomButton.setLayoutParams(new LayoutParams(buttonWidth,buttonHeight));
+		//bottomButton.add
+		//bottomButton.setBackgroundResource(R.drawable.bottom_bar);
 
-				}
-
-			});
-
+		bottomButton.setOnClickListener(new OnClickListener(){
+			public void onClick(View v) {
+				adminAlertBuilder();
+			}
+		});
 		//}
+ */
 
+		findDeviceTableView.setOnClickListener(new OnClickListener(){
+			public void onClick(View v) {
+				adminAlertBuilder();
+			}
+		});
 
-		return bottomButton;
+		findDeviceTableView.addView(bottomButtonText);
+		findDeviceTableView.setBackgroundResource(R.drawable.admin_background);
+		//findDeviceTableView.addView(bottomButton);
+
+		return findDeviceTableView;
 	}
 	
 	public TextView bottomText(){

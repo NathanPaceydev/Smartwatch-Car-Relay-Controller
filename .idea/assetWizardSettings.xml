@@ -64,6 +64,10 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="opacityPercent" value="80" />
+                                                <entry key="paddingPercent" value="-10" />
+                                                <entry key="text" value="Device Setup" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -75,6 +79,10 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="opacityPercent" value="80" />
+                                                <entry key="paddingPercent" value="-10" />
+                                                <entry key="text" value="Device Setup" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -84,10 +92,11 @@
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="assetType" value="TEXT" />
                                       <entry key="imageAsset" value="$PROJECT_DIR$/../Downloads/black.jpg" />
-                                      <entry key="outputName" value="speech_button" />
+                                      <entry key="outputName" value="device_setup_text" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="da291c" />
+                                      <entry key="themeColor" value="fdfdfd" />
                                     </map>
                                   </option>
                                 </PersistentState>
