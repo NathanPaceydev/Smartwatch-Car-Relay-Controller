@@ -110,7 +110,7 @@ public class DeviceListActivity extends Activity{
 		//mTable.setPadding(6);
 		//mTable.addView(title());
 		
-		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, 100);
+		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, 70);
 		bottomButtonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 		mTable.addView(findDevicesButton(), bottomButtonParams);
 		
@@ -224,8 +224,8 @@ public class DeviceListActivity extends Activity{
          */
 		TextView bottomButtonText = new TextView(this);
 		//bottomButtonText.setLayoutParams(new LayoutParams(100,20));
-		bottomButtonText.setText("Device Setup");
-		bottomButtonText.setTextColor(Color.WHITE);
+		bottomButtonText.setText(R.string.device_setup);
+		bottomButtonText.setTextColor(Color.rgb(255,204,204));
 		bottomButtonText.setTextSize(16);
 		bottomButtonText.setGravity(Gravity.CENTER);
 		bottomButtonText.setPadding(0,10,0,0);
@@ -254,6 +254,7 @@ public class DeviceListActivity extends Activity{
 
 		findDeviceTableView.addView(bottomButtonText);
 		findDeviceTableView.setBackgroundResource(R.drawable.admin_background);
+		findDeviceTableView.setPadding(0,0,0,10);
 		//findDeviceTableView.addView(bottomButton);
 
 		return findDeviceTableView;
