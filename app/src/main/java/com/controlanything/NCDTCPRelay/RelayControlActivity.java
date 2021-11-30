@@ -31,7 +31,9 @@ import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -338,7 +340,8 @@ public class RelayControlActivity extends Activity{
 
 				
 		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, 70);
-		bottomButtonParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		bottomButtonParams.addRule((RelativeLayout.ALIGN_PARENT_BOTTOM));
+
 		TableRow listButton = deviceListButton();
 		mTable.addView(listButton, bottomButtonParams);
 
