@@ -362,7 +362,7 @@ public class RelayControlActivity extends Activity{
 		RelativeLayout.LayoutParams scrollViewParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
 		scrollViewParams.addRule(RelativeLayout.ABOVE, titleTable.getId());
 		if(displayInputs || displayMacros){
-			scrollViewParams.addRule(RelativeLayout.ABOVE, bText.getId());
+			scrollViewParams.addRule(RelativeLayout.ABOVE, deviceListButtonTableView.getId());
 
 		}else{
 			scrollViewParams.addRule(RelativeLayout.ABOVE, deviceListButtonTableView.getId());

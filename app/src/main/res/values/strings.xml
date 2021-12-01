@@ -102,7 +102,7 @@
     <string name="relays_not_active">Relays Not Activated\nUse Relay Names to Activate</string>
     <string name="relays">Relays</string>
 
-    <string name="relay_active">, %s Activated</string>
+    <string name="relay_active"> %s Activated</string>
     <string name="connected">Connected</string>
     <string name="could_not_connect">Could Not Connect</string>
     <string name="got_this_IP">Got This IP back: %s</string>

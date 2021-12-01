@@ -731,10 +731,12 @@ public class SettingsPageActivity extends Activity{
 
 		lockConfigCheckBox = new CheckBox(this);
 		if (lockConfig){
-			lockConfigCheckBox.setChecked(true);
+			lockConfigCheckBox.setChecked(false);
+			//lockConfigCheckBox.setChecked(true);
 		}else{
 			lockConfigCheckBox.setChecked(false);
 		}
+
 		lockConfigCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener(){
 
 			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
@@ -746,6 +748,8 @@ public class SettingsPageActivity extends Activity{
 			}
 				
 			});
+
+
 			
 		tRow.addView(tView);
 		tRow.addView(lockConfigCheckBox);
@@ -801,6 +805,8 @@ public class SettingsPageActivity extends Activity{
 		}else{
 			lockAccessCheckBox.setChecked(false);
 		}
+
+
 		lockAccessCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener(){
 
 			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
@@ -810,8 +816,9 @@ public class SettingsPageActivity extends Activity{
 					lockAccessPinRow.setVisibility(View.GONE);
 				}
 			}
-				
+
 			});
+
 			
 		tRow.addView(tView);
 		tRow.addView(lockAccessCheckBox);
@@ -869,7 +876,8 @@ public class SettingsPageActivity extends Activity{
 		}else{
 			inputsCheckBox.setChecked(false);
 		}
-		inputsCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener(){
+
+		/*inputsCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener(){
 
 			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
 				if(arg1 == true){
@@ -880,6 +888,8 @@ public class SettingsPageActivity extends Activity{
 			}
 				
 			});
+
+		 */
 			
 		tRow.addView(tView);
 		tRow.addView(inputsCheckBox);
@@ -984,6 +994,8 @@ public class SettingsPageActivity extends Activity{
 		}else{
 			macrosCheckBox.setChecked(false);
 		}
+
+		/*
 		macrosCheckBox.setOnCheckedChangeListener(new OnCheckedChangeListener(){
 
 			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
@@ -996,6 +1008,8 @@ public class SettingsPageActivity extends Activity{
 			}
 			
 		});
+
+		 */
 		
 		tRow.addView(tView);
 		tRow.addView(macrosCheckBox);

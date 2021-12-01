@@ -592,8 +592,8 @@ public class DeviceListActivity extends Activity{
     			}
 
     	    	if(cPanel.getStoredString(infoSplit[1]).split(";")[13].equalsIgnoreCase("true")){
-    	    		configPassCodePrompt(infoSplit[1]);
-    	    		return true;
+    	    		//configPassCodePrompt(infoSplit[1]);
+    	    		//return true;
     	    	}else{
     	    		System.out.println("Passcode not enabeled");
     	    	}
@@ -1019,7 +1019,8 @@ public class DeviceListActivity extends Activity{
 			if(!cPanel.getStoredString(infoSplit[1]).split(";")[15].equalsIgnoreCase("true")){
 				switchToControlActivity(infoSplit[1]);
 			}else{
-				accessPassCodePrompt(infoSplit[1]);
+				//accessPassCodePrompt(infoSplit[1]);
+				switchToControlActivity(infoSplit[1]); // added for ease of use
 			}
 			
 			
