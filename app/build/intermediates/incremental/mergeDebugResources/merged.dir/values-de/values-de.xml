@@ -7,8 +7,9 @@
     <string name="ad_inputs">AD Eingänge</string>
     <string name="app_name">Magna</string>
     <string name="are_you_sure">Bist du sicher?</string>
+    <string name="bluetooth">Bluetooth</string>
     <string name="bottom_text_relays">%s</string>
-    <string name="button_is_momentary">Schaltfläche ist  Momentan?</string>
+    <string name="button_is_momentary">Schaltfläche ist \nMomentan?</string>
     <string name="cancel">Abbrechen</string>
     <string name="cancel_password">Abbrechen</string>
     <string name="click_and_hold">Klicken und halten Sie das Gerät zum Bearbeiten/Entfernen</string>
@@ -49,6 +50,7 @@
     <string name="lock_config">Konfiguration sperren</string>
     <string name="lock_config_pin">Konfigurationspin sperren</string>
     <string name="macro_setup">Makro-Setup</string>
+    <string name="network">Netzwerk</string>
     <string name="network_name">Netzwerkname</string>
     <string name="no">Nein</string>
     <string name="no_activity_message">Keine Aktivität aktiviert  muss Relais, Eingänge oder Makros auswählen</string>
@@ -56,9 +58,10 @@
     <string name="number_of_actuators">\\Anzahl der Aktoren \\</string>
     <string name="number_of_channels">\\Anzahl der Kanäle \\</string>
     <string name="number_of_relays">Anzahl der Relais</string>
-    <string name="password_hint">Geben Sie ein Passwort</string>
+    <string name="password_hint">" Passwort"</string>
     <string name="port_number">Port-Nummer</string>
     <string name="relay_active">%s Aktiviert</string>
+    <string name="relays">Relais</string>
     <string name="relays_not_active">Relais nicht aktiviert Verwenden Sie Relaisnamen zum Aktivieren</string>
     <string name="remote">Fern</string>
     <string name="remove">Entfernen</string>
@@ -66,13 +69,16 @@
     <string name="retry">Wiederholen</string>
     <string name="retry_connection">Verbindung erneut versuchen</string>
     <string name="retry_wifi_not_available">Verbindung erneut versuchen WLAN nicht verfügbar</string>
+    <string name="right_password">Richtiges Passwort</string>
     <string name="searching_lan_for_device">LAN nach Gerät suchen</string>
+    <string name="select_connection_type">Verbindungstyp Auswählen</string>
     <string name="service_name">Discovery-Dienstprogramm</string>
     <string name="setup">Setup</string>
     <string name="start">Anfang</string>
     <string name="submit_password">Einreichen</string>
     <string name="title_activity_hands">Hände</string>
     <string name="title_activity_macro_setup">Makro-Setup-Aktivität</string>
+    <string name="wrong_password">Falsches Passwort</string>
     <string name="yellow_title">"NCD TCP-Relais: Verbindung wird hergestellt.... "</string>
     <string name="yes">Ja</string>
 </resources>

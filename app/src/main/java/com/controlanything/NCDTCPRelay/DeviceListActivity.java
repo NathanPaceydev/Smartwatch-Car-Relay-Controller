@@ -434,11 +434,11 @@ public class DeviceListActivity extends Activity{
 				//if right password go to the device list activity
 				if(password.getText().toString().equals(passCodeWord)){
 					//test print Toast
-					Toast.makeText(DeviceListActivity.this, password.getText().toString()+"\nRight Password", Toast.LENGTH_SHORT).show();
+					Toast.makeText(DeviceListActivity.this, password.getText().toString()+getString(R.string.right_password), Toast.LENGTH_SHORT).show();
 					findDevicesAlertBuilder();
 				}else {
 					//test print Toast
-					Toast.makeText(DeviceListActivity.this, password.getText().toString() + "\nWrong password", Toast.LENGTH_SHORT).show();
+					Toast.makeText(DeviceListActivity.this, password.getText().toString() + getString(R.string.wrong_password), Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
@@ -450,7 +450,7 @@ public class DeviceListActivity extends Activity{
 
 	public void findDevicesAlertBuilder(){
 		AlertDialog.Builder aDialogBuilder = new AlertDialog.Builder(this);
-		aDialogBuilder.setTitle("Select Connection Type");
+		aDialogBuilder.setTitle(R.string.select_connection_type);
 		aDialogBuilder.setCancelable(true);
 		aDialogBuilder.setItems(R.array.connectionType, new DialogInterface.OnClickListener(){
 
@@ -471,7 +471,7 @@ public class DeviceListActivity extends Activity{
 			}
 			
 		});
-		aDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+		aDialogBuilder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
 
 			public void onClick(DialogInterface dialog, int which) {
 

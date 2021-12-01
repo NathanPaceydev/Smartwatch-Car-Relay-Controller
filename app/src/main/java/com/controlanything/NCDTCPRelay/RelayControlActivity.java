@@ -169,7 +169,7 @@ public class RelayControlActivity extends Activity{
 		speechText = speechText.toLowerCase();
 		//System.out.println(relayNames[0].toString());
 		int relayNumberActivated = -1;
-		String message= "Relays";
+		String message= getString(R.string.relays);
 
 		// loop through the relay names and se if the speech text contains the element
 		for(int i =0; i<relayNames.length; i++){

@@ -9,7 +9,7 @@
     <string name="bottom_text_relays">%s</string>
     <string name="green_title">NCD TCP-Relais: Verbunden</string>
     <string name="yellow_title">"NCD TCP-Relais: Verbindung wird hergestellt.... "</string>
-    <string name="password_hint">Geben Sie ein Passwort</string>
+    <string name="password_hint">" Passwort"</string>
     <string name="submit_password">Einreichen</string>
     <string name="cancel_password">Abbrechen</string>
     <string name="title_activity_hands">Hände</string>
@@ -72,7 +72,13 @@
     <string name="number_of_relays">Anzahl der Relais</string>
     <string name="number_of_channels">\\Anzahl der Kanäle \\</string>
     <string name="number_of_actuators">\\Anzahl der Aktoren \\</string>
-    <string name="button_is_momentary">Schaltfläche ist  Momentan?</string>
+    <string name="button_is_momentary">Schaltfläche ist \nMomentan?</string>
     <string name="device_setup">Geräte-Setup</string>
     <string name="device_list">Geräteliste</string>
+    <string name="relays">Relais</string>
+    <string name="right_password">Richtiges Passwort</string>
+    <string name="wrong_password">Falsches Passwort</string>
+    <string name="network">Netzwerk</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="select_connection_type">Verbindungstyp Auswählen</string>
 </resources>

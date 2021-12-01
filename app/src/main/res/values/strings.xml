@@ -72,18 +72,26 @@
         <item>PX3224</item>
         <item>PA6229</item>
     </string-array>
-    <string-array name="connectionType">
-        <item>Network</item>
-        <item>Bluetooth</item>
-    </string-array>
+
     <string-array name="menuOptions">
         <item>Export Settings</item>
         <item>Import Settings</item>
     </string-array>
+
     <string-array name="MacroAlertDialogOptions">
         <item>Edit</item>
         <item>Remove</item>
     </string-array>
+
+    <!-- For Find Device Alert Builder-->
+    <string name="network">Network</string>
+    <string name="bluetooth">Bluetooth</string>
+
+    <string-array name="connectionType">
+        <item>@string/network</item>
+        <item>@string/bluetooth</item>
+    </string-array>
+
 
     <string name="title_activity_hands">Hands</string>
     <string name="action_settings">Settings</string>
@@ -92,7 +100,9 @@
 
     <!-- Relay Control-->
     <string name="relays_not_active">Relays Not Activated\nUse Relay Names to Activate</string>
-    <string name="relay_active">%s Activated</string>
+    <string name="relays">Relays</string>
+
+    <string name="relay_active">, %s Activated</string>
     <string name="connected">Connected</string>
     <string name="could_not_connect">Could Not Connect</string>
     <string name="got_this_IP">Got This IP back: %s</string>
@@ -159,6 +169,10 @@
     <string name="button_is_momentary">Button is\n Momentary?</string>
     <string name="device_setup">Device Setup</string>
     <string name="device_list">Device List</string>
+    <string name="right_password">\nRight Password</string>
+    <string name="wrong_password">\nWrong password</string>
+    <string name="select_connection_type">Select Connection Type</string>
+
 
     <!-- Device Setup String-->
 

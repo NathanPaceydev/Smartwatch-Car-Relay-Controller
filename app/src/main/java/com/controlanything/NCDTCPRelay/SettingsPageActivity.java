@@ -1353,7 +1353,7 @@ public class SettingsPageActivity extends Activity{
 			TextView tView1 = new TextView(this);
 			tView1.setText(R.string.button_is_momentary);
 			tView1.setTextColor(Color.GREEN);
-			tView1.setTextSize(subTextSize);
+			tView1.setTextSize(10);
 			tView1.setGravity(Gravity.RIGHT);
 			tView1.setPadding(24,0,8,0);
 
