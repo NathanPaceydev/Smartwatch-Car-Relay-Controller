@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Magnate</string>
     <string name="hello">Ciao mondo, attività del relè NCDTCP!</string>
     <string name="NumberofRelays">Selezione</string>
     <string name="service_name">Utility Discovery.</string>
@@ -27,12 +26,12 @@
     <string name="cancel">Annulla</string>
     <string name="edit_or_remove">Modifica / Rimuovi</string>
     <string name="edit_or_remove_device">Modifica o rimuovi %s</string>
-    <string name="remove">Rimuovere</string>
+    <string name="remove">Togliere</string>
     <string name="are_you_sure">Sei sicuro?</string>
     <string name="remove_device">Rimuovi: %s</string>
-    <string name="yes">sì</string>
+    <string name="yes">Sì</string>
     <string name="no">No</string>
-    <string name="edit">Modificare</string>
+    <string name="edit">Modifica</string>
     <string name="getting_started">Iniziare</string>
     <string name="no_network_connection">Nessuna connessione di rete</string>
     <string name="start">Cominciare</string>

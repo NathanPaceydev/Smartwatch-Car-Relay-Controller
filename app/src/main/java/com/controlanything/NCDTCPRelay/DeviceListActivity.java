@@ -748,7 +748,7 @@ public class DeviceListActivity extends Activity{
     	final AlertDialog.Builder removeDeviceAlert = new AlertDialog.Builder(this);
     	removeDeviceAlert.setTitle(getString(R.string.edit_or_remove));
     	//removeDeviceAlert.setMessage("Edit or Remove: " + deviceName);
-		removeDeviceAlert.setMessage(getString(R.string.edit_or_remove_device,deviceName));
+		//removeDeviceAlert.setMessage(getString(R.string.edit_or_remove_device,deviceName));
 
     	removeDeviceAlert.setCancelable(true);
     	removeDeviceAlert.setPositiveButton(getString(R.string.remove), new DialogInterface.OnClickListener() {
@@ -757,7 +757,7 @@ public class DeviceListActivity extends Activity{
 			{
 
 				removeDeviceAlert.setTitle(getString(R.string.are_you_sure));
-				removeDeviceAlert.setMessage(getString(R.string.remove_device,deviceName));
+				//removeDeviceAlert.setMessage(getString(R.string.remove_device,deviceName));
 				removeDeviceAlert.setCancelable(true);
 
 				// ** remove device Yes Click **

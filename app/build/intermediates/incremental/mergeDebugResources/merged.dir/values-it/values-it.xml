@@ -6,7 +6,6 @@
     <string name="action_settings">Impostazioni</string>
     <string name="actuator">Attuatore</string>
     <string name="ad_inputs">Ingressi pubblicitari</string>
-    <string name="app_name">Magnate</string>
     <string name="are_you_sure">Sei sicuro?</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="button_is_momentary">Il pulsante è \n Momentary?</string>
@@ -32,7 +31,7 @@
     <string name="display_inputs">Visualizza ingressi</string>
     <string name="display_macros">Visualizza le macro</string>
     <string name="display_relays">Display Relè</string>
-    <string name="edit">Modificare</string>
+    <string name="edit">Modifica</string>
     <string name="edit_or_remove">Modifica / Rimuovi</string>
     <string name="edit_or_remove_device">Modifica o rimuovi %s</string>
     <string name="enter_name">Nome</string>
@@ -66,7 +65,7 @@
     <string name="relays">Relè</string>
     <string name="relays_not_active">Relè non attivato \n Utilizzare i nomi dei relè per attivare</string>
     <string name="remote">A distanza</string>
-    <string name="remove">Rimuovere</string>
+    <string name="remove">Togliere</string>
     <string name="remove_device">Rimuovi: %s</string>
     <string name="retry">Ricercare</string>
     <string name="retry_connection">Riprova connessione</string>
@@ -82,5 +81,5 @@
     <string name="title_activity_macro_setup">Attività di Config Macro</string>
     <string name="wrong_password">\n Password errata</string>
     <string name="yellow_title">NCD TCP Relay: collegamento ....</string>
-    <string name="yes">sì</string>
+    <string name="yes">Sì</string>
 </resources>
