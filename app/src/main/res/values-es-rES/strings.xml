@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Magna</string>
     <string name="hello">Hola mundo, NCDTCP RELAY ACTIVIDAD!</string>
     <string name="NumberofRelays">Selección</string>
     <string name="service_name">Utilidad de descubrimiento</string>
