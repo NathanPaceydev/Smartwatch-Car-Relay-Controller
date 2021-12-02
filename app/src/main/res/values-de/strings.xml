@@ -6,7 +6,6 @@
     <string name="service_name">Discovery-Dienstprogramm</string>
     <string name="find_device">"Gerät finden "</string>
     <string name="ad_inputs">AD Eingänge</string>
-    <string name="bottom_text_relays">%s</string>
     <string name="green_title">NCD TCP-Relais: Verbunden</string>
     <string name="yellow_title">"NCD TCP-Relais: Verbindung wird hergestellt.... "</string>
     <string name="password_hint">" Passwort"</string>

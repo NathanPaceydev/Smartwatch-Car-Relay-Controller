@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Dec 02 10:15:11 EST 2021
+#Thu Dec 02 11:30:49 EST 2021
 0.base=/home/nti/IORelay_TCP/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 0.path=fonts/neuropolxfree.ttf
 1.baseType=DIRECTORY
