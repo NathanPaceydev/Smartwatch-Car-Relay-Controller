@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Lock_Access_Pin">Bloccare il perno di accesso</string>
+    <string name="Lock_Access_Pin">Pin di accesso</string>
     <string name="NumberofRelays">Selezione</string>
     <string name="a_or_d_setup">Setup A/D</string>
     <string name="action_settings">Impostazioni</string>
+    <string name="actuator">Attuatore</string>
     <string name="ad_inputs">Ingressi pubblicitari</string>
     <string name="app_name">Magnate</string>
     <string name="are_you_sure">Sei sicuro?</string>
@@ -11,6 +12,7 @@
     <string name="button_is_momentary">Il pulsante è \n Momentary?</string>
     <string name="cancel">Annulla</string>
     <string name="cancel_password">Annulla</string>
+    <string name="channel">Canale</string>
     <string name="click_and_hold">clic lungo elemento \n per modificare/rimuovere</string>
     <string name="connected">Collegato</string>
     <string name="connecting">Collegamento</string>
@@ -20,8 +22,8 @@
     <string name="could_not_connect_remote">Impossibile connettere il telecomando</string>
     <string name="could_not_find_device">Impossibile trovare il dispositivo</string>
     <string name="default_IP_address">Indirizzo IP predefinito</string>
-    <string name="device_list">Elenco dei dispositivi</string>
-    <string name="device_name">Nome del dispositivo</string>
+    <string name="device_list">Indietro</string>
+    <string name="device_name">Nome</string>
     <string name="device_not_available">Dispositivo non disponibile</string>
     <string name="device_not_available_message">Dispositivo non disponibile locale o remoto</string>
     <string name="device_not_found">dispositivo non trovato locale</string>
@@ -29,11 +31,11 @@
     <string name="device_setup">Setup</string>
     <string name="display_inputs">Visualizza ingressi</string>
     <string name="display_macros">Visualizza le macro</string>
-    <string name="display_relays">Display relè.</string>
+    <string name="display_relays">Display Relè</string>
     <string name="edit">Modificare</string>
     <string name="edit_or_remove">Modifica / Rimuovi</string>
     <string name="edit_or_remove_device">Modifica o rimuovi %s</string>
-    <string name="enter_name">Inserisci il nome</string>
+    <string name="enter_name">Nome</string>
     <string name="enter_network">Inserisci rete</string>
     <string name="exit">Uscita</string>
     <string name="find_device">Trova il dispositivo</string>
@@ -46,8 +48,8 @@
     <string name="home_welcome_message">Benvenuti nel controller relè</string>
     <string name="local">Locale</string>
     <string name="lock_access">Blocca Accesso</string>
-    <string name="lock_config">Blocca la configurazione</string>
-    <string name="lock_config_pin">Bloccare il perno di configurazione</string>
+    <string name="lock_config">Blocca la Config</string>
+    <string name="lock_config_pin">Pin di Configurazione</string>
     <string name="macro_setup">Setup macro.</string>
     <string name="network">Rete</string>
     <string name="network_name">Nome della rete</string>
@@ -59,6 +61,7 @@
     <string name="number_of_relays">Numero di relè</string>
     <string name="password_hint">Inserisci password</string>
     <string name="port_number">Numero di porta</string>
+    <string name="relay">Relè</string>
     <string name="relay_active">" %s attivato"</string>
     <string name="relays">Relè</string>
     <string name="relays_not_active">Relè non attivato \n Utilizzare i nomi dei relè per attivare</string>
@@ -76,7 +79,7 @@
     <string name="start">Cominciare</string>
     <string name="submit_password">Invia</string>
     <string name="title_activity_hands">Mani</string>
-    <string name="title_activity_macro_setup">Attività di configurazione macro</string>
+    <string name="title_activity_macro_setup">Attività di Config Macro</string>
     <string name="wrong_password">\n Password errata</string>
     <string name="yellow_title">NCD TCP Relay: collegamento ....</string>
     <string name="yes">sì</string>

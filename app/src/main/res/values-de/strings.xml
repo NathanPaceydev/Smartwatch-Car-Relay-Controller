@@ -80,4 +80,7 @@
     <string name="network">Netzwerk</string>
     <string name="bluetooth">Bluetooth</string>
     <string name="select_connection_type">Verbindungstyp Auswählen</string>
+    <string name="relay">Relais</string>
+    <string name="channel">Sender</string>
+    <string name="actuator">Aktuator</string>
 </resources>

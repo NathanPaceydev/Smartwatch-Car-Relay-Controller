@@ -172,6 +172,9 @@
     <string name="right_password">\nRight Password</string>
     <string name="wrong_password">\nWrong password</string>
     <string name="select_connection_type">Select Connection Type</string>
+    <string name="relay">Relay</string>
+    <string name="channel">"Channel "</string>
+    <string name="actuator">"Actuator "</string>
 
 
     <!-- Device Setup String-->

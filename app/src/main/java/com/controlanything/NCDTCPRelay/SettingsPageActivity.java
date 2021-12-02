@@ -137,21 +137,21 @@ public class SettingsPageActivity extends Activity{
 		if(i.getStringExtra("PWM")!=null){
 			if(i.getStringExtra("PWM").equalsIgnoreCase("true")){
 				pwm = true;
-				channelType = "Channel ";
+				channelType = getString(R.string.channel);
 				Toast toast = Toast.makeText(getBaseContext(), "Device is PWM", Toast.LENGTH_LONG);
 				toast.show();
 			}else{
 				pwm = false;
-				channelType = "Relay ";
+				channelType = getString(R.string.relay) + " ";
 			}
 		}else{
 			pwm = false;
-			channelType = "Relay ";
+			channelType = getString(R.string.relay) + " ";
 		}
 		if(i.getStringExtra("ACTUATOR")!=null){
 			if(i.getStringExtra("ACTUATOR").equalsIgnoreCase("true")){
 				linearActuator = true;
-				channelType = "Actuator ";
+				channelType = getString(R.string.actuator);
 				Toast toast = Toast.makeText(getBaseContext(), "Device is Actuator", Toast.LENGTH_LONG);
 				toast.show();
 			}else{
@@ -275,16 +275,16 @@ public class SettingsPageActivity extends Activity{
 					{
 						if(storedSettingsSplit[9].equalsIgnoreCase("true")){
 							pwm = true;
-							channelType = "Channel ";
+							channelType = getString(R.string.channel);
 						}else{
 							pwm = false;
-							channelType = "Relay ";
+							channelType = getString(R.string.relay)+" ";
 						}
 					}
 					if(storedSettingsSplit.length > 10){
 						if(storedSettingsSplit[10].equalsIgnoreCase("true")){
 							linearActuator = true;
-							channelType = "Actuator ";
+							channelType = getString(R.string.actuator);
 						}else{
 							linearActuator = false;
 						}
@@ -325,6 +325,7 @@ public class SettingsPageActivity extends Activity{
 				}
 				
 				//Initialize gloabal view objects
+		// ** change flag **
 				relayNames = new String[numberOfRelays];
 				relayNamesEditTextArray = new EditText[numberOfRelays];
 				momentaryCheckBoxArray = new CheckBox[numberOfRelays];			

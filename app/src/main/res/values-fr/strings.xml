@@ -80,4 +80,7 @@
     <string name="right_password">\\n bon mot de passe</string>
     <string name="wrong_password">\\n mauvais mot de passe</string>
     <string name="select_connection_type">Sélectionnez le type de connexion</string>
+    <string name="actuator">Actionneur</string>
+    <string name="channel">"Chaîne "</string>
+    <string name="relay">Relais</string>
 </resources>
