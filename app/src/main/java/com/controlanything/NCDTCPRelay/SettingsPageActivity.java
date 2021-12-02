@@ -561,9 +561,9 @@ public class SettingsPageActivity extends Activity{
 		if(!pwm){
 			if(!linearActuator){
 				subTable.addView(displayInputsCheck());
-				subTable.addView(inputButtonRow());
+				//subTable.addView(inputButtonRow());
 				subTable.addView(displayMacrosCheck());
-				subTable.addView(macroButtonRow());
+				//subTable.addView(macroButtonRow());
 				subTable.addView(displayRelaysCheck());
 				subTable.addView(numberOfRelaysRow());
 				
@@ -897,7 +897,8 @@ public class SettingsPageActivity extends Activity{
 		return tRow;
 		
 	}
-	
+
+	/*
 	private TableRow inputButtonRow(){
 		inputSetupRow = new TableRow(this);
 		
@@ -934,6 +935,8 @@ public class SettingsPageActivity extends Activity{
 		
 		return inputSetupRow;
 	}
+
+	 */
 	
 	private TableRow displayRelaysCheck(){
 		
@@ -1016,7 +1019,8 @@ public class SettingsPageActivity extends Activity{
 		
 		return tRow;		
 	}
-	
+
+	/*
 	private TableRow macroButtonRow(){
 		macroSetupRow = new TableRow(this);
 		
@@ -1053,6 +1057,8 @@ public class SettingsPageActivity extends Activity{
 		
 		return macroSetupRow;
 	}
+
+	 */
 	
 	private TableRow numberOfRelaysRow(){
 		numRelaysRow = new TableRow(this);

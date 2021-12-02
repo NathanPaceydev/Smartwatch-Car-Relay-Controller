@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="NumberofRelays">Selezione</string>
+    <string name="ad_inputs">Ingressi AD</string>
+    <string name="app_name">Magna</string>
+    <string name="bottom_text_relays">%s</string>
+    <string name="find_device">Trova dispositivo</string>
+    <string name="green_title">Relè NCD TCP: Connesso</string>
+    <string name="hello">Ciao mondo, NCDTCPRelayActivity!</string>
+    <string name="password_hint">parola d\'ordine</string>
+    <string name="service_name">"Utilità di rilevamento "</string>
+    <string name="submit_password">Invia</string>
+    <string name="yellow_title">Relè NCD TCP: Connessione in corso....</string>
+</resources>

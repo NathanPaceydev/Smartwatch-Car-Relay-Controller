@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/nti/IORelay_TCP/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml",
+            "map": [
+                {
+                    "source": "/home/nti/IORelay_TCP/app/src/main/res/values-it/strings.xml",
+                    "from": {
+                        "startLines": "4,7,2,8,6,9,3,11,5,12,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "165,343,55,393,285,443,98,586,218,645,506",
+                        "endColumns": "52,49,42,49,57,62,66,58,66,49,79",
+                        "endOffsets": "213,388,93,438,338,501,160,640,280,690,581"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,108,158,201,251,309,372,439,498,565,615",
+                        "endColumns": "52,49,42,49,57,62,66,58,66,49,79",
+                        "endOffsets": "103,153,196,246,304,367,434,493,560,610,690"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Thu Dec 02 10:15:11 EST 2021
+0.base=/home/nti/IORelay_TCP/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+0.path=fonts/neuropolxfree.ttf
+1.baseType=DIRECTORY
+count=2
+1.path=classes.dex
+0.baseType=DIRECTORY
+1.set=DEX
+1.base=/home/nti/IORelay_TCP/app/build/intermediates/transforms/dexMerger/debug/0
+0.set=ASSET
