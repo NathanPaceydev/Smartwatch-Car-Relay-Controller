@@ -31,9 +31,7 @@ import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -199,47 +197,31 @@ public class RelayControlActivity extends Activity{
 
 
 	// method called for speech recogintion -> assumes click relay
-	public boolean clickRelay(final int relayNumber, final int bankNumber)
-	{
+	//TODO make momentary
+	public void clickRelay(final int relayNumber, final int bankNumber) {
 
-		if (momentaryIntArray[relayNumber] == 0) {
-			if (relayStatusArray[relayNumber] == 0) {
-				int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber - ((bankNumber-1)*8)), bankNumber));
-				if(returnedStatus[0] != 260){
-					myVib.vibrate(50);
+		System.out.println("***"+momentaryIntArray[relayNumber]+"***");
 
-					updateButtonTextFusion(bankNumber, returnedStatus);
-				}else{
-					changeTitleToRed();
-				}
-			}
-			else {
-				int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber - ((bankNumber-1)*8)), bankNumber));
 
-				if(returnedStatus[0] != 260){
-					myVib.vibrate(50);
-					updateButtonTextFusion(bankNumber, returnedStatus);
-				}
-				else{
-					changeTitleToRed();
-				}
+			int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber + ((bankNumber-1)*8)), bankNumber));
+			if(returnedStatus[0] != 260){
+				myVib.vibrate(50);
+				updateButtonTextFusion(bankNumber, returnedStatus);
 			}
 
-		}
-		else{
-				int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber - ((bankNumber-1)*8)), bankNumber));
-				if(returnedStatus[0] != 260){
-					myVib.vibrate(50);
-					updateButtonTextFusion(bankNumber, returnedStatus);
-				}
-				else{
-					changeTitleToRed();
-				}
+			int[] returnedStatus2 = (cPanel.TurnOffRelayFusion((relayNumber - ((bankNumber-1)*8)), bankNumber));
 
-		}
-				return false;
+			if(returnedStatus2[0] != 260){
+				myVib.vibrate(50);
+				updateButtonTextFusion(bankNumber, returnedStatus);
+			}
+
+
+
 
 	}
+
+
 
 
 

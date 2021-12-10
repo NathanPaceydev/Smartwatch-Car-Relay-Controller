@@ -1,0 +1,259 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.controlanything.NCDTCPRelay"
+4    android:versionCode="14"
+5    android:versionName="8.5.1" >
+6
+7    <uses-sdk
+7-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:7:5-43
+8        android:minSdkVersion="8"
+8-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:7:15-40
+9        android:targetSdkVersion="8" />
+9-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:7:5-43
+10
+11    <uses-permission android:name="android.permission.INTERNET" >
+11-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:9:5-10:23
+11-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:9:22-64
+12    </uses-permission>
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+13-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:11:5-12:23
+13-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:11:22-76
+14    </uses-permission>
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+15-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:13:5-14:23
+15-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:13:22-73
+16    </uses-permission>
+17    <uses-permission android:name="android.permission.VIBRATE" >
+17-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:15:5-16:23
+17-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:15:22-63
+18    </uses-permission>
+19    <uses-permission android:name="android.permission.BLUETOOTH" >
+19-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:17:5-18:23
+19-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:17:22-65
+20    </uses-permission>
+21    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" >
+21-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:19:5-20:23
+21-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:19:22-71
+22    </uses-permission>
+23    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+23-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:21:5-81
+23-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:21:22-78
+24    <uses-permission android:name="android:keepScreenOn=true" />
+24-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:22:5-65
+24-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:22:22-62
+25    <uses-permission android:name="android.permission.WAKE_LOCK" />
+25-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:23:5-68
+25-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:23:22-65
+26    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+26-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:24:5-71
+26-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:24:22-68
+27
+28    <application
+28-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:28:5-141:19
+29        android:name="com.controlanything.NCDTCPRelay.ControlPanel"
+29-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:29:9-68
+30        android:debuggable="true"
+31        android:icon="@mipmap/launch_icon"
+31-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:30:9-43
+32        android:label="@string/app_name"
+32-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:32:9-41
+33        android:supportsRtl="true"
+33-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:31:9-35
+34        android:testOnly="true" >
+35        <activity
+35-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:34:9-42:20
+36            android:name="com.controlanything.NCDTCPRelay.DeviceListActivity"
+36-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:35:13-78
+37            android:theme="@android:style/Theme.NoTitleBar" >
+37-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:36:13-60
+38            <intent-filter>
+38-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:37:13-41:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:38:17-69
+39-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:38:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:40:17-77
+41-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:40:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <receiver android:name="com.controlanything.NCDTCPRelay.CommandReceiver" >
+45-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:43:9-47:20
+45-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:43:19-50
+46            <intent-filter>
+46-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:44:13-46:29
+47                <action android:name="com.controlanything.NCDTCPRelay.CommandReceiver" />
+47-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:45:17-90
+47-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:45:25-87
+48            </intent-filter>
+49        </receiver>
+50
+51        <activity
+51-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:48:9-51:20
+52            android:name="com.controlanything.NCDTCPRelay.SettingsPageActivity"
+52-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:49:13-80
+53            android:theme="@android:style/Theme.NoTitleBar" >
+53-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:50:13-60
+54        </activity>
+55        <activity
+55-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:52:9-55:20
+56            android:name="com.controlanything.NCDTCPRelay.DiscoveryActivity"
+56-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:53:13-77
+57            android:theme="@android:style/Theme.NoTitleBar" >
+57-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:54:13-60
+58        </activity>
+59        <activity
+59-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:56:9-59:20
+60            android:name="com.controlanything.NCDTCPRelay.BluetoothDiscovery"
+60-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:57:13-78
+61            android:theme="@android:style/Theme.NoTitleBar" >
+61-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:58:13-60
+62        </activity>
+63        <activity
+63-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:60:9-64:20
+64            android:name="com.controlanything.NCDTCPRelay.RelayControlActivity"
+64-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:61:13-80
+65            android:screenOrientation="portrait"
+65-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:62:13-49
+66            android:theme="@android:style/Theme.NoTitleBar" >
+66-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:63:13-60
+67        </activity>
+68        <activity
+68-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:65:9-69:20
+69            android:name="com.controlanything.NCDTCPRelay.ADInputActivity"
+69-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:66:13-75
+70            android:screenOrientation="portrait"
+70-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:67:13-49
+71            android:theme="@android:style/Theme.NoTitleBar" >
+71-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:68:13-60
+72        </activity>
+73        <activity
+73-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:70:9-74:20
+74            android:name="com.controlanything.NCDTCPRelay.PWMControlActivity"
+74-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:71:13-78
+75            android:screenOrientation="portrait"
+75-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:72:13-49
+76            android:theme="@android:style/Theme.NoTitleBar" >
+76-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:73:13-60
+77        </activity>
+78        <activity
+78-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:75:9-79:20
+79            android:name="com.controlanything.NCDTCPRelay.LinearActuatorActivity"
+79-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:76:13-82
+80            android:screenOrientation="portrait"
+80-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:77:13-49
+81            android:theme="@android:style/Theme.NoTitleBar" >
+81-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:78:13-60
+82        </activity>
+83        <activity
+83-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:80:9-85:20
+84            android:name="com.controlanything.NCDTCPRelay.ADSetupActivity"
+84-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:81:13-75
+85            android:screenOrientation="portrait"
+85-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:82:13-49
+86            android:theme="@android:style/Theme.NoTitleBar"
+86-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:83:13-60
+87            android:windowSoftInputMode="adjustResize" >
+87-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:84:13-55
+88        </activity>
+89        <activity
+89-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:86:9-91:20
+90            android:name="com.controlanything.NCDTCPRelay.WiNetDeviceList"
+90-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:87:13-75
+91            android:screenOrientation="portrait"
+91-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:88:13-49
+92            android:theme="@android:style/Theme.NoTitleBar"
+92-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:89:13-60
+93            android:windowSoftInputMode="adjustResize" >
+93-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:90:13-55
+94        </activity>
+95        <activity
+95-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:92:9-96:20
+96            android:name="com.controlanything.NCDTCPRelay.Hands"
+96-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:93:13-65
+97            android:screenOrientation="portrait"
+97-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:94:13-49
+98            android:theme="@android:style/Theme.NoTitleBar" >
+98-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:95:13-60
+99        </activity>
+100
+101        <service
+101-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:98:9-101:19
+102            android:name="com.controlanything.NCDTCPRelay.DeviceComService"
+102-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:99:13-76
+103            android:enabled="true" >
+103-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:100:13-35
+104        </service>
+105        <service
+105-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:102:9-106:19
+106            android:name="com.controlanything.NCDTCPRelay.DiscoveryUtility"
+106-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:103:13-76
+107            android:enabled="true"
+107-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:104:13-35
+108            android:label="@string/service_name" >
+108-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:105:13-49
+109        </service>
+110        <service
+110-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:107:9-110:19
+111            android:name="com.controlanything.NCDTCPRelay.WebiDiscoveryService"
+111-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:108:13-80
+112            android:enabled="true" >
+112-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:109:13-35
+113        </service>
+114        <service
+114-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:111:9-115:19
+115            android:name="com.controlanything.NCDTCPRelay.FindDevice"
+115-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:112:13-70
+116            android:enabled="true"
+116-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:113:13-35
+117            android:label="@string/find_device" >
+117-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:114:13-48
+118        </service>
+119        <service
+119-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:98:9-101:19
+120            android:name="com.controlanything.NCDTCPRelay.DeviceComService"
+120-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:99:13-76
+121            android:enabled="true" >
+121-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:100:13-35
+122        </service>
+123        <service
+123-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:120:9-124:19
+124            android:name="com.controlanything.NCDTCPRelay.ADInputs"
+124-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:121:13-68
+125            android:enabled="true"
+125-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:122:13-35
+126            android:label="@string/ad_inputs" >
+126-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:123:13-46
+127        </service>
+128
+129        <activity
+129-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:126:9-130:20
+130            android:name="com.controlanything.NCDTCPRelay.MacroSetupActivity"
+130-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:127:13-78
+131            android:screenOrientation="portrait"
+131-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:128:13-49
+132            android:theme="@android:style/Theme.NoTitleBar" >
+132-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:129:13-60
+133        </activity>
+134        <activity
+134-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:131:9-135:20
+135            android:name="com.controlanything.NCDTCPRelay.MacroConfigurationActivity"
+135-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:132:13-86
+136            android:screenOrientation="portrait"
+136-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:133:13-49
+137            android:theme="@android:style/Theme.NoTitleBar" >
+137-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:134:13-60
+138        </activity>
+139        <activity
+139-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:136:9-140:20
+140            android:name="com.controlanything.NCDTCPRelay.MacroActivity"
+140-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:137:13-73
+141            android:screenOrientation="portrait"
+141-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:138:13-49
+142            android:theme="@android:style/Theme.NoTitleBar" >
+142-->/home/nti/IORelay_TCP/app/src/main/AndroidManifest.xml:139:13-60
+143        </activity>
+144    </application>
+145
+146</manifest>
