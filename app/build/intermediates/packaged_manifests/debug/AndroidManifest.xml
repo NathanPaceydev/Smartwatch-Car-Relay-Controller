@@ -57,6 +57,10 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
+            android:name="com.controlanything.NCDTCPRelay.SliderActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
             android:name="com.controlanything.NCDTCPRelay.BluetoothDiscovery"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>

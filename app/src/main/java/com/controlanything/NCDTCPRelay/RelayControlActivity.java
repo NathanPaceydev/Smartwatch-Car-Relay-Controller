@@ -32,6 +32,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -103,7 +104,6 @@ public class RelayControlActivity extends Activity{
 
 	//private ActivityMainBinding binding;
 	private static final int SPEECH_RECOGNIZER_REQUEST_CODE = 0;
-	private float tipPercent = .15f;
 
 
 	// method to show Toast messages on the main UI thread instead of locally
@@ -197,7 +197,7 @@ public class RelayControlActivity extends Activity{
 
 
 	// method called for speech recogintion -> assumes click relay
-	//TODO make momentary
+	// updated to momentary
 	public void clickRelay(final int relayNumber, final int bankNumber) {
 
 		System.out.println("***"+momentaryIntArray[relayNumber]+"***");
@@ -254,6 +254,8 @@ public class RelayControlActivity extends Activity{
 	public void getDeviceInfo(){
 		//Get device settings for its name and number of relays.
 		String[] deviceSettings = cPanel.getStoredString(deviceMacAddress).split(";");
+
+
 		if(deviceSettings[2].equalsIgnoreCase("Bluetooth")){
 			bluetooth = true;
 			btDeviceAddress = deviceMacAddress;
@@ -442,7 +444,7 @@ public class RelayControlActivity extends Activity{
 		return sView;
 	}
 
-	//TODO
+	//
 	public TableRow deviceListButton(){
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -606,6 +608,20 @@ public class RelayControlActivity extends Activity{
 			relayLabels[i].setMaxLines(1);
 			relayLabels[i].setLineSpacing(100, 100); // reduce the line spacing
 			relayLabels[i].setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.MATCH_PARENT));
+
+
+			final String relayName = relayLabels[i].getText().toString();
+
+			//TODO make this access the slider activity
+			// ** Work Area **
+			relayLabels[i].setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View view) {
+					System.out.println("Clicked "+ relayName);
+					SliderRelayBuilder(relayName);
+
+				}
+			});
 			
 			
 			
@@ -677,7 +693,20 @@ public class RelayControlActivity extends Activity{
 		return cTable;
 		
 	}
-	
+
+	// private method to call the slider view activity
+	//TODO work area
+	private void SliderRelayBuilder(String relayName) {
+		Intent intent = new Intent(this, SliderActivity.class);
+		intent.putExtra("RelayName",relayName);
+		intent.putExtra("MAC", deviceMacAddress);
+		startActivity(intent);
+
+	}
+
+
+
+
 	public ImageButton newButton(final int relayNumber, final int bankNumber){
 		final ImageButton relayButton = new ImageButton(this);
   		relayButton.setAdjustViewBounds(true);
@@ -861,6 +890,9 @@ public class RelayControlActivity extends Activity{
 		}
 		
 		String[] deviceInfo = cPanel.getStoredString(deviceMacAddress).split(";");
+
+		//System.out.println(" ***"+cPanel.getStoredString(deviceMacAddress));
+
 		if(deviceInfo[2].equalsIgnoreCase("Bluetooth")){
 			bluetooth = true;
 		}else{
@@ -1311,8 +1343,11 @@ public class RelayControlActivity extends Activity{
         if(progressDialog != null)
             progressDialog.dismiss();
     }
-    
-    public class MyGestureDetector extends SimpleOnGestureListener
+
+
+
+
+	public class MyGestureDetector extends SimpleOnGestureListener
     {
     	@Override
     	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY){

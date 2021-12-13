@@ -53,6 +53,12 @@
             android:name="com.controlanything.NCDTCPRelay.DiscoveryActivity"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
+
+        <activity
+            android:name="com.controlanything.NCDTCPRelay.SliderActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
         <activity
             android:name="com.controlanything.NCDTCPRelay.BluetoothDiscovery"
             android:theme="@android:style/Theme.NoTitleBar" >
@@ -113,6 +119,7 @@
             android:enabled="true"
             android:label="@string/find_device" >
         </service>
+
         <service
             android:name="com.controlanything.NCDTCPRelay.DeviceComService"
             android:enabled="true" >
