@@ -1,41 +1,132 @@
 package com.controlanything.NCDTCPRelay;
+import static java.lang.Math.abs;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 
 //TODO add functional code lol
 public class SliderActivity extends Activity{
 
-    ControlPanel cPanel;
-    String deviceMacAddressSlider;
+    // declare attributes
+    String deviceMacAddressSlider; // string for Mac address
+    private TextView relayNameTextView, movingTextView;
+    private SeekBar seekBar;
 
+    final int MAXTIME = 5000; // global time var
+    private boolean direction = true;
+    private float prog = 0;
+    private float progPrior = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // get the intents
         Intent intent = getIntent();
         String relayName = intent.getStringExtra("RelayName");
-        System.out.println("**Slider Activity **"+"\n"+relayName);
-
         deviceMacAddressSlider = intent.getStringExtra("MAC");
 
+        // print the intents
+        System.out.println("** Slider Activity **"+"\nName: "+relayName+"\nMAC: "+deviceMacAddressSlider);
+
+        // set the layout to slider_activity
         setContentView(R.layout.slider_activity);
 
-        //cPanel = ((ControlPanel)getApplicationContext());
-        //cPanel.connect(deviceMacAddressSlider); // TODO
-
         // get the relay name textview
-        final TextView relayNameTextView = (TextView) findViewById(R.id.relayName);
-        final ImageButton cancelButton = (ImageButton) findViewById(R.id.BackButton);
-        //change name to relayName
+        relayNameTextView = (TextView) findViewById(R.id.relayName);
+
+        movingTextView= (TextView) findViewById(R.id.movingText);
+
         relayNameTextView.setText(relayName);
 
+        // set the custom slider resources
+        final Drawable thumb = getResources().getDrawable(R.drawable.custom_thumb);
+        final Drawable thumb1 = getResources().getDrawable(R.drawable.custom_thumb1);
+
+        // get back button
+        final ImageButton cancelButton = (ImageButton) findViewById(R.id.BackButton);
+        seekBar = (SeekBar) findViewById(R.id.seekBar);
+        seekBar.setThumb(thumb1);
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            int lastprogress = 0;
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                prog = progress;
+                if(direction) {
+                    //seekBar.setThumb(thumb1);
+                    if (progress < lastprogress) {
+                        seekBar.setProgress(lastprogress);
+                    } else {
+                        lastprogress = progress;
+                        //direction = !direction;
+                    }
+                }
+                else{
+                    //seekBar.setThumb(thumb);
+                    if (progress > lastprogress) {
+                        seekBar.setProgress(lastprogress);
+                    } else {
+                        lastprogress = progress;
+                        //direction = !direction;
+                    }
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                if(prog != progPrior){
+                    movingTextView.setText("Started");
+                }
+                //   textView2.setText("" + 0);
+            }
+
+            @Override
+            public void onStopTrackingTouch(final SeekBar seekBar) {
+                if(prog != progPrior){
+                    direction = !direction;
+                    String movingText = "Moving to " + (int)((abs(prog)/4*100)) + "%";
+                    movingTextView.setText(movingText);
+                    //seekBar.setThumb(thumb);
+                }
+                //textView3.setText("" + direction);
+                //textView1.setText(""+ (int)(abs(prog-progPrior)/4*100) + "");
+                seekBar.setEnabled(false);
+                movingTextView.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        movingTextView.setText("Ready");
+                        // textView2.setText("" + (long) (MAXTIME*((abs(prog-progPrior)/4))));
+                        seekBar.getProgressDrawable().setColorFilter(Color.BLACK, android.graphics.PorterDuff.Mode.SRC_IN);
+                        progPrior = prog;
+                        seekBar.setEnabled(true);
+                        if(direction){
+                            seekBar.setThumb(thumb1);
+                            seekBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.magnaBlue), android.graphics.PorterDuff.Mode.SRC_IN);
+
+                        }
+                        else{
+                            seekBar.setThumb(thumb);
+                            seekBar.getProgressDrawable().setColorFilter(Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
+                        }
+                    }
+                }, (long) (MAXTIME*((abs(prog-progPrior)/4))));
+
+                //progPrior = prog;
+                //   runit((int)(prog/4));
+            }
+        });
+
+        // on click listener for back button
         cancelButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -45,116 +136,24 @@ public class SliderActivity extends Activity{
                 //DeviceListActivity.super.onBackPressed();//send back to home screen
             }
         });
-    }
-
-/*
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        //tvSocketConnection = new TextView(this);
-        getDeviceInfo();
-        setContentView(R.layout.slider_activity);
-        //setContentView(mainViewTable());
-        //System.out.println("Bottom Button Height"+deviceListButtonTableView.getHeight());
-
-        String[] deviceInfo = cPanel.getStoredString(deviceMacAddressSlider).split(";");
-
-        //System.out.println(" ***"+cPanel.getStoredString(deviceMacAddress));
-
-        if(deviceInfo[2].equalsIgnoreCase("Bluetooth")){
-            bluetooth = true;
-        }else{
-            bluetooth = false;
-        }
-
-        if(cPanel.connected == false){
-            if(bluetooth){
-                if(cPanel.connect(deviceMacAddressSlider) == false){
-                    System.out.println("Could not connect");
-                }
-            }else{
-                if(cPanel.connect(defaultIP, port) == false){
-                    System.out.println("Could not connect");
-                }
-            }
-
-//			fusion = cPanel.checkFusion();
-        }else{
-//			fusion = cPanel.checkFusion();
-        }
-    }
 
 
-    public void getDeviceInfo(){
-        //Get device settings for its name and number of relays.
-        System.out.println(deviceMacAddressSlider.toString());
-        String[] deviceSettings = cPanel.getStoredString(deviceMacAddressSlider).split(";");
-
-        System.out.println(" ***"+cPanel.getStoredString(deviceMacAddressSlider));
-
-
-        for (int i = 0; i<deviceSettings.length; i++)
-        {
-            System.out.println(deviceSettings[i]);
-        }
-
-
-
-        if(deviceSettings[2].equalsIgnoreCase("Bluetooth")){
-            bluetooth = true;
-            btDeviceAddress = deviceMacAddressSlider;
-        }else{
-            bluetooth = false;
-        }
-        numberOfRelays = Integer.parseInt(deviceSettings[3]);
-        deviceName = deviceSettings[4];
-        if(!bluetooth){
-            defaultIP = deviceSettings[1];
-            port = Integer.parseInt(deviceSettings[2]);
-        }
-
-
-        //Get Relay Names
-        relayNames = cPanel.getStoredString(deviceMacAddressSlider+"Names").split(";");
-
-        //Get button momentary or not.
-        String[] momentaryString = cPanel.getStoredString(deviceMacAddressSlider+"Momentary").split(";");
-        momentaryIntArray = new int[numberOfRelays];
-        for(int i = 0; i<momentaryString.length; i++){
-            if (momentaryString[i].equals("1")){
-//				System.out.println("momentaryString[i] = 1|0");
-                momentaryIntArray[i] = 1;
-            }else
-            {
-                momentaryIntArray[i] = 0;
-            }
-        }
-
-        if(deviceSettings[6].equalsIgnoreCase("true")){
-            displayInputs = true;
-        }else{
-            displayInputs = false;
-        }
-        if(deviceSettings.length > 8){
-            if(deviceSettings[8].equalsIgnoreCase("true")){
-                winet = true;
-                cPanel.winet = true;
-            }else{
-                cPanel.winet = false;
-            }
-        }else{
-            cPanel.winet = false;
-        }
-        if(deviceSettings[11].equalsIgnoreCase("true")){
-            displayMacros = true;
-        }
 
 
     }
 
- */
 
+    public void runit(int mf){
+        new java.util.Timer().schedule(
+                new java.util.TimerTask(){
+                    @Override
+                    public void run(){
+                        movingTextView.setText("Ended");
+                    }
+                },
+                (long) (MAXTIME*((abs(prog-progPrior)/4)))
+        );
+    }
 
 
 

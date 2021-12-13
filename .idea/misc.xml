@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/drawable-anydpi/device_setup_text.xml" value="0.75" />
         <entry key="app/src/main/res/drawable-anydpi/speech_button.xml" value="1.1611111111111112" />
         <entry key="app/src/main/res/drawable/admin_button.xml" value="1.1583333333333334" />
+        <entry key="app/src/main/res/drawable/custom_thumb.xml" value="1.7777777777777777" />
+        <entry key="app/src/main/res/drawable/custom_thumb1.xml" value="1.7777777777777777" />
         <entry key="app/src/main/res/drawable/device_setup_button.xml" value="1.1611111111111112" />
         <entry key="app/src/main/res/drawable/device_setup_new.xml" value="1.3416666666666666" />
         <entry key="app/src/main/res/layout-v21/slider_activity.xml" value="0.20969202898550723" />

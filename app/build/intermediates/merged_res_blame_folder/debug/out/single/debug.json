@@ -188,6 +188,10 @@
         "source": "/home/nti/IORelay_TCP/app/src/main/res/layout/action_item.xml"
     },
     {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/merged_res/debug/drawable_custom_thumb.xml.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/custom_thumb.xml"
+    },
+    {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/merged_res/debug/drawable_google_mic.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/google_mic.png"
     },
@@ -298,6 +302,10 @@
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/merged_res/debug/drawable-mdpi_textbox.png.flat",
         "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable-mdpi/textbox.png"
+    },
+    {
+        "merged": "/home/nti/IORelay_TCP/app/build/intermediates/merged_res/debug/drawable_custom_thumb1.xml.flat",
+        "source": "/home/nti/IORelay_TCP/app/src/main/res/drawable/custom_thumb1.xml"
     },
     {
         "merged": "/home/nti/IORelay_TCP/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.png.flat",
