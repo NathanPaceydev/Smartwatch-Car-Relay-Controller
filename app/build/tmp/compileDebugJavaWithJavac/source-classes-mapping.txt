@@ -1,21 +1,3 @@
-com/controlanything/NCDTCPRelay/ControlPanel.java
- com.controlanything.NCDTCPRelay.ControlPanel
- com.controlanything.NCDTCPRelay.ControlPanel$CycleRelays
- com.controlanything.NCDTCPRelay.ControlPanel$SendCommand
- com.controlanything.NCDTCPRelay.ControlPanel$SendCommandBT
- com.controlanything.NCDTCPRelay.ControlPanel$SendCommandWiNet
-com/controlanything/NCDTCPRelay/CommandReceiver.java
- com.controlanything.NCDTCPRelay.CommandReceiver
-com/controlanything/NCDTCPRelay/DiscoveryUtility.java
- com.controlanything.NCDTCPRelay.DiscoveryUtility
-com/controlanything/NCDTCPRelay/WebiDiscoveryService.java
- com.controlanything.NCDTCPRelay.WebiDiscoveryService
-com/controlanything/NCDTCPRelay/BuildConfig.java
- com.controlanything.NCDTCPRelay.BuildConfig
-com/controlanything/NCDTCPRelay/ActionObject.java
- com.controlanything.NCDTCPRelay.ActionObject
-com/controlanything/NCDTCPRelay/FindDevice.java
- com.controlanything.NCDTCPRelay.FindDevice
 com/controlanything/NCDTCPRelay/WiNetDeviceList.java
  com.controlanything.NCDTCPRelay.WiNetDeviceList
  com.controlanything.NCDTCPRelay.WiNetDeviceList$1
@@ -28,35 +10,14 @@ com/controlanything/NCDTCPRelay/EventListActivity.java
  com.controlanything.NCDTCPRelay.EventListActivity$3
  com.controlanything.NCDTCPRelay.EventListActivity$4
  com.controlanything.NCDTCPRelay.EventListActivity$5
-com/controlanything/NCDTCPRelay/RelayControlActivity.java
- com.controlanything.NCDTCPRelay.RelayControlActivity
- com.controlanything.NCDTCPRelay.RelayControlActivity$1
- com.controlanything.NCDTCPRelay.RelayControlActivity$1$1
- com.controlanything.NCDTCPRelay.RelayControlActivity$10
- com.controlanything.NCDTCPRelay.RelayControlActivity$11
- com.controlanything.NCDTCPRelay.RelayControlActivity$12
- com.controlanything.NCDTCPRelay.RelayControlActivity$13
- com.controlanything.NCDTCPRelay.RelayControlActivity$14
- com.controlanything.NCDTCPRelay.RelayControlActivity$15
- com.controlanything.NCDTCPRelay.RelayControlActivity$16
- com.controlanything.NCDTCPRelay.RelayControlActivity$17
- com.controlanything.NCDTCPRelay.RelayControlActivity$18
- com.controlanything.NCDTCPRelay.RelayControlActivity$19
- com.controlanything.NCDTCPRelay.RelayControlActivity$2
- com.controlanything.NCDTCPRelay.RelayControlActivity$20
- com.controlanything.NCDTCPRelay.RelayControlActivity$21
- com.controlanything.NCDTCPRelay.RelayControlActivity$22
- com.controlanything.NCDTCPRelay.RelayControlActivity$23
- com.controlanything.NCDTCPRelay.RelayControlActivity$24
- com.controlanything.NCDTCPRelay.RelayControlActivity$25
- com.controlanything.NCDTCPRelay.RelayControlActivity$3
- com.controlanything.NCDTCPRelay.RelayControlActivity$4
- com.controlanything.NCDTCPRelay.RelayControlActivity$5
- com.controlanything.NCDTCPRelay.RelayControlActivity$6
- com.controlanything.NCDTCPRelay.RelayControlActivity$7
- com.controlanything.NCDTCPRelay.RelayControlActivity$8
- com.controlanything.NCDTCPRelay.RelayControlActivity$9
- com.controlanything.NCDTCPRelay.RelayControlActivity$MyGestureDetector
+com/controlanything/NCDTCPRelay/DiscoveryUtility.java
+ com.controlanything.NCDTCPRelay.DiscoveryUtility
+com/controlanything/NCDTCPRelay/ADSetupActivity.java
+ com.controlanything.NCDTCPRelay.ADSetupActivity
+ com.controlanything.NCDTCPRelay.ADSetupActivity$1
+ com.controlanything.NCDTCPRelay.ADSetupActivity$2
+ com.controlanything.NCDTCPRelay.ADSetupActivity$MyGestureDetector
+ com.controlanything.NCDTCPRelay.ADSetupActivity$SpinnerListener
 com/controlanything/NCDTCPRelay/ActionAdapter.java
  com.controlanything.NCDTCPRelay.ActionAdapter
  com.controlanything.NCDTCPRelay.ActionAdapter$1
@@ -75,6 +36,8 @@ com/controlanything/NCDTCPRelay/MacroConfigurationActivity.java
  com.controlanything.NCDTCPRelay.MacroConfigurationActivity$7
  com.controlanything.NCDTCPRelay.MacroConfigurationActivity$8
  com.controlanything.NCDTCPRelay.MacroConfigurationActivity$9
+com/controlanything/NCDTCPRelay/FindDevice.java
+ com.controlanything.NCDTCPRelay.FindDevice
 com/controlanything/NCDTCPRelay/MacroActivity.java
  com.controlanything.NCDTCPRelay.MacroActivity
  com.controlanything.NCDTCPRelay.MacroActivity$1
@@ -133,6 +96,8 @@ com/controlanything/NCDTCPRelay/LinearActuatorActivity.java
  com.controlanything.NCDTCPRelay.LinearActuatorActivity$9
  com.controlanything.NCDTCPRelay.LinearActuatorActivity$MyGestureDetector
  com.controlanything.NCDTCPRelay.LinearActuatorActivity$seekBarListener
+com/controlanything/NCDTCPRelay/ActionObject.java
+ com.controlanything.NCDTCPRelay.ActionObject
 com/controlanything/NCDTCPRelay/PWMControlActivity.java
  com.controlanything.NCDTCPRelay.PWMControlActivity
  com.controlanything.NCDTCPRelay.PWMControlActivity$1
@@ -153,6 +118,8 @@ com/controlanything/NCDTCPRelay/PWMControlActivity.java
  com.controlanything.NCDTCPRelay.PWMControlActivity$8
  com.controlanything.NCDTCPRelay.PWMControlActivity$9
  com.controlanything.NCDTCPRelay.PWMControlActivity$seekBarListener
+com/controlanything/NCDTCPRelay/WebiDiscoveryService.java
+ com.controlanything.NCDTCPRelay.WebiDiscoveryService
 com/controlanything/NCDTCPRelay/MacroSetupActivity.java
  com.controlanything.NCDTCPRelay.MacroSetupActivity
  com.controlanything.NCDTCPRelay.MacroSetupActivity$1
@@ -208,12 +175,16 @@ com/controlanything/NCDTCPRelay/DiscoveryActivity.java
  com.controlanything.NCDTCPRelay.DiscoveryActivity$6
  com.controlanything.NCDTCPRelay.DiscoveryActivity$7
  com.controlanything.NCDTCPRelay.DiscoveryActivity$8
-com/controlanything/NCDTCPRelay/SliderActivity.java
- com.controlanything.NCDTCPRelay.SliderActivity
- com.controlanything.NCDTCPRelay.SliderActivity$1
- com.controlanything.NCDTCPRelay.SliderActivity$1$1
- com.controlanything.NCDTCPRelay.SliderActivity$2
- com.controlanything.NCDTCPRelay.SliderActivity$3
+com/controlanything/NCDTCPRelay/ControlPanel.java
+ com.controlanything.NCDTCPRelay.ControlPanel
+ com.controlanything.NCDTCPRelay.ControlPanel$CycleRelays
+ com.controlanything.NCDTCPRelay.ControlPanel$SendCommand
+ com.controlanything.NCDTCPRelay.ControlPanel$SendCommandBT
+ com.controlanything.NCDTCPRelay.ControlPanel$SendCommandWiNet
+com/controlanything/NCDTCPRelay/CommandReceiver.java
+ com.controlanything.NCDTCPRelay.CommandReceiver
+com/controlanything/NCDTCPRelay/BuildConfig.java
+ com.controlanything.NCDTCPRelay.BuildConfig
 com/controlanything/NCDTCPRelay/DeviceListActivity.java
  com.controlanything.NCDTCPRelay.DeviceListActivity
  com.controlanything.NCDTCPRelay.DeviceListActivity$1
@@ -236,9 +207,38 @@ com/controlanything/NCDTCPRelay/DeviceListActivity.java
  com.controlanything.NCDTCPRelay.DeviceListActivity$7
  com.controlanything.NCDTCPRelay.DeviceListActivity$8
  com.controlanything.NCDTCPRelay.DeviceListActivity$9
-com/controlanything/NCDTCPRelay/ADSetupActivity.java
- com.controlanything.NCDTCPRelay.ADSetupActivity
- com.controlanything.NCDTCPRelay.ADSetupActivity$1
- com.controlanything.NCDTCPRelay.ADSetupActivity$2
- com.controlanything.NCDTCPRelay.ADSetupActivity$MyGestureDetector
- com.controlanything.NCDTCPRelay.ADSetupActivity$SpinnerListener
+com/controlanything/NCDTCPRelay/RelayControlActivity.java
+ com.controlanything.NCDTCPRelay.RelayControlActivity
+ com.controlanything.NCDTCPRelay.RelayControlActivity$1
+ com.controlanything.NCDTCPRelay.RelayControlActivity$1$1
+ com.controlanything.NCDTCPRelay.RelayControlActivity$10
+ com.controlanything.NCDTCPRelay.RelayControlActivity$11
+ com.controlanything.NCDTCPRelay.RelayControlActivity$12
+ com.controlanything.NCDTCPRelay.RelayControlActivity$13
+ com.controlanything.NCDTCPRelay.RelayControlActivity$14
+ com.controlanything.NCDTCPRelay.RelayControlActivity$15
+ com.controlanything.NCDTCPRelay.RelayControlActivity$16
+ com.controlanything.NCDTCPRelay.RelayControlActivity$17
+ com.controlanything.NCDTCPRelay.RelayControlActivity$18
+ com.controlanything.NCDTCPRelay.RelayControlActivity$19
+ com.controlanything.NCDTCPRelay.RelayControlActivity$2
+ com.controlanything.NCDTCPRelay.RelayControlActivity$20
+ com.controlanything.NCDTCPRelay.RelayControlActivity$21
+ com.controlanything.NCDTCPRelay.RelayControlActivity$22
+ com.controlanything.NCDTCPRelay.RelayControlActivity$23
+ com.controlanything.NCDTCPRelay.RelayControlActivity$24
+ com.controlanything.NCDTCPRelay.RelayControlActivity$25
+ com.controlanything.NCDTCPRelay.RelayControlActivity$3
+ com.controlanything.NCDTCPRelay.RelayControlActivity$4
+ com.controlanything.NCDTCPRelay.RelayControlActivity$5
+ com.controlanything.NCDTCPRelay.RelayControlActivity$6
+ com.controlanything.NCDTCPRelay.RelayControlActivity$7
+ com.controlanything.NCDTCPRelay.RelayControlActivity$8
+ com.controlanything.NCDTCPRelay.RelayControlActivity$9
+ com.controlanything.NCDTCPRelay.RelayControlActivity$MyGestureDetector
+com/controlanything/NCDTCPRelay/SliderActivity.java
+ com.controlanything.NCDTCPRelay.SliderActivity
+ com.controlanything.NCDTCPRelay.SliderActivity$1
+ com.controlanything.NCDTCPRelay.SliderActivity$1$1
+ com.controlanything.NCDTCPRelay.SliderActivity$2
+ com.controlanything.NCDTCPRelay.SliderActivity$3

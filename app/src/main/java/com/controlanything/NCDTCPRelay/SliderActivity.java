@@ -3,6 +3,7 @@ import static java.lang.Math.abs;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -16,15 +17,26 @@ import android.widget.TextView;
 //TODO add functional code lol
 public class SliderActivity extends Activity{
 
+    final int MAXTIME = 5000; // global time var
+
     // declare attributes
     String deviceMacAddressSlider; // string for Mac address
     private TextView relayNameTextView, movingTextView;
     private SeekBar seekBar;
 
-    final int MAXTIME = 5000; // global time var
-    private boolean direction = true;
-    private float prog = 0;
-    private float progPrior = 0;
+    // Strings for Key down saves
+    private final String KEY_SEEKBARLOCATION = "seekBarLocation";
+    private final String KEY_PROG = "progress";
+    private final String KEY_PRORPRIOR = "priorProgress";
+    private final String KEY_DIRECTION = "savedDirection";
+    public String SHARED_PREFS = "sharedPrefs";
+
+    // declare variables
+    private int sliderProgress;
+    private boolean direction;
+    private float prog;
+    private float progPrior;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +45,8 @@ public class SliderActivity extends Activity{
         // get the intents
         Intent intent = getIntent();
         String relayName = intent.getStringExtra("RelayName");
+        SHARED_PREFS = relayName;
+
         deviceMacAddressSlider = intent.getStringExtra("MAC");
 
         // print the intents
@@ -57,23 +71,37 @@ public class SliderActivity extends Activity{
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         seekBar.setThumb(thumb1);
 
+        loadData();
+        updateViews();
+
+        if(direction){
+            seekBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.magnaBlue), android.graphics.PorterDuff.Mode.SRC_IN);
+            seekBar.setThumb(thumb1);
+        }
+        else{
+            seekBar.getProgressDrawable().setColorFilter(Color.RED, android.graphics.PorterDuff.Mode.SRC_IN);
+            seekBar.setThumb(thumb);
+        }
+
+
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            int lastprogress = 0;
+            int lastprogress = (int)progPrior;
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 prog = progress;
                 if(direction) {
                     //seekBar.setThumb(thumb1);
-                    if (progress < lastprogress) {
+                    if (progress <= lastprogress) {
                         seekBar.setProgress(lastprogress);
                     } else {
                         lastprogress = progress;
+
                         //direction = !direction;
                     }
                 }
                 else{
                     //seekBar.setThumb(thumb);
-                    if (progress > lastprogress) {
+                    if (progress >= lastprogress) {
                         seekBar.setProgress(lastprogress);
                     } else {
                         lastprogress = progress;
@@ -126,21 +154,51 @@ public class SliderActivity extends Activity{
             }
         });
 
+        System.out.println(prog +", " + progPrior + ", " + direction + ", " + seekBar.getProgress());
+
+
         // on click listener for back button
         cancelButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
                 Intent relayControl = new Intent(getApplicationContext(), RelayControlActivity.class);
                 startActivity(relayControl);
+                saveData();
                 finish();
                 //DeviceListActivity.super.onBackPressed();//send back to home screen
             }
         });
 
 
+    }
 
+
+    public void saveData(){
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        System.out.println("SAVED " + prog +", " + progPrior + ", " + direction + ", " + seekBar.getProgress());
+
+        editor.putInt(KEY_SEEKBARLOCATION, seekBar.getProgress());
+        editor.putFloat(KEY_PROG, prog);
+        editor.putFloat(KEY_PRORPRIOR, progPrior);
+        editor.putBoolean(KEY_DIRECTION, direction);
+        editor.apply();
+    }
+
+    public void loadData(){
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        sliderProgress = sharedPreferences.getInt(KEY_SEEKBARLOCATION, 0);
+        prog = sharedPreferences.getFloat(KEY_PROG, 0);
+        progPrior = sharedPreferences.getFloat(KEY_PRORPRIOR, 0);
+        direction = sharedPreferences.getBoolean(KEY_DIRECTION,true);
 
     }
+
+    public void updateViews(){
+        seekBar.setProgress(sliderProgress);
+    }
+
 
 
     public void runit(int mf){
