@@ -1187,7 +1187,7 @@ public class ControlPanel extends Application {
 	}
 
 	public int[] TurnOnRelayFusion(int relay, int bank){
-		System.out.println("turnoffrelayfusion");
+		System.out.println("turnonrelayfusion");
 		int[] fail = {260, 260};
 
 		Byte[] command = new Byte[6];
@@ -1491,6 +1491,7 @@ public class ControlPanel extends Application {
 			try {
 				byte[] byteBankStatus = (new SendCommandBT().execute(command).get());
 				if(byteBankStatus == null || byteBankStatus.length != 5){
+					/*
 					try {
 						if(btSocket != null){
 							btSocket.close();
@@ -1500,6 +1501,8 @@ public class ControlPanel extends Application {
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
+
+					 */
 					return fail;
 				}
 				if(byteBankStatus.length > 2){

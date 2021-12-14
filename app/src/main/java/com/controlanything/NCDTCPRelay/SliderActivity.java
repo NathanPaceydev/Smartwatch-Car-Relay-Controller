@@ -158,7 +158,9 @@ public class SliderActivity extends Activity{
                     public void run() {
                         movingTextView.setText("Ready");
 
-                        //clickRelay(relayNumber,BANKNUMBER);//TODO make work
+                        if(prog != progPrior) {
+                            clickRelay(relayNumber, BANKNUMBER);//TODO make work
+                        }
 
                         // textView2.setText("" + (long) (MAXTIME*((abs(prog-progPrior)/4))));
                         seekBar.getProgressDrawable().setColorFilter(Color.BLACK, android.graphics.PorterDuff.Mode.SRC_IN);
