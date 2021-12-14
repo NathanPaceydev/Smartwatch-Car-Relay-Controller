@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/slider_background"
+    android:background="@drawable/lift_gate_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -59,12 +59,12 @@
 
     <ImageButton
         android:id="@+id/BackButton"
-        android:layout_width="135dp"
-        android:layout_height="29dp"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="0dp"
-        android:background="@drawable/bottom_bar_exit"
+        android:background="@drawable/back_button"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </RelativeLayout>

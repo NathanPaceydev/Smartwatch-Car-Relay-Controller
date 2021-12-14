@@ -24,7 +24,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="/tmp/baseline_mic_none_24.xml" />
+                                                <entry key="imagePath" value="/tmp/baseline_keyboard_backspace_24.xml" />
                                                 <entry key="opacityPercent" value="80" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
@@ -37,7 +37,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="file:$PROJECT_DIR$/../Android/Sdk/icons/material/materialicons/mic_none/baseline_mic_none_24.xml" />
+                                                <entry key="url" value="file:$PROJECT_DIR$/../Android/Sdk/icons/material/materialicons/keyboard_backspace/baseline_keyboard_backspace_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -92,9 +92,8 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="assetType" value="TEXT" />
                                       <entry key="imageAsset" value="$PROJECT_DIR$/../Downloads/black.jpg" />
-                                      <entry key="outputName" value="device_setup_text" />
+                                      <entry key="outputName" value="back_button" />
                                       <entry key="theme" value="CUSTOM" />
                                       <entry key="themeColor" value="fdfdfd" />
                                     </map>

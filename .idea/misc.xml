@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-anydpi/back_button.xml" value="1.35" />
         <entry key="app/src/main/res/drawable-anydpi/device_setup_text.xml" value="0.75" />
         <entry key="app/src/main/res/drawable-anydpi/speech_button.xml" value="1.1611111111111112" />
         <entry key="app/src/main/res/drawable/admin_button.xml" value="1.1583333333333334" />

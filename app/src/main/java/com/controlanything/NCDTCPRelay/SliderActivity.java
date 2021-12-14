@@ -202,10 +202,7 @@ public class SliderActivity extends Activity{
     }
 
 
-
-    // TODO
-    // fake button click method
-    // method called for speech recogintion -> assumes click relay
+    // fake button click method. Method called for speech recogintion -> assumes click relay
     // updated to momentary
     public void clickRelay(final int relayNumber, final int bankNumber) {
 
@@ -217,77 +214,21 @@ public class SliderActivity extends Activity{
         int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber + ((bankNumber-1)*8)), bankNumber));
         if(returnedStatus[0] != 260){
             //myVib.vibrate(50);
-            updateButtonTextFusion(bankNumber, returnedStatus);
+            //updateButtonTextFusion(bankNumber, returnedStatus);
         }
 
         int[] returnedStatus2 = (cPanel.TurnOffRelayFusion((relayNumber - ((bankNumber-1)*8)), bankNumber));
 
         if(returnedStatus2[0] != 260){
             //myVib.vibrate(50);
-            updateButtonTextFusion(bankNumber, returnedStatus);
+            //updateButtonTextFusion(bankNumber, returnedStatus);
         }
 
     }
 
 
 
-// TODO GOD Help pls
-    // might not be needed
-    private void updateButtonTextFusion(int bankNumber, int[] status) {
-
-        if(status != null){
-
-            if(numberOfRelays < 8){
-
-                for(int i = 0; i < numberOfRelays; i++){
-                    relayStatusArray[i+((bankNumber-1)*8)] = status[i];
-                }
-
-                for (int i = 0; i < numberOfRelays; i++) {
-
-                    if (relayStatusArray[i+((bankNumber-1)*8)] != 0){
-                        //relayButtons[i + ((bankNumber-1)*8)].setImageResource(R.drawable.blue_button_no_glow);
-
-                    }
-                    else {
-                        //relayButtons[i + ((bankNumber-1)*8)].setImageResource(R.drawable.button_dead);
-                    }
-                }
-
-            }else{
-
-                for(int i = 0; i < 8; i++){
-                    relayStatusArray[i+((bankNumber-1)*8)] = status[i];
-                }
-
-                for (int i = 0; i < 8; i++) {
-
-                    if (relayStatusArray[i+((bankNumber-1)*8)] != 0){
-                        //relayButtons[i + ((bankNumber-1)*8)].setImageResource(R.drawable.blue_button_no_glow);
-
-                    }
-                    else {
-                        //relayButtons[i + ((bankNumber-1)*8)].setImageResource(R.drawable.button_dead);
-                    }
-                }
-
-            }
-
-            System.out.println("Current relay's status "+Arrays.toString(relayStatusArray));
-        }else{
-            //changeTitleToRed();
-        }
-    }
-
-    public void changeTitleToRed(){
-        System.out.println("Connection Lost");
-    }
-
-
-
-
-
-        public void saveData(){
+    public void saveData(){
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -300,6 +241,7 @@ public class SliderActivity extends Activity{
         editor.apply();
     }
 
+
     public void loadData(){
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         sliderProgress = sharedPreferences.getInt(KEY_SEEKBARLOCATION, 0);
@@ -309,10 +251,10 @@ public class SliderActivity extends Activity{
 
     }
 
+
     public void updateViews(){
         seekBar.setProgress(sliderProgress);
     }
-
 
 
     public void runit(int mf){
@@ -326,8 +268,6 @@ public class SliderActivity extends Activity{
                 (long) (MAXTIME*((abs(prog-progPrior)/4)))
         );
     }
-
-
 
 
 }

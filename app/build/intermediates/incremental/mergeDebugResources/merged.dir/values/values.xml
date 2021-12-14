@@ -69,8 +69,8 @@
     <color name="black">#000000</color>
     <color name="darkGray">#999999</color>
     <color name="green">#98CA3C</color>
-    <color name="magnaBlue">#00BCD4</color>
-    <color name="magnaRed">#F44336</color>
+    <color name="magnaBlue">#FF03DAC5</color>
+    <color name="magnaRed">#FFDA291C</color>
     <color name="opaque_red">#f00</color>
     <color name="red">#EF382B</color>
     <color name="teal_200">#00BCD4</color>
