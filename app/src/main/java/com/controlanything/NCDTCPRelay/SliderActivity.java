@@ -7,17 +7,21 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 
 //TODO add functional code lol
 public class SliderActivity extends Activity{
 
     final int MAXTIME = 5000; // global time var
+    final int BANKNUMBER = 1; // weird number that makes relay work
 
     // declare attributes
     String deviceMacAddressSlider; // string for Mac address
@@ -37,17 +41,31 @@ public class SliderActivity extends Activity{
     private float prog;
     private float progPrior;
 
+    String[] relayNames;
+    ControlPanel cPanel;
+    private Vibrator myVib;
+    int numberOfRelays;
+    public int[] relayStatusArray;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        cPanel = ((ControlPanel)getApplicationContext());
+
+        relayStatusArray = new int [numberOfRelays];
+
 
         // get the intents
         Intent intent = getIntent();
         String relayName = intent.getStringExtra("RelayName");
         SHARED_PREFS = relayName;
 
-        deviceMacAddressSlider = intent.getStringExtra("MAC");
+        deviceMacAddressSlider = intent.getStringExtra("MAC"); //get the MAC address
+        final int relayNumber = intent.getIntExtra("RelayNumber",-1);
+
 
         // print the intents
         System.out.println("** Slider Activity **"+"\nName: "+relayName+"\nMAC: "+deviceMacAddressSlider);
@@ -114,6 +132,8 @@ public class SliderActivity extends Activity{
             public void onStartTrackingTouch(SeekBar seekBar) {
                 if(prog != progPrior){
                     movingTextView.setText("Started");
+
+                    //clickRelay(relayNumber,BANKNUMBER);
                 }
                 //   textView2.setText("" + 0);
             }
@@ -124,15 +144,22 @@ public class SliderActivity extends Activity{
                     direction = !direction;
                     String movingText = "Moving to " + (int)((abs(prog)/4*100)) + "%";
                     movingTextView.setText(movingText);
+
+                    // TODO make this  work dawg
+                    clickRelay(relayNumber,BANKNUMBER);
                     //seekBar.setThumb(thumb);
                 }
                 //textView3.setText("" + direction);
                 //textView1.setText(""+ (int)(abs(prog-progPrior)/4*100) + "");
                 seekBar.setEnabled(false);
+
                 movingTextView.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         movingTextView.setText("Ready");
+
+                        //clickRelay(relayNumber,BANKNUMBER);//TODO make work
+
                         // textView2.setText("" + (long) (MAXTIME*((abs(prog-progPrior)/4))));
                         seekBar.getProgressDrawable().setColorFilter(Color.BLACK, android.graphics.PorterDuff.Mode.SRC_IN);
                         progPrior = prog;
@@ -173,7 +200,92 @@ public class SliderActivity extends Activity{
     }
 
 
-    public void saveData(){
+
+    // TODO
+    // fake button click method
+    // method called for speech recogintion -> assumes click relay
+    // updated to momentary
+    public void clickRelay(final int relayNumber, final int bankNumber) {
+
+        System.out.println("*** ClICKED ***"); // test print
+
+        System.out.println("***"+relayNumber+"***"); // test print
+
+
+        int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber + ((bankNumber-1)*8)), bankNumber));
+        if(returnedStatus[0] != 260){
+            //myVib.vibrate(50);
+            updateButtonTextFusion(bankNumber, returnedStatus);
+        }
+
+        int[] returnedStatus2 = (cPanel.TurnOffRelayFusion((relayNumber - ((bankNumber-1)*8)), bankNumber));
+
+        if(returnedStatus2[0] != 260){
+            //myVib.vibrate(50);
+            updateButtonTextFusion(bankNumber, returnedStatus);
+        }
+
+    }
+
+
+
+// TODO GOD Help pls
+    // might not be needed
+    private void updateButtonTextFusion(int bankNumber, int[] status) {
+
+        if(status != null){
+
+            if(numberOfRelays < 8){
+
+                for(int i = 0; i < numberOfRelays; i++){
+                    relayStatusArray[i+((bankNumber-1)*8)] = status[i];
+                }
+
+                for (int i = 0; i < numberOfRelays; i++) {
+
+                    if (relayStatusArray[i+((bankNumber-1)*8)] != 0){
+                        //relayButtons[i + ((bankNumber-1)*8)].setImageResource(R.drawable.blue_button_no_glow);
+
+                    }
+                    else {
+                        //relayButtons[i + ((bankNumber-1)*8)].setImageResource(R.drawable.button_dead);
+                    }
+                }
+
+            }else{
+
+                for(int i = 0; i < 8; i++){
+                    relayStatusArray[i+((bankNumber-1)*8)] = status[i];
+                }
+
+                for (int i = 0; i < 8; i++) {
+
+                    if (relayStatusArray[i+((bankNumber-1)*8)] != 0){
+                        //relayButtons[i + ((bankNumber-1)*8)].setImageResource(R.drawable.blue_button_no_glow);
+
+                    }
+                    else {
+                        //relayButtons[i + ((bankNumber-1)*8)].setImageResource(R.drawable.button_dead);
+                    }
+                }
+
+            }
+
+            System.out.println("Current relay's status "+Arrays.toString(relayStatusArray));
+        }else{
+            //changeTitleToRed();
+        }
+    }
+
+    public void changeTitleToRed(){
+        System.out.println("Connection Lost");
+    }
+
+
+
+
+
+        public void saveData(){
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 

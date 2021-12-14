@@ -195,12 +195,12 @@ public class RelayControlActivity extends Activity{
 
 
 
-
+	// fake button click method
 	// method called for speech recogintion -> assumes click relay
 	// updated to momentary
 	public void clickRelay(final int relayNumber, final int bankNumber) {
 
-		System.out.println("***"+momentaryIntArray[relayNumber]+"***");
+		System.out.println("***"+momentaryIntArray[relayNumber]+"***"); // test print
 
 
 			int[] returnedStatus = (cPanel.TurnOnRelayFusion((relayNumber + ((bankNumber-1)*8)), bankNumber));
@@ -215,8 +215,6 @@ public class RelayControlActivity extends Activity{
 				myVib.vibrate(50);
 				updateButtonTextFusion(bankNumber, returnedStatus);
 			}
-
-
 
 
 	}
@@ -614,11 +612,12 @@ public class RelayControlActivity extends Activity{
 
 			//TODO make this access the slider activity
 			// ** Work Area **
+			final int finalI = i;
 			relayLabels[i].setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View view) {
 					System.out.println("Clicked "+ relayName);
-					SliderRelayBuilder(relayName);
+					SliderRelayBuilder(relayName, finalI);
 
 				}
 			});
@@ -696,9 +695,10 @@ public class RelayControlActivity extends Activity{
 
 	// private method to call the slider view activity
 	//TODO work area
-	private void SliderRelayBuilder(String relayName) {
+	private void SliderRelayBuilder(String relayName, int relayNumber) {
 		Intent intent = new Intent(this, SliderActivity.class);
 		intent.putExtra("RelayName",relayName);
+		intent.putExtra("RelayNumber", relayNumber);
 		intent.putExtra("MAC", deviceMacAddress);
 		startActivity(intent);
 
