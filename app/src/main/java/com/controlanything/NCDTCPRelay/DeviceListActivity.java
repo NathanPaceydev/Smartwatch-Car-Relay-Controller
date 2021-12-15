@@ -447,10 +447,11 @@ public class DeviceListActivity extends Activity{
 
 
 
-
+	// TODO remove alert builder since app only uses BT
+	// ** Can still be used later on **
 	public void findDevicesAlertBuilder(){
 		AlertDialog.Builder aDialogBuilder = new AlertDialog.Builder(this);
-		aDialogBuilder.setTitle(R.string.select_connection_type);
+		//aDialogBuilder.setTitle(R.string.select_connection_type);
 		aDialogBuilder.setCancelable(true);
 		aDialogBuilder.setItems(R.array.connectionType, new DialogInterface.OnClickListener(){
 
