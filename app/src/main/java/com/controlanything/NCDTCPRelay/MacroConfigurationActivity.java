@@ -119,7 +119,7 @@ public class MacroConfigurationActivity extends Activity{
 	
 	private RelativeLayout title(){
 		titleTable = new RelativeLayout(this);
-		titleTable.setBackgroundResource(R.drawable.top_bar);
+		//titleTable.setBackgroundResource(R.drawable.top_bar);
 		titleTable.setId(1);
 				
 		final TextView tView = new TextView(this);

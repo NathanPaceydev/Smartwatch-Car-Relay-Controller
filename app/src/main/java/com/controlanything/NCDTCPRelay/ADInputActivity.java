@@ -548,7 +548,7 @@ public class ADInputActivity extends Activity {
 	// *** TOP title Bar ***
 	public RelativeLayout title(){
 		titleTable = new RelativeLayout(this);
-		titleTable.setBackgroundResource(R.drawable.top_bar);
+		//titleTable.setBackgroundResource(R.drawable.top_bar);
 
 
 

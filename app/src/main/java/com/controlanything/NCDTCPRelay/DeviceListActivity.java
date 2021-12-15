@@ -435,7 +435,10 @@ public class DeviceListActivity extends Activity{
 				if(password.getText().toString().equals(passCodeWord)){
 					//test print Toast
 					Toast.makeText(DeviceListActivity.this, password.getText().toString()+getString(R.string.right_password), Toast.LENGTH_SHORT).show();
-					findDevicesAlertBuilder();
+					Intent discoveryBluetoothIntent = new Intent(getApplicationContext(), BluetoothDiscovery.class);
+					startActivity(discoveryBluetoothIntent);
+					finish();
+					//findDevicesAlertBuilder();
 				}else {
 					//test print Toast
 					Toast.makeText(DeviceListActivity.this, password.getText().toString() + getString(R.string.wrong_password), Toast.LENGTH_SHORT).show();
@@ -447,7 +450,7 @@ public class DeviceListActivity extends Activity{
 
 
 
-	// TODO remove alert builder since app only uses BT
+	// not called since we are only using BT connection
 	// ** Can still be used later on **
 	public void findDevicesAlertBuilder(){
 		AlertDialog.Builder aDialogBuilder = new AlertDialog.Builder(this);

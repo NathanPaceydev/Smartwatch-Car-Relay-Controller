@@ -203,7 +203,7 @@ public class DiscoveryActivity extends Activity{
 	
 	public RelativeLayout title(){
 		RelativeLayout rLayout = new RelativeLayout(this);
-		rLayout.setBackgroundResource(R.drawable.top_bar);
+		//rLayout.setBackgroundResource(R.drawable.top_bar);
 		rLayout.setLayoutParams(new LayoutParams(displayWidth,248));
 		
 		//Create TextView

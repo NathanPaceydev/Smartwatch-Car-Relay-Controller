@@ -199,7 +199,7 @@ public class LinearActuatorActivity extends Activity{
 
 	public RelativeLayout title(){
 		titleTable = new RelativeLayout(this);
-		titleTable.setBackgroundResource(R.drawable.top_bar);
+		//titleTable.setBackgroundResource(R.drawable.top_bar);
 		titleTable.setId(1);
 
 		//			table.setLayoutParams(new LayoutParams(displayWidth,(int) convertPixelsToDp(248, this)));

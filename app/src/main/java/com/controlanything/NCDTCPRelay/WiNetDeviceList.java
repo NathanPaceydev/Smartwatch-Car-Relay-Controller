@@ -124,7 +124,7 @@ public class WiNetDeviceList extends Activity{
 	
 	public RelativeLayout title(){
 		titleTextView = new RelativeLayout(this);
-		titleTextView.setBackgroundResource(R.drawable.top_bar);
+		//titleTextView.setBackgroundResource(R.drawable.top_bar);
 
 		TextView tView = new TextView(this);
 		tView.setText("Scanning");

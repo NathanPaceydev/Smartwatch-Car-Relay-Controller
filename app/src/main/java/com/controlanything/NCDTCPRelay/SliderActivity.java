@@ -16,8 +16,7 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 
-
-//TODO add functional code lol
+// class to determine the slider controller capability
 public class SliderActivity extends Activity{
 
     final int MAXTIME = 5000; // global time var
@@ -145,7 +144,7 @@ public class SliderActivity extends Activity{
                     String movingText = getString(R.string.moving_to) + " " + (int)((abs(prog)/4*100)) + "%";
                     movingTextView.setText(movingText);
 
-                    // TODO make this  work dawg
+                    // ** call to the click relay method **
                     clickRelay(relayNumber,BANKNUMBER);
                     //seekBar.setThumb(thumb);
                 }
@@ -159,7 +158,8 @@ public class SliderActivity extends Activity{
                         movingTextView.setText(R.string.ready);
 
                         if(prog != progPrior) {
-                            clickRelay(relayNumber, BANKNUMBER);//TODO make work
+                            // ** call to the click relay method **
+                            clickRelay(relayNumber, BANKNUMBER);
                         }
 
                         // textView2.setText("" + (long) (MAXTIME*((abs(prog-progPrior)/4))));
