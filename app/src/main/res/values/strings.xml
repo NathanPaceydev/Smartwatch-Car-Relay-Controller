@@ -175,6 +175,10 @@
     <string name="relay">Relay</string>
     <string name="channel">"Channel "</string>
     <string name="actuator">"Actuator "</string>
+    <string name="started">Started</string>
+    <string name="ready">Ready</string>
+    <string name="moving_to">Moving to</string>
+    <string name="ended">Ended</string>
 
 
     <!-- Device Setup String-->

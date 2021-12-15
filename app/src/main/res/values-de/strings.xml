@@ -82,4 +82,8 @@
     <string name="relay">Relais</string>
     <string name="channel">Sender</string>
     <string name="actuator">Aktuator</string>
+    <string name="started">Gestartet</string>
+    <string name="ready">Bereit</string>
+    <string name="ended">Beendet</string>
+    <string name="moving_to">Umziehen nach</string>
 </resources>

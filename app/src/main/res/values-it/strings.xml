@@ -82,4 +82,8 @@
     <string name="relay">Relè</string>
     <string name="channel">Canale</string>
     <string name="actuator">Attuatore</string>
+    <string name="started">Cominciato</string>
+    <string name="moving_to">Trasferirsi a</string>
+    <string name="ended">Conclusa</string>
+    <string name="ready">Pronto</string>
 </resources>

@@ -11,15 +11,15 @@
 
     <TextView
         android:id="@+id/movingText"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/seekBar"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="-46dp"
         android:padding="0dp"
-        android:text="Ready"
+        android:text="@string/ready"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/relayName"
@@ -29,7 +29,7 @@
         android:layout_above="@id/seekBar"
         android:layout_marginBottom="57dp"
         android:padding="0dp"
-        android:text="Relay"
+        android:text="@string/relay"
         android:textColor="@color/white"
         android:textSize="20sp" />
 

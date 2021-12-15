@@ -131,7 +131,7 @@ public class SliderActivity extends Activity{
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
                 if(prog != progPrior){
-                    movingTextView.setText("Started");
+                    movingTextView.setText(R.string.started);
 
                     //clickRelay(relayNumber,BANKNUMBER);
                 }
@@ -142,7 +142,7 @@ public class SliderActivity extends Activity{
             public void onStopTrackingTouch(final SeekBar seekBar) {
                 if(prog != progPrior){
                     direction = !direction;
-                    String movingText = "Moving to " + (int)((abs(prog)/4*100)) + "%";
+                    String movingText = getString(R.string.moving_to) + " " + (int)((abs(prog)/4*100)) + "%";
                     movingTextView.setText(movingText);
 
                     // TODO make this  work dawg
@@ -156,7 +156,7 @@ public class SliderActivity extends Activity{
                 movingTextView.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        movingTextView.setText("Ready");
+                        movingTextView.setText(R.string.ready);
 
                         if(prog != progPrior) {
                             clickRelay(relayNumber, BANKNUMBER);//TODO make work
@@ -262,7 +262,7 @@ public class SliderActivity extends Activity{
                 new java.util.TimerTask(){
                     @Override
                     public void run(){
-                        movingTextView.setText("Ended");
+                        movingTextView.setText(R.string.ended);
                     }
                 },
                 (long) (MAXTIME*((abs(prog-progPrior)/4)))

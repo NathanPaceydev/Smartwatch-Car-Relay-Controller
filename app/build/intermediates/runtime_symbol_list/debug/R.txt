@@ -170,6 +170,7 @@ int string display_relays 0x7f090020
 int string edit 0x7f090021
 int string edit_or_remove 0x7f090022
 int string edit_or_remove_device 0x7f090023
+int string ended 0x7f090054
 int string enter_name 0x7f090024
 int string enter_network 0x7f090025
 int string exit 0x7f090026
@@ -186,6 +187,7 @@ int string lock_access 0x7f090030
 int string lock_config 0x7f090031
 int string lock_config_pin 0x7f090032
 int string macro_setup 0x7f090033
+int string moving_to 0x7f090055
 int string network 0x7f090034
 int string network_name 0x7f090035
 int string no 0x7f090036
@@ -196,6 +198,7 @@ int string number_of_channels 0x7f09003a
 int string number_of_relays 0x7f09003b
 int string password_hint 0x7f09003c
 int string port_number 0x7f09003d
+int string ready 0x7f090056
 int string relay 0x7f09003e
 int string relay_active 0x7f09003f
 int string relays 0x7f090040
@@ -212,6 +215,7 @@ int string select_connection_type 0x7f09004a
 int string service_name 0x7f09004b
 int string setup 0x7f09004c
 int string start 0x7f09004d
+int string started 0x7f090057
 int string submit_password 0x7f09004e
 int string title_activity_hands 0x7f09004f
 int string title_activity_macro_setup 0x7f090050

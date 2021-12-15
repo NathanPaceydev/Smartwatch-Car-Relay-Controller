@@ -82,4 +82,8 @@
     <string name="actuator">Solenoide</string>
     <string name="channel">Canal</string>
     <string name="relay">Relé</string>
+    <string name="started">Empezado</string>
+    <string name="moving_to">Moviéndose a</string>
+    <string name="ended">Terminado</string>
+    <string name="ready">Listo</string>
 </resources>

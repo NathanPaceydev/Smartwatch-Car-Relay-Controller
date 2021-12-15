@@ -82,4 +82,8 @@
     <string name="actuator">Actionneur</string>
     <string name="channel">"Chaîne "</string>
     <string name="relay">Relais</string>
+    <string name="started">Débuté</string>
+    <string name="moving_to">Déménager</string>
+    <string name="ready">Prêt</string>
+    <string name="ended">Terminé</string>
 </resources>
