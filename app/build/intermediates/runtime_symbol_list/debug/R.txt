@@ -104,12 +104,12 @@ int string ad_inputs 0x7f090005
 int string app_name 0x7f090006
 int string are_you_sure 0x7f090007
 int string bluetooth 0x7f090008
-int string bottom_text_relays 0x7f090009
 int string button_is_momentary 0x7f09000a
 int string cancel 0x7f09000b
 int string cancel_password 0x7f09000c
 int string channel 0x7f09000d
 int string click_and_hold 0x7f09000e
+int string click_relay_name_to_control 0x7f090058
 int string connected 0x7f09000f
 int string connecting 0x7f090010
 int string connection_lost 0x7f090011

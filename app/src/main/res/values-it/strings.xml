@@ -86,4 +86,5 @@
     <string name="moving_to">Trasferirsi a</string>
     <string name="ended">Conclusa</string>
     <string name="ready">Pronto</string>
+    <string name="click_relay_name_to_control">Fare clic sul nome per controllare</string>
 </resources>

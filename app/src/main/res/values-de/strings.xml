@@ -86,4 +86,5 @@
     <string name="ready">Bereit</string>
     <string name="ended">Beendet</string>
     <string name="moving_to">Umziehen nach</string>
+    <string name="click_relay_name_to_control">Zum Steuern auf den Namen klicken</string>
 </resources>

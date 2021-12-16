@@ -9,7 +9,7 @@
     <string name="ad_inputs">ADInputs</string>
 
     <!-- Added Strings Relay control -->
-    <string name="bottom_text_relays">Click Relay Name to Control</string>
+
     <string name="green_title">NCD TCP Relay: Connected</string>
     <string name="yellow_title">NCD TCP Relay: Connecting....</string>
 
@@ -179,6 +179,7 @@
     <string name="ready">Ready</string>
     <string name="moving_to">Moving to</string>
     <string name="ended">Ended</string>
+    <string name="click_relay_name_to_control">Click Relay Name to Control</string>
 
 
     <!-- Device Setup String-->
