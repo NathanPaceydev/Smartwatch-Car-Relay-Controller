@@ -65,6 +65,7 @@ int id commandTextView 0x7f050006
 int id commandedittext 0x7f050007
 int id commandtextview 0x7f050008
 int id control_layout 0x7f050009
+int id control_message 0x7f050039
 int id delayTextView 0x7f05000a
 int id delayedittext 0x7f05000b
 int id editTextNumberPassword 0x7f05000c

@@ -318,7 +318,7 @@ public class RelayControlActivity extends Activity{
 //		mTable.setBackgroundResource(R.drawable.background);
 		mTable.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 
-		mTable.addView(title());
+		//mTable.addView(title());
 
 				
 		RelativeLayout.LayoutParams bottomButtonParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, 70);
@@ -328,27 +328,36 @@ public class RelayControlActivity extends Activity{
 		mTable.addView(listButton, bottomButtonParams);
 
 
-		
+		/*
 		if(displayInputs || displayMacros){
 			RelativeLayout.LayoutParams bottomTextParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
 			bottomTextParams.addRule(RelativeLayout.ABOVE, deviceListButtonTableView.getId());
-			/*
+
 			if(displayInputs){
 				//mTable.addView(bottomText("Swipe left to display Inputs Page"), bottomTextParams);
 			}else{
 				//mTable.addView(bottomText("Swipe left to display Macros Page"), bottomTextParams);
 			}
-			 */
+
 		}
+
+		 */
+
 	
 		RelativeLayout.LayoutParams scrollViewParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
-		scrollViewParams.addRule(RelativeLayout.ABOVE, titleTable.getId());
+//		scrollViewParams.addRule(RelativeLayout.ABOVE, titleTable.getId());
+		scrollViewParams.addRule(RelativeLayout.ABOVE, findViewById(R.id.control_message).getId());
+
+		/*
 		if(displayInputs || displayMacros){
 			scrollViewParams.addRule(RelativeLayout.ABOVE, deviceListButtonTableView.getId());
 
 		}else{
 			scrollViewParams.addRule(RelativeLayout.ABOVE, deviceListButtonTableView.getId());
 		}
+
+		 */
+
 		mTable.addView(scrollView(), scrollViewParams);
 
 		//		** new speech button layout **

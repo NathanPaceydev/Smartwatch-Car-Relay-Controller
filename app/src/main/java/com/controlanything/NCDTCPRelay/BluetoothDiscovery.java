@@ -141,6 +141,10 @@ public class BluetoothDiscovery extends Activity{
 
 	public ListView listView(){
 		ListView pairedDevicesList = new ListView(this);
+
+		//set the top padding
+		pairedDevicesList.setPadding(0,30,0,0);
+
 		pairedDevicesListAdapter = new ArrayAdapter<String>(this, R.layout.device_name);
 		
 		//Get Paired Devices
