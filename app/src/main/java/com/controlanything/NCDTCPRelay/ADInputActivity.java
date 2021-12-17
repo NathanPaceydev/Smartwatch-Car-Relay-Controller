@@ -52,7 +52,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-// ** activity when Network Device Selected ***
+// ** activity when Input is selected - 2-way communication view ***
 public class ADInputActivity extends Activity {
 	
 	TextView readTimeTextView;

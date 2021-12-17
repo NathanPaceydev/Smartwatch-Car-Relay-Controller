@@ -252,6 +252,7 @@ public class RelayControlActivity extends Activity{
 	public void getDeviceInfo(){
 		//Get device settings for its name and number of relays.
 		String[] deviceSettings = cPanel.getStoredString(deviceMacAddress).split(";");
+		System.out.println(deviceSettings);
 
 
 		if(deviceSettings[2].equalsIgnoreCase("Bluetooth")){
