@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="menu_eng">Menu</string>
+    <string name="setup_eng">Car Setup</string>
+    <string name="liftgate_eng">LiftGate</string>
+    <string name="doors_eng">Doors</string>
+    <string name="hood_eng">Hood</string>
+    <string name="toast_msg">Please Select Bluetooth Device</string>
+
+    <string name="app_name">Magna</string>
+
+    <string name="ready">Ready</string>
+    <string name="moving">Moving</string>
+
+    <string name="setupHeader_eng">Setup</string>
+    <string name="connection_eng">Connection</string>
+    <string name="languageButton_eng">Language</string>
+    <string name="none">NONE</string>
+    <string name="EN">EN</string>
+    <string name="choose_language">Choose Language</string>
+
+
+</resources>

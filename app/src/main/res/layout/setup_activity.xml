@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_settings"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="@string/setupHeader_eng"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:text="@string/connection_eng"
+        android:textColor="@android:color/white"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/connectionButton"
+        android:layout_width="156.34285714dp"
+        android:layout_height="36.7885714286dp"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="66.5857142857dp"
+        android:background="@drawable/connection_button"
+        android:text="@string/none"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="123dp"
+        android:text="@string/languageButton_eng"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:translationZ="45dp" />
+
+    <TextView
+        android:id="@+id/languageAbr"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="123dp"
+        android:text="@string/EN"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:translationZ="100dp" />
+
+    <Button
+        android:id="@+id/languageButton"
+        android:layout_width="169.331428571dp"
+        android:layout_height="34.1257142857dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="117.142857143dp"
+        android:background="@drawable/language_button" />
+
+
+    <Button
+        android:id="@+id/backButtonSetup"
+        android:layout_width="136.382857143dp"
+        android:layout_height="29.04dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="166.285714286dp"
+        android:background="@drawable/back_button" />
+
+</RelativeLayout>

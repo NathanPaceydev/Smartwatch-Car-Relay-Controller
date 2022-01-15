@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:background="@color/black"
+    android:textColor="@color/white"
+    android:layout_width="205dp"
+    android:layout_height="75dp"
+    android:layout_centerInParent="true"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:minHeight="0dp"
+    />

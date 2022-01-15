@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.AppCompat"
+    android:background="@drawable/slider_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:text="@string/ready"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <SeekBar
+        android:id="@+id/slider"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="111dp"
+        android:max="4"
+        android:progressBackgroundTint="@color/white"
+        android:tickMark="@drawable/tickmark"
+        android:tickMarkTint="@color/white" />
+
+    <ImageView
+        android:id="@+id/headerLogo"
+        android:layout_width="42.2228571429dp"
+        android:layout_height="42.2228571429dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10.8571428571dp"
+        app:srcCompat="@drawable/admin_pass_activity" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="136.382857143dp"
+        android:layout_height="29.04dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="166.285714286dp"
+        android:background="@drawable/back_button" />
+
+    <Button
+        android:id="@+id/textToSpeechButton"
+        android:layout_width="169.862857143dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="142.285714286dp"
+        android:background="@drawable/text_to_speech_button" />
+
+
+</RelativeLayout>

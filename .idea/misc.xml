@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../Android/Sdk/platforms/android-31/data/res/layout/alert_dialog.xml" value="1.0555555555555556" />
+        <entry key="../../Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="1.0555555555555556" />
+        <entry key="app/src/main/res/drawable/custom_thumb.xml" value="1.0538461538461539" />
+        <entry key="app/src/main/res/drawable/custom_thumb1.xml" value="1.0538461538461539" />
+        <entry key="app/src/main/res/drawable/tickmark.xml" value="1.0538461538461539" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/admin_password.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/device_list_MAIN.xml" value="0.78515625" />
+        <entry key="app/src/main/res/layout/device_list_main.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/device_list_prototype.xml" value="1.25" />
+        <entry key="app/src/main/res/layout/device_list_prototype1.xml" value="2.0" />
+        <entry key="app/src/main/res/layout/device_name.xml" value="0.78515625" />
+        <entry key="app/src/main/res/layout/devicelistpopup.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/devicepopup.xml" value="1.0555555555555556" />
+        <entry key="app/src/main/res/layout/edit_command_alert_dialog.xml" value="0.78515625" />
+        <entry key="app/src/main/res/layout/setup_act.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/setup_act1.xml" value="1.0" />
+        <entry key="app/src/main/res/layout/setup_activity.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/slider_act.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/slider_act1.xml" value="0.9743589743589743" />
+        <entry key="app/src/main/res/layout/tickmark.xml" value="0.9743589743589743" />
+        <entry key="app/src/main/res/menu/popup_menu.xml" value="1.8972222222222221" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

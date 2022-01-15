@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Magna</string>
+    <string name="menu_eng">Menù</string>
+    <string name="setup_eng">Configurazione dell\'auto</string>
+    <string name="liftgate_eng">Portellone</string>
+    <string name="doors_eng">Porte</string>
+    <string name="hood_eng">Cofano</string>
+    <string name="toast_msg">Si prega di selezionare il dispositivo Bluetooth</string>
+    <string name="ready">Pronto</string>
+    <string name="moving">Muovendo</string>
+    <string name="setupHeader_eng">Installazione</string>
+    <string name="connection_eng">Connessione</string>
+    <string name="languageButton_eng">Lingua</string>
+    <string name="none">NESSUNO</string>
+    <string name="EN">IT</string>
+    <string name="choose_language">Scegli la lingua</string>
+</resources>
