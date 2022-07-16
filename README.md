@@ -3,7 +3,7 @@ A Wear OS Android Smartwatch app that allows users to connect to a relay control
 
 ![watches advertisement draft 2 0 (3)](https://user-images.githubusercontent.com/64051575/149846771-7b4bb7b1-701f-49e6-ac3b-34aeb7e5d0fd.png)
 <a href="https://npacey01.wixsite.com/website/smartwatch-feature" target="_blank">Watch Demo!</a>
-[Google](https://google.com" target="_blank)
+
 
 
 Version 1.0 of the app was directly modified from NCD's remote relay controller app for Android and features many more items than version 2.0. These features include connecting to network devices, dynamically setting up the number of relay channels and number of relays to control. The app also allows the user to remove devices from the communications stack or add a lock pin to access certain devices. Version 1.0 is also fully supported in over 6 languages.
